@@ -3489,6 +3489,7 @@ input[type="button"].btn-block {
   margin-left: 0;
 }
 
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -14572,6 +14573,8 @@ a.dropdown-item:hover:before {
 
 .navbar-light .navbar-nav .show>.nav-link,
 .navbar-light .navbar-nav .active>.nav-link,
+
+
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
   color: var(--primary-color);
@@ -14581,7 +14584,8 @@ a.dropdown-item:hover:before {
   text-transform: capitalize;
   transition: all 0.5s ease;
   padding: 14px 0;
-  font-size: 1.2em;
+
+
   font-weight: 400;
   position: relative;
   color: var(--heading-color);
@@ -14593,8 +14597,7 @@ a.dropdown-item:hover:before {
 
 a.dropdown-item {
   font-weight: 400;
-  font-size: 1.2em;
-  position: relative;
+   position: relative;
   color: var(--heading-color);
   padding-top: 0;
   display: block;
@@ -14669,7 +14672,7 @@ nav ul li a:hover {
   border-radius: var(--border-radius);
   background: var(--dropdown-color);
   border: 1px solid var(--border-color);
-  min-width: 13rem;
+  min-width: 15rem;
   padding: 1rem 0 .3rem;
 }
 
@@ -17428,22 +17431,21 @@ h3.hny-title.two {
   .w3l-top-menu-1 .social-top li {
     display: inline-block; }
   .w3l-top-menu-1 .social-top li a {
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff; }
   .w3l-top-menu-1 .social-top li a:hover {
     opacity: 0.8; }
   .w3l-top-menu-1 .social-top {
     text-align: right; }
   .w3l-top-menu-1 .top-head li {
-    font-size: 16px;
-    line-height: 24px;
-    color: #ffffff;
+    font-size: 14px;
+     color: #ffffff;
     margin: 0px 10px;
     display: inline-block; }
   .w3l-top-menu-1 .accounts li:nth-child(1) {
     margin-left: 0; }
   .w3l-top-menu-1 .top-head li span.fa {
-    font-size: 16px;
+    font-size: 14px;
     color: #ffffff; }
   .w3l-top-menu-1 ul li {
     display: inline-block; }
@@ -17453,9 +17455,8 @@ h3.hny-title.two {
   .w3l-top-menu-1 .accounts li {
     display: inline-block;
     margin: 0 24px;
-    font-size: 16px;
-    line-height: 24px;
-    color: #ffffff; }
+    font-size: 14px;
+     color: #ffffff; }
   .w3l-top-menu-1 .accounts li a {
     color: #ffffff; }
   .w3l-top-menu-1 .accounts li a:hover {
@@ -17490,4 +17491,4 @@ h3.hny-title.two {
       padding-right: 15px; } }
 
 
-/*# sourceMappingURL=style-freedom.css.map */
+.resizable{}
