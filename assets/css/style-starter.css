@@ -5795,6 +5795,9 @@ a.badge-dark.focus {
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
+  height: 300px; 
+  overflow-x: hidden; 
+  overflow-y: auto; 
 }
 
 .list-group-item-action {
