@@ -1,6 +1,5 @@
 <!--
-Author: W3layouts
-Author URL: http://w3layouts.com
+Author: Pritam Shah
 -->
 <!doctype html>
 <html lang="en">
@@ -10,6 +9,12 @@ Author URL: http://w3layouts.com
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>NRCO</title>
+  <META NAME="DESCRIPTION" CONTENT="The ICAR-National Research Centre for Orchids, Sikkim was established by Indian Council of Agricultural Research, New Delhi on 5th October 1996 based on the recommendations of the Planning Commission during VIIIth Five Year Plan. The basic objective for setting up this centre was to provide research support to upcoming orchid industry, conserve and use orchid genetic resources available in the country.">
+  <META NAME="KEYWORDS" CONTENT="Sikkim, Darjeeling, ICAR, NRCO, Orchids, Orchid, Gangtok,ICAR-NRC for Orchids">
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--CSS-->
+    
    <!-- google fonts -->  
    <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
    <!-- google fonts --> 
@@ -800,7 +805,7 @@ Author URL: http://w3layouts.com
       <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
         <div class="container">
           <p class="copy-footer-28 text-center"> &copy; Copyright NRC for Orchids. All rights reserved. Designed and developed by <a
-            href="https://w3layouts.com/">ARIS Cell</a></p>
+            href="#">ARIS Cell</a></p>
         </div>
       </div>
     </div>
@@ -960,17 +965,31 @@ Author URL: http://w3layouts.com
 <!-- //video popup -->
 <script>
   $(document).ready(function(){
-    if (document.addEventListener) {
-        document.addEventListener('contextmenu', function(e) {
-            alert("Right click disabled !"); //here you draw your own menu
-            e.preventDefault();
-        }, false);
-    } else {
-        document.attachEvent('oncontextmenu', function() {
-            alert("You've tried to open context menu");
-            window.event.returnValue = false;
-        });
-    }
+    // if (document.addEventListener) {
+    //     document.addEventListener('contextmenu', function(e) {
+    //         alert("Right click disabled !"); //here you draw your own menu
+    //         e.preventDefault();
+    //     }, false);
+    // } else {
+    //     document.attachEvent('oncontextmenu', function() {
+    //         alert("You've tried to open context menu");
+    //         window.event.returnValue = false;
+    //     });
+    // }
+      ///////////////// fixed menu on scroll for desktop
+ 
+   $(window).scroll(function(){  
+      if ($(this).scrollTop() > 300) {
+         $('#site-header').addClass("fixed-top");
+         // add padding top to show content behind navbar
+         $('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+       }else{
+         $('#site-header').removeClass("fixed-top");
+          // remove padding top from body
+         $('body').css('padding-top', '0');
+       }   
+   });
+  // end if
   var resize = new Array('.resizable');
   resize = resize.join(',');
   
@@ -1034,7 +1053,7 @@ Author URL: http://w3layouts.com
   <!--//MENU-JS-->
   <script>
     ///////////////// fixed menu on scroll for desktop
- if ($(window).width() > 992) {
+ 
    $(window).scroll(function(){  
       if ($(this).scrollTop() > 300) {
          $('#site-header').addClass("fixed-top");
@@ -1046,7 +1065,7 @@ Author URL: http://w3layouts.com
          $('body').css('padding-top', '0');
        }   
    });
- } // end if
+  // end if
   </script>
   <script src="assets/js/bootstrap.min.js"></script>
 
