@@ -15485,7 +15485,7 @@ button.owl-next {
   color: var(--primary-color);
 }
 a.marq {
-  font-size: 17px;
+ 
   padding: 0;
   border-bottom: 2px solid var(--primary-color);
   color: var(--heading-color);
@@ -17499,3 +17499,25 @@ h3.hny-title.two {
 #whiteback{
   color: white;
 }
+
+
+
+
+
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+  } 
+body {
+  top: 0px !important; 
+  }
+
+
+  .goog-logo-link {
+    display:none !important;
+} 
+    
+.goog-te-gadget {
+    color: transparent !important;
+}
+ 

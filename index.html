@@ -55,7 +55,7 @@ Author: Pritam Shah
  
   
   <img style="margin-left: auto;  margin-right: auto;" src="assets\images\bannerlogo.jpg" class="img-responsive">
-
+    
 <header id="site-header" class="j">
   <div class="container">
       <nav class="navbar navbar-expand-lg stroke">
@@ -168,6 +168,17 @@ Author: Pritam Shah
                   <li class="nav-item">
                       <a class="nav-link" href="#">Contact</a>
                   </li>
+                  <li class="nav-item">
+                    <div id="google_translate_element" class="nav-link"></div> 
+
+ <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script>
+                    
+                  </li>
+
               </ul>
           </div>
           <!-- toggle switch for light and dark theme -->
@@ -187,17 +198,16 @@ Author: Pritam Shah
           <!-- //toggle switch for light and dark theme -->
       </nav>
   </div>
-  <div class="" style="background-color: ">
-    <marquee behavior="scroll"  direction="left" scrollamount="6" onmouseover="this.stop()" onmouseout="this.start()">
-        <a href="#" class="marq" >National Science Day Observed </a>*
-        <a href="#"class="marq"> International Womens' Day Celebrated </a>*
-        <a href="#"class="marq"> Walk- in- interview will be held 27.03.2021 for the post of Senior Research Fellow (SRF) under National Agriculture Innovation Fund scheme (IPR) purely on temporary basis. </a></marquee>
-      </div> 
 </header>
-<!-- //header -->
+ <!-- //header -->
   <!-- main-slider -->
    <!-- main-slider -->
-       
+       <div class="" style="background-color: wheat;">
+      <marquee behavior="scroll"  direction="left" scrollamount="6" onmouseover="this.stop()" onmouseout="this.start()">
+          <a href="#">National Science Day Observed </a>*
+          <a href="#"> International Womens' Day Celebrated </a>*
+          <a href="#"> Walk- in- interview will be held 27.03.2021 for the post of Senior Research Fellow (SRF) under National Agriculture Innovation Fund scheme (IPR) purely on temporary basis. </a></marquee>
+        </div> 
    <section class="w3l-main-slider" id="home">
     <div class="companies20-content">
       <div class="owl-one owl-carousel owl-theme">
@@ -936,6 +946,23 @@ Author: Pritam Shah
   <!--//MENU-JS-->
    
   <script src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+    }
 
+	 
+
+	jQuery('.lang-select').click(function() {
+	  var theLang = jQuery(this).attr('data-lang');
+	  jQuery('.goog-te-combo').val(theLang);
+
+	  //alert(jQuery(this).attr('href'));
+	  window.location = jQuery(this).attr('href');
+	  location.reload();
+
+	});
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
