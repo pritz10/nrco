@@ -15484,7 +15484,21 @@ button.owl-next {
 .w3l-features .area-box h4 a:hover {
   color: var(--primary-color);
 }
+a.marq {
+  font-size: 17px;
+  padding: 0;
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--heading-color);
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  border-radius: 0;
+  display: inline-block;
+  text-transform: capitalize;
+}
 
+a.marq:hover {
+  color: var(--primary-color);
+}
 a.read {
   font-size: 17px;
   padding: 0;
