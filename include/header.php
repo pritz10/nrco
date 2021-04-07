@@ -49,7 +49,7 @@
   </div>
   </div>
   </section>
-  <img  src="assets/images/logod.png" style="margin-left: auto;  margin-right: auto;" class="img-responsive">
+  <img  src="assets/images/k.gif" style="margin-left: auto;  margin-right: auto;" class="img-responsive">
 
 <!-- <div class="row">
   <div class="col-lg-2 col-2">
