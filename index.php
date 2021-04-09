@@ -84,7 +84,7 @@
       <div class="col-lg-4 col-sm-6 grids-feature ">
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
    <div class="d-flex w-100 justify-content-between">
-     <h5 class="mb-1">News / Events </h5>
+     <h5 class="mb-1"><span class="fa fa-newspaper-o"></span> News / Events </h5>
       
    </div>
     </a>
@@ -130,7 +130,7 @@
      <div class="col-lg-4 col-sm-6 grids-feature ">
       <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
  <div class="d-flex w-100 justify-content-between">
-   <h5 class="mb-1">Opportunity</h5>
+   <h5 class="mb-1"><span class="fa fa-line-chart"></span> Opportunity</h5>
     
  </div>
  
@@ -179,8 +179,7 @@
    <div class="col-lg-4 col-sm-6 grids-feature ">
     <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
 <div class="d-flex w-100 justify-content-between">
- <h5 class="mb-1">Tenders</h5>
-  
+ <h5 class="mb-1"> <span class="fa fa-paperclip"></span> Tenders</h5>
 </div>
 
 </a>
@@ -257,7 +256,8 @@
           <h5><?php echo $data['Name']; ?></h5>
           <p><?php echo $data['Designation']; ?></p>
           <?php
-        }?>
+        $connect -> close();
+      }?>
       </div>
       </div>
             </div>

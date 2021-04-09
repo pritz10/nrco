@@ -1,6 +1,6 @@
 <!-- Author: Pritam Shah -->
 <?php require_once 'include/db.php'; ?>
-
+ 
 <!doctype html>
 <html lang="en">
 <head>
@@ -73,7 +73,7 @@
       <nav class="navbar navbar-expand-lg stroke">
           
           <a class="navbar-brand" href="index.php">NRCO
-            <img src="assets/images/logo - Copy.png" alt="Your logo" title="Your logo" style="height:35px;" />
+            <img src="assets/images/logo.png" alt="logo" title="" style="height:35px;" />
         </a> 
           <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
               data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -268,5 +268,5 @@
           </div>
           <!-- //toggle switch for light and dark theme -->
       </nav>
- 
 </header>
+ 
