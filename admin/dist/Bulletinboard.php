@@ -5,48 +5,9 @@
                     <div class="container-fluid">
               
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item active">Bulletin Board</li>
                         </ol>
-                        <div class="row">
-                        <div class="col-xl-3 col-md-6">
-                                  <div class="card bg-primary text-white mb-4">
-                                      <div class="card-body">
-                                      <h5 class="card-title">Director's Desk</h5> </div>
-                                      <div class="card-footer d-flex align-items-center justify-content-between">
-                                          <a class="text-white stretched-link" href="#">View Details</a>
-                                          <div class="text-white"><i class="fas fa-angle-right"></i></div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-xl-3 col-md-6">
-                                  <div class="card bg-success text-white mb-4">
-                                      <div class="card-body"> <h5 class="card-title">Bulletin Board</h5> </div>
-                                      <div class="card-footer d-flex align-items-center justify-content-between">
-                                          <a class="  text-white stretched-link" href="Bulletinboard.php">Add Details</a>
-                                          <div class="  text-white"><i class="fas fa-angle-right"></i></div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-xl-3 col-md-6">
-                                  <div class="card text-white bg-dark mb-3">
-                                      <div class="card-body"> <h5 class="card-title">Counters</h5> </div>
-                                      <div class="card-footer d-flex align-items-center justify-content-between">
-                                          <a class="text-white stretched-link" href="#">View Details</a>
-                                          <div class="text-white"><i class="fas fa-angle-right"></i></div>
-                                      </div>
-                                  </div>
-                              </div>
                               
-                              <div class="col-xl-3 col-md-6">
-                                  <div class="card bg-danger text-white mb-4">
-                                      <div class="card-body"> <h5 class="card-title">Testimonials</h5> </div>
-                                      <div class="card-footer d-flex align-items-center justify-content-between">
-                                          <a class="  text-white stretched-link" href="#">View Details</a>
-                                          <div class=" text-white"><i class="fas fa-angle-right"></i></div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>       
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -80,18 +41,22 @@
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area mr-1"></i>
-                                       Main Slider <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModal">
+                                      From the Director's Desk <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModal">
  ?
 </button>
                                     </div>
                                             <form style="padding:10px;">
                                             <div class="form-group">
-                                                <label for="exampleFormControlInput1">Enter Title</label>
-                                                <input type="text" class="form-control" onchange="readURL(this);" id="title" placeholder="Nataional Science Day Celebration">
+                                                <label for="exampleFormControlInput1">Enter Name</label>
+                                                <input type="text" class="form-control" onchange="readURL(this);" id="title"  >
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleFormControlTextarea1">Enter Description</label>
-                                                <textarea class="form-control" onchange="readURL(this);" id="details" rows="3"placeholder="Dikling School was invited in celebration of National Science Day"></textarea>
+                                                <label for="exampleFormControlInput1">Designation</label>
+                                                <input type="text" class="form-control" onchange="readURL(this);" id="designation"  >
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Enter Message</label>
+                                                <textarea class="form-control" onchange="readURL(this);" id="details" rows="3" ></textarea>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleFormControlFile1">Select Image 1680*1000 pixels</label>
@@ -108,9 +73,11 @@
                                         <i class="fas fa-chart-bar mr-1"></i>
                                         Live Preview
                                     </div>
-                                    <h3 id="db"></h3>
+                                    
                                     <img id="blah" src="assets/img/p.png" alt="Image will appear here" />
                                     <p id="dab"></p>
+                                   <strong> <p id="db"></p></strong>
+                                    <p id="dd"></p>
                                    
                                 </div>
                             </div>
@@ -118,10 +85,14 @@
                         <script>
                              function readURL(input) {
                                 add = $('input#title').val();
+                                add3 = $('input#designation').val();
+
                                 add2 = $('textarea#details').val();
 
-                                 $('h3#db').empty().html(add).show();
+                                 $('p#db').empty().html(add).show();
                                  $('p#dab').empty().html(add2).show();
+                                 $('p#dd').empty().html(add3).show();
+
 
                                 if (input.files && input.files[0]) {
                                     var reader = new FileReader();

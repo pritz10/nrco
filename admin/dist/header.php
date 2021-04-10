@@ -27,9 +27,11 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="login.html">Logout</a>
                     </div>
+                    
                 </li>
+                 
             </ul>
-        </nav>
+         </nav>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -96,7 +98,7 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
+                        <div class="small">Have a nice day😊 !</div>
                        Pritam Shah
                     </div>
                 </nav>
