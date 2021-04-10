@@ -8,19 +8,89 @@
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
                         <div class="row">
+                        <div class="col-xl-3 col-md-6">
+                                  <div class="card bg-primary text-white mb-4">
+                                      <div class="card-body">
+                                      <h5 class="card-title">Director's Desk</h5> </div>
+                                      <div class="card-footer d-flex align-items-center justify-content-between">
+                                          <a class="text-white stretched-link" href="#">View Details</a>
+                                          <div class="text-white"><i class="fas fa-angle-right"></i></div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-3 col-md-6">
+                                  <div class="card bg-success text-white mb-4">
+                                      <div class="card-body"> <h5 class="card-title">Bulletin Board</h5> </div>
+                                      <div class="card-footer d-flex align-items-center justify-content-between">
+                                          <a class="  text-white stretched-link" href="#">Add Details</a>
+                                          <div class="  text-white"><i class="fas fa-angle-right"></i></div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-xl-3 col-md-6">
+                                  <div class="card text-white bg-dark mb-3">
+                                      <div class="card-body"> <h5 class="card-title">Counters</h5> </div>
+                                      <div class="card-footer d-flex align-items-center justify-content-between">
+                                          <a class="text-white stretched-link" href="#">View Details</a>
+                                          <div class="text-white"><i class="fas fa-angle-right"></i></div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <div class="col-xl-3 col-md-6">
+                                  <div class="card bg-danger text-white mb-4">
+                                      <div class="card-body"> <h5 class="card-title">Testimonials</h5> </div>
+                                      <div class="card-footer d-flex align-items-center justify-content-between">
+                                          <a class="  text-white stretched-link" href="#">View Details</a>
+                                          <div class=" text-white"><i class="fas fa-angle-right"></i></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>       
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">How to upload Image in the Home page slider?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="alert alert-warning" role="alert">
+                       <strong> Here you can upload images in slider of the homepage.</strong> <br>
+                        Step 1: Give title to the slider image. <br>
+                        Step 2: Give a description about the image not more than 2 lines. <br>
+                        Step 3: Upload a image of 1600*1000 Pixels. <br>
+                        Step 4: Check spellings and image preview in the Live preview. <br>
+                        Step 5: Click on Upload button and wait.
+                        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+       </div>
+    </div>
+  </div>
+</div>
+                       
+                        <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
                                     <div class="card-header">
                                         <i class="fas fa-chart-area mr-1"></i>
-                                       Main Slider Images
+                                       Main Slider <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModal">
+ ?
+</button>
                                     </div>
                                             <form style="padding:10px;">
                                             <div class="form-group">
                                                 <label for="exampleFormControlInput1">Enter Title</label>
-                                                <input type="email" class="form-control" onchange="readURL(this);" id="title" placeholder="Nataional Science Day Celebration">
+                                                <input type="text" class="form-control" onchange="readURL(this);" id="title" placeholder="Nataional Science Day Celebration">
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleFormControlTextarea1">Enter Details</label>
+                                                <label for="exampleFormControlTextarea1">Enter Description</label>
                                                 <textarea class="form-control" onchange="readURL(this);" id="details" rows="3"placeholder="Dikling School was invited in celebration of National Science Day"></textarea>
                                             </div>
                                             <div class="form-group">
@@ -73,68 +143,14 @@
 
    
 
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area mr-1"></i>
-                                        Area Chart Example
-                                    </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar mr-1"></i>
-                                        Bar Chart Example
-                                    </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                     
+                         
+
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
-                                DataTable Example
+                              Previous Slider Images
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
