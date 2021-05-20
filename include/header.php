@@ -1,6 +1,5 @@
 <!-- Author: Pritam Shah -->
 <?php require_once 'include/db.php'; ?>
- 
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,14 +11,23 @@
   <META NAME="KEYWORDS" CONTENT="Sikkim, Darjeeling, ICAR, NRCO, Orchids, Orchid, Gangtok,ICAR-NRC for Orchids">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--CSS-->
-   <!-- google fonts -->  
-   <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
-   
-   <!-- google fonts --> 
-  <!-- Template CSS -->
-  <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+     <script src="assets/js/jquery-3.5.1.min.js"></script>
 
-  <!-- Template CSS -->
+     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable({
+      "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+    });
+  
+} );</script>
+   
 </head>
 
 <body class="resizable">
@@ -67,9 +75,9 @@
    }
    </script>
    
-  
 <header id="site-header" class="j" style="padding-left: 10px; padding-right: 10px;"> 
-   
+<div class="container">
+
       <nav class="navbar navbar-expand-lg stroke">
           
           <a class="navbar-brand" href="index.php">NRCO
@@ -87,14 +95,14 @@
               <ul class="navbar-nav ml-auto">
                 
                   <li class="nav-item  ">
-                      <a class="nav-link" href="index.php">Home</a>
+                      <a class="nav-link" href="index.php"> <span class="fa fa-home"></span> Home</a>
                   </li>
                   <li class="nav-item dropdown  ">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     At a glance
                   </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">About NRCO</a>
+                      <a class="dropdown-item" href="about_nrco.php">About NRCO</a>
                       <a class="dropdown-item" href="#">Organization Setup</a>
                       <a class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
                       <div class="dropdown-menu ">
@@ -103,10 +111,10 @@
                         <a href="#" class="dropdown-item">Lab</a>
                       </div>
                       <a class="dropdown-item" href="#">Staffs</a>
-                      <a class="dropdown-item" href="#">Regional/ Sub Centres</a>
-                      <a class="dropdown-item" href="#">Institute as a glance</a>
-                      <a class="dropdown-item" href="#">Administration</a>
-                      <a class="dropdown-item" href="#">Our Campus</a>    
+                      <a class="dropdown-item" href="regional_sub-centres.php">Regional/ Sub Centres</a>
+                      <a class="dropdown-item" href="admin\dist\uploads\ICAR-NRCO-At-a-Glance.pdf">Institute as a glance</a>
+                        <a class="dropdown-item" href="#">Former Directors</a>    
+  
                      
                     </div>
                   </li>
@@ -182,71 +190,17 @@
                       <a class="dropdown-item" href="#">Events</a>
                       <a class="dropdown-item" href="#">Opportunity</a>
                       <a class="dropdown-item" href="#">Tenders</a>
-
                     </div>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   KM Portal
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Events</a>
-                      <a class="dropdown-item" href="#">Opportunity</a>
-                      <a class="dropdown-item" href="#">Tenders</a>
-
-                    </div>
+                  <li class="nav-item  ">
+                      <a class="nav-link" href="index.php">हिंदी</a>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Blog<span class="fa fa-angle-down"></span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                        <a class="dropdown-item" href="blog.html">Blog Posts</a>
-                        <a class="dropdown-item" href="blog-single.html">Blog single</a>
-                        <a class="dropdown-item" href="#" id="navbarDropdown3" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    ARchine<span class="fa fa-angle-down"></span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                    <a class="dropdown-item" href="blog.html">Asdf</a>
-                    <a class="dropdown-item" href="blog-single.html">Newdsfsfds single</a>
-                   <a class="dropdown-item" href="landing-single.html">Lasdffnding News</a>
-                </div>
-                       <a class="dropdown-item" href="landing-single.html">Landing Page</a>
-                       <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Pritam<span class="fa fa-angle-down"></span>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <a class="dropdown-item" href="blog.html">News</a>
-                    <a class="dropdown-item" href="blog-single.html">News single</a>
-                   <a class="dropdown-item" href="landing-single.html">Landing News</a>
-                </div>
-                    </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     KM Portal
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Events</a>
-                        <a class="dropdown-item" href="#">Opportunity</a>
-                        <a class="dropdown-item" href="#">Tenders</a>
-  
-                      </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     KM Portal
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Events</a>
-                        <a class="dropdown-item" href="#">Opportunity</a>
-                        <a class="dropdown-item" href="#">Tenders</a>
-  
-                      </div>
-                    </li>
+                  <li class="nav-item  ">
+                      <a class="nav-link" href="index.php">Contact</a>
+                  </li>
+                 
+                    
+                    
   
               </ul>
           </div>
@@ -269,4 +223,4 @@
           <!-- //toggle switch for light and dark theme -->
       </nav>
 </header>
- 
+</div>

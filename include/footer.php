@@ -1,23 +1,26 @@
  
 <section class="w3l-footer">
+<div class="map-iframe mt-5">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3547.607592443914!2d88.58795001437328!3d27.23146735285179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e6a6f3e32a5de9%3A0xbbea4c4e38649e3!2sICAR-National%20Research%20Centre%20For%20Orchids!5e0!3m2!1sen!2sin!4v1620627718763!5m2!1sen!2sin" width="600" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
   <footer class="footer-28">
     <div class="footer-bg-layer">
       <div class="container py-lg-3">
         <div class="row footer-top-28">
-          <div class="col-lg-6 col-md-5 footer-list-28 mt-5">
+          <div class="col-lg-4 col-md-5 footer-list-28 mt-5">
             <h6 class="footer-title-28">Contact information</h6>
             <ul>
               <li>
-                <p><strong>Address</strong> : #135 block, Barnard St. Brooklyn, London 10036, UK</p>
+                <p><strong>Address</strong> : ICAR-National Research Centre for Orchids <br>Dikiling Road, Pakyong, Sikkim 737106 </p>
               </li>
               <li>
-                <p><strong>Phone</strong> : <a href="tel:+(12)234-11-24">+(12)234-11-24</a></p>
+                <p><strong>Phone</strong> : <a href="tel:03592267031">03592267031</a></p>
               </li>
               <li>
-                <p><strong>Email</strong> : <a href="mailto:example@mail.com">example@mail.com</a></p>
+                <p><strong>Email</strong> : <a href="mailto:director.nrco@icar.gov.in">director.nrco@icar.gov.in</a></p>
               </li>
             </ul>
-
+           
             <div class="main-social-footer-28 mt-3">
               <ul class="social-icons">
                 <li class="facebook">
@@ -43,40 +46,49 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-6 col-md-7">
+          <div class="col-lg-8 col-md-7">
             <div class="row">
-              <div class="col-sm-4 col-6 footer-list-28 mt-5">
-                <h6 class="footer-title-28">Company</h6>
-                <ul>
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="#">Blog Posts</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="#pricing">Pricing</a></li>
-                </ul>
-              </div>
-              <div class="col-sm-4 col-6 footer-list-28 mt-5">
+              <div class="col-sm-3 col-6 footer-list-28 mt-5">
                 <h6 class="footer-title-28">Quick Links</h6>
                 <ul>
-                  <li><a href="contact.html">Contact Us</a></li>
-                  <li><a href="#signup">Create account</a></li>
-                  <li><a href="#learn">Care Center</a></li>
-                  <li><a href="#feedback">Site Feedack</a></li>
+                  <li><a href="about.html">Publications</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="services.html">Research</a></li>
+                  <li><a href="#pricing">Flowers</a></li>
                 </ul>
               </div>
-              <div class="col-sm-4 footer-list-28 mt-5">
-                <h6 class="footer-title-28">Support</h6>
+              <div class="col-sm-3 col-6 footer-list-28 mt-5">
+                <h6 class="footer-title-28">Quick Links</h6>
                 <ul>
-                  <li><a href="#URL">All Dogs</a></li>
-                  <li><a href="#URL">Care Advices</a></li>
+                  <li><a href="contact.html">ICAR</a></li>
+                  <li><a href="#signup">IASRI</a></li>
+                  <li><a href="#learn">DARE</a></li>
+                  <li><a href="#feedback">NHB</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-3 col-6 footer-list-28 mt-5">
+                <h6 class="footer-title-28">Quick Links</h6>
+                <ul>
+                  <li><a href="contact.html">NMHS</a></li>
+                  <li><a href="#signup">ICAR WEBMAIL</a></li>
+                  <li><a href="#learn">IARI</a></li>
+                  <li><a href="#feedback">HYPM</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-3 col-6 footer-list-28 mt-5">
+                <h6 class="footer-title-28">Quick Links</h6>
+                <ul>
+                  <li><a href="#URL">KIRAN</a></li>
+                  <li><a href="#URL">RTI</a></li>
                   <li><a href="#URL">Care Support</a></li>
-                  <li><a href="#URL">Veterinary Help</a></li>
+                  <li><a href="#URL">ICAR ERP</a></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+    <center>  <h6 style="color:green">Last Updated on : 12-May-2021</h6>  </center> 
 
       <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
         <div class="container">
@@ -86,7 +98,6 @@
       </div>
     </div>
   </footer>
-
   <!-- move top -->
   <button onclick="topFunction()" id="movetop" title="Go to top">
     &#10548;
@@ -96,7 +107,6 @@
     window.onscroll = function () {
       scrollFunction()
     };
-
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("movetop").style.display = "block";
@@ -123,33 +133,29 @@
   });
 </script>
 <!-- disable body scroll which navbar is in active -->
-
-  <!-- Template JavaScript -->
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
+<!-- Template JavaScript -->
   <script src="assets/js/theme-change.js"></script>
   <script src="assets/js/owl.carousel.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-
   <!-- script for banner slider-->
   <script>
     $(document).ready(function () {
       $('.owl-one').owlCarousel({
         loop: true,
         margin: 0,
-        nav: true,
+        nav: false,
         responsiveClass: true,
         autoplay: true,
         autoplayTimeout: 5000,
         autoplaySpeed: 1000,
-        autoplayHoverPause: true,
+        autoplayHoverPause: false,
         responsive: {
           0: {
             items: 1,
-            nav: true
+            nav: false
           },
           480: {
             items: 1,
-            nav: true
+            nav: false
           },
           667: {
             items: 1,
@@ -163,7 +169,6 @@
       })
     })
   </script>
-  <!-- //script -->
   <!-- script for tesimonials carousel slider -->
 <script>
   $(document).ready(function () {
@@ -180,16 +185,16 @@
       responsive: {
         0: {
           items: 1,
-          nav: false
+          nav: true
         },
         736: {
           items: 1,
-          nav: false
+          nav: true
         },
         1000: {
           items: 2,
-          nav: false,
-          loop: false
+          nav: true,
+          loop: true
         }
       }
     })
@@ -243,6 +248,7 @@
 <!-- //video popup -->
 <script>
   $(document).ready(function(){
+   
     // if (document.addEventListener) {
     //     document.addEventListener('contextmenu', function(e) {
     //         alert("Right click disabled !"); //here you draw your own menu
@@ -348,5 +354,6 @@
 	});
 </script>
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ 
 </body>
 </html>

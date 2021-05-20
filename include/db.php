@@ -1,8 +1,7 @@
 <?php 	
-
 $localhost = "localhost";
 $username = "root";
-$password = "";
+$password = "pritz";
 $dbname = "nrconewdb";
  // db connection
 $connect = new mysqli($localhost, $username, $password, $dbname);
@@ -13,5 +12,4 @@ if($connect->connect_error) {
 } else {
   //echo "Successfully connected";
 }
-
 ?>
