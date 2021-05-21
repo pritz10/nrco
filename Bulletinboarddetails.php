@@ -4,8 +4,7 @@
           <h2 class="title">Bulletin Board</h2>
 </section>
 <div class="container"> 
-<div class="col-9">
-<div class="area-box mb-lg-0 shadow" style="padding:10px;">
+ <div class="area-box mb-lg-0 shadow" style="padding:10px;">
                                      
                                     <div class="table-responsive">
 
@@ -43,8 +42,7 @@
 
     </div>
     </div>
-    </div>
- </div>
+  </div>
  
 <?php require_once 'include/footer.php'; ?>
 

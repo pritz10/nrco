@@ -28,7 +28,7 @@
     <div class="companies20-content">
       <div class="owl-one owl-carousel owl-theme">
       <?php
-          $sql = "select * from nrconewdb.mainslider";  
+          $sql = "select * from nrconewdb.mainslider ORDER BY id DESC LIMIT 5";  
           $result = mysqli_query($connect, $sql); 
           $count = mysqli_num_rows($result);  
           if($count > 0)

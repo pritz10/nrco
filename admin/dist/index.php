@@ -66,7 +66,8 @@
                         Step 2: Give a description about the image not more than 2 lines. <br>
                         Step 3: Upload a image of 1600*1000 Pixels. <br>
                         Step 4: Check spellings and image preview in the Live preview. <br>
-                        Step 5: Click on Upload button and wait.
+                        Step 5: Click on Upload button and wait.<br>
+                        Link: <a href="https://convert-my-image.com/imageconverter" target="blank">IMAGE RESIZER</a>
                         </div>
       </div>
       <div class="modal-footer">

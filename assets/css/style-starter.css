@@ -15002,8 +15002,8 @@ nav ul li a:hover {
   left: 0;
   right: 0;
   z-index: -1;
-  background-color: #0c0c0c;
-  opacity: .2;
+  background-color: #ff7300;
+  opacity: .05;
 }
 
 @media (max-width:1200px) {

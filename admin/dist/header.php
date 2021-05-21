@@ -11,13 +11,12 @@
         <title>NCRO</title>
         <link href="css/styles.css" rel="stylesheet" />
         <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
- 
-     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+        <link href="css/bootstrap.css" rel="stylesheet" />
 <script>
 $(document).ready(function() {
-    $('#example').DataTable({
+    $('#dataTable').DataTable({
      
     });
   

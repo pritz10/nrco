@@ -12,18 +12,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--CSS-->
     <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/css/style-starter.css">
-     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
-     <script src="assets/js/jquery-3.5.1.min.js"></script>
 
-     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+     <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+     <script src="assets/js/jquery-3.5.1.min.js"></script>
+     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
 <script>
 $(document).ready(function() {
     $('#example').DataTable({
-      "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+      "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+      columnDefs: [
+            { width: '15%', targets:3,
+              width: '12%', targets:1 }
+        ],
+        fixedColumns: true
     });
   
 } );</script>
@@ -49,7 +53,7 @@ $(document).ready(function() {
             </span>
       <span class="fa fa-font" style="color: white;"> 
           <a class="increase">+ </a> |
-          <a class="decrease">- </a> |
+          <a class="decrease">--</a> |
           <a class="reset">reset</a>
         </span>
       </div> 
@@ -104,16 +108,10 @@ $(document).ready(function() {
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="about_nrco.php">About NRCO</a>
                       <a class="dropdown-item" href="#">Organization Setup</a>
-                      <a class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
-                      <div class="dropdown-menu ">
-                        <a href="#" class="dropdown-item">Library Services</a>
-                        <a href="#" class="dropdown-item">Guest House</a>
-                        <a href="#" class="dropdown-item">Lab</a>
-                      </div>
-                      <a class="dropdown-item" href="#">Staffs</a>
+                      <a class="dropdown-item" href="Staff.php">Staffs</a>
                       <a class="dropdown-item" href="regional_sub-centres.php">Regional/ Sub Centres</a>
                       <a class="dropdown-item" href="admin\dist\uploads\ICAR-NRCO-At-a-Glance.pdf">Institute as a glance</a>
-                        <a class="dropdown-item" href="#">Former Directors</a>    
+                        <a class="dropdown-item" href="FormerDirectors.php">Former Directors</a>    
   
                      
                     </div>
@@ -124,23 +122,21 @@ $(document).ready(function() {
                   Services
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
+                      <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Library Services</a>
+                        <a href="#" class="dropdown-item">Guest House</a>
+                         <a class="dropdown-item" href="#">SAIF</a>
+                      <a class="dropdown-item" href="#">Labrotaries</a> 
+                         </div>
                       <a class="dropdown-item" href="#">Training</a>
                       <a class="dropdown-item" href="#">Consultancy</a>
                       <a class="dropdown-item" href="#">NAGS</a>
                       <a class="dropdown-item" href="#">Library</a>
+                      <a class="dropdown-item" href="#">SAIF</a>
+                      <a class="dropdown-item" href="#">Labrotaries</a>
                       <a class="dropdown-item" href="#">Seminar Hall</a>
-                      <a class="dropdown-item" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
-                      <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item">Library Services</a>
-                        <a href="#" class="dropdown-item">Guest House</a>
-                        <a href="#" class="dropdown-item">Lab</a>
-                        <a class="dropdown-item" href="#" id="ps" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Facilities</a>
-                      <div class="dropdown-menu" aria-labelledby="ps">
-                        <a href="#" class="dropdown-item">Library Services</a>
-                        <a href="#" class="dropdown-item">Guest House</a>
-                        <a href="#" class="dropdown-item">Lab</a>
-                      </div>
-                      </div>
+                      
                     </div>
                   </li>
                 
@@ -164,15 +160,7 @@ $(document).ready(function() {
                       <a class="dropdown-item" href="#">Technical Publications</a>            
                     </div>
                   </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   Facilities
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">SAIF</a>
-                      <a class="dropdown-item" href="#">Labrotaries</a>            
-                    </div>
-                  </li>
+                  
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                    Outreach
