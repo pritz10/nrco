@@ -4,10 +4,13 @@
           <h2 class="title">Bulletin Board</h2>
 </section>
 <div class="container"> 
+
  <div class="area-box mb-lg-0 shadow" style="padding:10px;">
                                      
                                     <div class="table-responsive">
-
+                                    <div class="alert alert-warning" role="alert" style="margin:10px;">
+  Search for any events, opportunity,tender, date, year etc...
+</div>
                                     <table id="example"  class="table table-hover table-bordered">
         <thead class="thead-dark">
             <tr>
@@ -27,7 +30,7 @@
                                 echo "<tr>";
                                 echo"  
                                 <td>".$row["Id"]."</td> <td>".$row["Tags"]."</td>";              
-                               echo '<td><a href="admin/dist/'.$row['PdfUrl'].'"target="_blank">  '.$row['Name'].'</li></a></td>';  
+                               echo '<td><strong><a href="admin/dist/'.$row['PdfUrl'].'"target="_blank">  '.$row['Name'].'</li></a></strong></td>';  
 
                                echo"  
                                 <td>".$row["Date"]."</td>";

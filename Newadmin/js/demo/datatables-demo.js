@@ -1,17 +1,12 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
-  $('#dataTable').DataTable();
+  $('#dataTable').DataTable({
+    buttons: [
+      'copy', 'excel', 'pdf'
+  ]
+  });
 
-  $('#dataTable').Tabledit({
-    url: 'action.php',
-    columns: {
-        identifier: [0, 'Id'],
-        editable: [[2, 'Title']]
-        
-        
-    },
-  
-});
+   
 
 });
 

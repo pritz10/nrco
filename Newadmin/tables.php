@@ -387,7 +387,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Bulletin Board Previous Posts</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -398,6 +398,8 @@
                                             <th>Category</th>
                                             <th>Title</th>
                                             <th>UploadDate</th>
+                                            <th>Action</th>
+
                                            
 
                                         </tr>
@@ -408,6 +410,8 @@
                                             <th>Category</th>
                                             <th>Title</th>
                                             <th>UplpadDate</th>
+                                            <th>Action</th>
+
                                           
                                         </tr>
                                     </tfoot>
@@ -438,7 +442,14 @@
                                         echo "<td>".$row["Name"]."</td>";  
                                         echo"  
                                         <td>".$row["Date"]."</td>"; 
-                                        
+                                        echo"<td>
+                                            <div class='btn-group'>
+                                            <a class='btn btn-outline-info btn-sm'><i class='fas fa-pen'></i></a>
+
+                                            <a class='btn btn-outline-danger btn-sm'><i class='fas fa-trash'></i></a>
+
+                                            </div>
+                                        </td>";
                                         echo "</tr>";
 
 
