@@ -73,7 +73,7 @@
        </div>
       </div> 
     <div class="grids-area-hny main-cont-wthree-fea row">      
-      <div class="col-lg-6 col-sm-6 grids-feature  mb-4">
+      <div class="col-lg-6 col-sm-12 grids-feature  mb-4">
         <a href="Bulletinboarddetails.php" class="list-group-item list-group-item-action flex-column align-items-start active">
    <div class="d-flex w-100 justify-content-between">
      <h5 class="mb-1"><span class="fa fa-newspaper-o"></span> News / Events </h5>
@@ -88,7 +88,7 @@
                      {  
                           while($row = mysqli_fetch_array($result))  
                           {  
-                               echo '<a href="admin/dist/'.$row['PdfUrl'].'"target="_blank" class="marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'].'</li></a>';  
+                               echo '<a href="admin/dist/'.$row['PdfUrl'].'"target="_blank" class="marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'].'<span class="badge badge-pill badge-danger">'.$row['Date'].'</span></li></a>';  
                           }  
                      } 
                      else

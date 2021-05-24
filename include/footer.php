@@ -34,13 +34,13 @@
                   </a>
                 </li>
                 <li class="dribbble">
-                  <a href="#link" title="Dribbble">
-                    <span class="fa fa-dribbble" aria-hidden="true"></span>
+                  <a href="#link" title="Youtube">
+                    <span class="fa fa-youtube-play" aria-hidden="true"></span>
                   </a>
                 </li>
                 <li class="google">
-                  <a href="#link" title="Google">
-                    <span class="fa fa-google" aria-hidden="true"></span>
+                  <a href="#link" title="Instagram">
+                    <span class="fa fa-instagram" aria-hidden="true"></span>
                   </a>
                 </li>
               </ul>

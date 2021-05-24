@@ -6,7 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>NRCO</title>
+  <title>ICAR-NRC for Orchids</title>
   <META NAME="DESCRIPTION" CONTENT="The ICAR-National Research Centre for Orchids, Sikkim was established by Indian Council of Agricultural Research, New Delhi on 5th October 1996 based on the recommendations of the Planning Commission during VIIIth Five Year Plan. The basic objective for setting up this centre was to provide research support to upcoming orchid industry, conserve and use orchid genetic resources available in the country.">
   <META NAME="KEYWORDS" CONTENT="Sikkim, Darjeeling, ICAR, NRCO, Orchids, Orchid, Gangtok,ICAR-NRC for Orchids">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,12 +49,12 @@ $(document).ready(function() {
       <div class="social-top col-6 " style="font-size: 14px;" >
           </span>
           <span class="fa fa-book top_li1" style="color: white;"> 
-            <a href="Screenreader.html" style="color: white;">Screen Reader</a>  |
+            <a href="Screenreader.html" style="color: white;" data-toggle="tooltip" data-placement="top" title="Screen Reader">Screen Reader</a>  |
             </span>
       <span class="fa fa-font" style="color: white;"> 
-          <a class="increase">+ </a> |
-          <a class="decrease">--</a> |
-          <a class="reset">reset</a>
+          <a class="increase" data-toggle="tooltip" data-placement="top" title="Increase Font Size!">+ </a> |
+          <a class="decrease" data-toggle="tooltip" data-placement="top" title="Decrease Font Size!">--</a> |
+          <a class="reset"data-toggle="tooltip" data-placement="top" title="Original Size">reset</a>
         </span>
       </div> 
     </header>
