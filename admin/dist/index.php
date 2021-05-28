@@ -1,6 +1,4 @@
 <?php require_once 'header.php'; ?>
-
-
            <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">

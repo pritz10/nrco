@@ -434,18 +434,40 @@
                                         {  ?>
 
 
+
+
+
                                             <tr>
 							                <td><?php echo $row['Id']; ?></td>
 							                <td><?php echo $row['Tags']; ?></td>
                                             <td><?php echo $row['Name']; ?></td>
                                             <td><?php echo $row['Date']; ?></td>
                                             
-                                            <td><a  href="edit.php?Id=<?php echo $row['Id']; ?>" class='btn btn-outline-info btn-sm'data-toggle='modal' data-target='#update<?php echo $row['Id']; ?>'><i class='fas fa-pen'></i></a>
+                                            <td><a   class='btn btn-outline-info btn-sm'data-toggle='modal' data-target='#update<?php echo $row['Id']; ?>'><i class='fas fa-pen'></i></a>
                                             
-                                            <a class='btn btn-outline-danger btn-sm'data-toggle='modal' data-target='#delete'><i class='fas fa-trash'></i></a>
+                                             <a   class='btn btn-outline-danger btn-sm'data-toggle='modal' data-target='#delete<?php echo $row['Id']; ?>'><i class='fas fa-trash'></i></a>
                                             </td>
 							                </tr>
-                                            
+                                             <!-- Delete Modal-->
+                                                <div class="modal fade" id="delete<?php echo $row['Id']; ?>" tabindex="-1" role="dialog" aria-labelledby="delete"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="delete">Are you sure you want to delete?</h5>
+                                                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">×</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">Select "Delete" below if you are ready to delete:<br> <strong> <?php echo $row['Name']; ?></div></strong>
+                                                            <div class="modal-footer">
+                                                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                                                <a class="btn btn-danger" href="login.html">Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <!-- Update Modal-->
                                             <div class="modal fade" id="update<?php echo $row['Id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                                                 aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
@@ -475,9 +497,7 @@
                                                 </div>
                                             </div>
 
-                                            <?php
-                                               
-                                               
+                                            <?php 
                                             }
                                             ?>
                                   
@@ -533,45 +553,8 @@
             </div>
         </div>
     </div>
-      <!--Update Modal -->
-      <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Details</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-     <!-- Delete Modal-->
-     <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="delete"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="delete">Are you sure you want to delete?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Delete" below if you are ready to delete.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="login.html">Delete</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+      
+    
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

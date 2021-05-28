@@ -88,7 +88,7 @@
                      {  
                           while($row = mysqli_fetch_array($result))  
                           {  
-                               echo '<a href="admin/dist/'.$row['PdfUrl'].'"target="_blank" class="marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'].'<span class="badge badge-pill badge-danger">'.$row['Date'].'</span></li></a>';  
+                               echo '<a href="admin/dist/'.$row['PdfUrl'].'"target="_blank" class="marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'] .'<span class="badge badge-pill badge-danger">' .$row['Date'].'</span></li></a>';  
                           }  
                      } 
                      else
