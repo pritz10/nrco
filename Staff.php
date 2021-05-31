@@ -19,24 +19,14 @@
         <div class="col-lg-3 col-6 team-wrap">
           <div class="team-info text-center">
             <div class="column position-relative">
-              <a href="#url"><img src="assets/images/team1.jpg" alt=""
+              <a href="#url"><img src="assets/images/user.png" alt=""
                   class="img-fluid team-image" /></a>
             </div>
             <div class="column">
-              
-              <h3 class="name-pos"> Micheal Wagou</h3>
-              <p>Training </p>
-              <div class="social">
-                <div class="social-left">
-                  <a href="#facebook" class="facebook"><span class="fa fa-facebook"
-                      aria-hidden="true"></span></a>
-                  <a href="#twitter" class="twitter"><span class="fa fa-twitter"
-                      aria-hidden="true"></span></a>
-                  <a href="#linkedin"><span class="fa fa-linkedin" aria-hidden="true"></span></a>
-               
-                </div>
-
-              </div>
+              <h3 class="name-pos"> Kalaivanan N.S</h3>
+              <p>Training </p>  
+              <a href="tel:03592267031">0359221658</a> <br>
+              <a href="mailto:kalaivanan.s@icar.gov.in"> kalaivanan.s@icar.gov.in </a> 
             </div>
           </div>
         </div>

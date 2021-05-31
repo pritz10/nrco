@@ -7,7 +7,7 @@
     $description = $_POST['description'];
      $created_date = date("m-d-y");
     // destination of the file on the server
-    $destination = 'files/Images/' . $filename;
+    $destination = 'files/images/' . $filename;
 
     // get the file extension
     $extension = pathinfo($filename, PATHINFO_EXTENSION);
@@ -162,7 +162,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"> <a href="">Counters</a> </div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"> <a href="Counter.php">Counters</a> </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm mr-2">
@@ -209,7 +209,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
    <!-- Card Header - Accordion -->
     <a href="#messagedata" style="color: white;" class="d-block card-header py-3" data-toggle="collapse"
      role="button" aria-expanded="true" aria-controls="as">
- <h6 class="m-0 font-weight-bold text-primary">Upload Slider Images</h6>
+ <h6 class="m-0 font-weight-bold text-white">Upload Slider Images</h6>
                                 </a>
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse show " id="messagedata">
@@ -240,7 +240,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
           <!-- Card Header - Accordion -->
           <div class="card shadow mb-4">
           <a href="#messagedata" class="d-block card-header py-3" data-toggle="collapse"                                    role="button" aria-expanded="true" aria-controls="as">
-                                    <h6 class="m-0 font-weight-bold text-primary">Live Preview</h6>
+                                    <h6 class="m-0 font-weight-bold text-white">Live Preview</h6>
                                 </a>
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse show" id="messagedata">
@@ -285,10 +285,9 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
 </div>
 
 <div class="card shadow mb-4">
-    
     <a href="#dataprevious" class="d-block card-header py-3" data-toggle="collapse"
                                     role="button" aria-expanded="true" aria-controls="dataprevious">
-                                    <h6 class="m-0 font-weight-bold text-primary">Previous Posts</h6>
+                                    <h6 class="m-0 font-weight-bold text-white">Previous Posts</h6>
                                 </a>
                                 <div class="collapse" id="dataprevious">
     <div class="card-body">
@@ -381,11 +380,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                     <div class="modal-footer">
                                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                          <button type="submit" value="delete"  name="submit" class="btn btn-danger" id="upload-file"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                                    
-
                                         </div>
-                                     </form>
-                                         
+                                     </form> 
                                     </div>
                                 </div>
                             </div>

@@ -20,7 +20,7 @@
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/dataTables.bootstrap4.min.js"></script>
 <script>
-$(document).ready(function() {
+$(document).ready(function(){
     $('#example').DataTable({
       "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
       columnDefs: [
@@ -29,9 +29,7 @@ $(document).ready(function() {
         ],
         fixedColumns: true
     });
-  
 } );</script>
-   
 </head>
 
 <body class="resizable">

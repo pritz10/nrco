@@ -39,7 +39,7 @@
         <div class="item">
           <li>     
              
-          <div class="slider-info banner-view bg bg2 img-fluid radius-image video-popup-image" style="background: url('admin/dist/<?php  echo $row['ImageUrl'];?>'); background-repeat:no-repeat; background-size: cover;">
+          <div class="slider-info banner-view bg bg2 img-fluid radius-image video-popup-image" style="background: url('enIN841IN841/<?php  echo $row['ImageUrl'];?>'); background-repeat:no-repeat; background-size: cover;">
 
                <div class="banner-info">
                 <div class="container">
@@ -242,7 +242,7 @@ Transfer of technology and capacity building of stakeholders for enhancing and s
    
       <div class="cwp4-image col-lg-6 pl-lg-5 mb-lg-0 mb-5">
         <div class="text-center">
-        <img src="admin/dist/<?php echo $data['ImageUrl']; ?>" class="img-curve img-fluid" alt="" />
+        <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" class="img-curve img-fluid" alt="" />
 
           <h5><?php echo $data['Name']; ?></h5>
           <p><?php echo $data['Designation']; ?></p>
