@@ -24,7 +24,7 @@
             </div>
             <div class="column">
               <h3 class="name-pos"> Kalaivanan N.S</h3>
-              <p>Training </p>  
+              <p>Scientist (Plant Pathologist) </p>  
               <a href="tel:03592267031">0359221658</a> <br>
               <a href="mailto:kalaivanan.s@icar.gov.in"> kalaivanan.s@icar.gov.in </a> 
             </div>

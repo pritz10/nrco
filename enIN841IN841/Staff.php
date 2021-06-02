@@ -70,13 +70,16 @@
 if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
 {
     $name = $_POST['update_name'];
+    $rank = $_POST['update_rank'];
     $uid = $_POST['id'];
     $designation = $_POST['update_designation'];
-    $message = $_POST['update_message'];
+    $email = $_POST['update_email'];
+    $phone = $_POST['update_phone'];
     $created_date = date("m-d-y ");
-    $sql = "UPDATE nrconewdb.director_message set Name='$name', Designation='$designation', Message='$message', Date='$created_date' where id='$uid'";
+    $sql = "UPDATE staff set Name='$name', Designation='$designation', Phone='$phone', Email='$email', Rank='$rank', Date='$created_date' where id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){
+ 
         echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">
         <i class="fas fa-save text-success"></i><strong> Successfully Updated.</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -95,7 +98,9 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
  
     }
     else {
+
         echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        
         <strong>SERVER BUSY</strong>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -107,8 +112,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
 if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
 {
      
-    $uid = $_POST['id'];   
-    $sql = "DELETE FROM nrconewdb.director_message where id='$uid'";
+    $uid = $_POST['Id'];   
+    $sql = "DELETE FROM nrconewdb.director_message where Id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){
         echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -277,377 +282,46 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                 <div class="collapse" id="dataprevious1">
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="staff" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Image</th>
                         <th>Name</th>
                         <th>Designation</th>
-                        <th>Message</th>
-                        <th>UploadDate</th>
+                        <th>Category</th>
+                        <th>Date</th>                
+
                         <th>Action</th>                
                     </tr>
                 </thead>
-                
-               <tbody>
-               <?php  
-               
-                    $sql = "SELECT * FROM director_message";  
-                    $result = mysqli_query($connect, $sql);  
-
-                    while($row = mysqli_fetch_assoc($result))  
-                    {  ?>
-                        <tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><img  src="<?php echo $row['ImageUrl']; ?>" class="img-thumbnail" alt="Image will appear here" /></td>
-                        <td><?php echo $row['Name']; ?></td>
-                        <td><?php echo $row['Designation']; ?></td>
-                        <td><?php echo $row['Message']; ?></td>
-                        <td><?php echo $row['Date']; ?></td>
-                        <td><div class="btn-group" role="group" aria-label="Basic"><a class='btn btn-outline-success btn-sm'data-toggle='modal' data-target='#update<?php echo $row['id']; ?>'><i class='fas fa-pen'></i></a>
-                         <a   class='btn btn-outline-danger btn-sm'data-toggle='modal' data-target='#delete<?php echo $row['id']; ?>'><i class='fas fa-trash'></i></a>
-                        </div></td>
-                        </tr>
-                         
-                        <!-- Update Modal-->
-                        <div class="modal fade" id="update<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-primary" id="exampleModalLabel">Edit Details</h5>
-                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                    <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                            <label for="title">Name</label>
-                                            <input type="text" name="update_name"  class="form-control" id="title" value="<?php echo $row['Name']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Designation</label>
-                                           <input type="text" name="update_designation"   class="form-control" id="title" value="<?php echo $row['Designation']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Message</label>
-                                            <input input type="text" name="update_message" rows="3" class="form-control" id="title" value="<?php echo $row['Message']; ?>"aria-describedby="emailHelp"  placeholder="Enter title"></input>
-                                        </div> 
-                                        
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="update"  name="submit" class="btn btn-success" id="upload-file"><i class="fa fa-save" aria-hidden="true"></i> Save changes</button>
-                                        </div>
-                                     </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Delete Modal-->
-                        <div class="modal fade" id="delete<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="delete"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-primary" id="delete">Are you sure you want to delete?</h5>
-                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body text-danger">Select "Delete" below if you are ready to delete:<br> 
-                                        <strong> <?php echo $row['Name']; ?> <br>
-                                        <strong> <?php echo $row['Designation']; ?> <br>
-                                        <strong> <?php echo $row['Message']; ?></strong></strong>
-                                      
-                                        <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                          </div> 
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="delete"  name="submit" class="btn btn-danger" id="upload-file"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                                    
-
-                                        </div>
-                                     </form>
-                                         
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        <?php 
-                        }
-                        ?>
-               </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-</div>
-<div class="card shadow mb-4">
-    
-    <a href="#dataprevious2" class="d-block card-header py-3" data-toggle="collapse"
-                                    role="button" aria-expanded="true" aria-controls="dataprevious2s">
-                                    <h6 class="m-0 font-weight-bold text-white">Scientists</h6>
-                                </a>
-                                <div class="collapse" id="dataprevious2">
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Image</th>
+                <tfoot>
+            <tr>
+            <th>Id</th>
                         <th>Name</th>
                         <th>Designation</th>
-                        <th>Message</th>
-                        <th>UploadDate</th>
-                        <th>Action</th>                
+                        <th>Category</th>
+                        <th>Date</th>  
+                        <th>Action</th>                   
+                 
                     </tr>
-                </thead>
-                
+        </tfoot>
                <tbody>
                <?php  
                
-                    $sql = "SELECT * FROM director_message";  
-                    $result = mysqli_query($connect, $sql);  
-
-                    while($row = mysqli_fetch_assoc($result))  
-                    {  ?>
-                        <tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><img  src="<?php echo $row['ImageUrl']; ?>" class="img-thumbnail" alt="Image will appear here" /></td>
-                        <td><?php echo $row['Name']; ?></td>
-                        <td><?php echo $row['Designation']; ?></td>
-                        <td><?php echo $row['Message']; ?></td>
-                        <td><?php echo $row['Date']; ?></td>
-                        <td><div class="btn-group" role="group" aria-label="Basic"><a class='btn btn-outline-success btn-sm'data-toggle='modal' data-target='#update<?php echo $row['id']; ?>'><i class='fas fa-pen'></i></a>
-                         <a   class='btn btn-outline-danger btn-sm'data-toggle='modal' data-target='#delete<?php echo $row['id']; ?>'><i class='fas fa-trash'></i></a>
-                        </div></td>
-                        </tr>
-                         
-                        <!-- Update Modal-->
-                        <div class="modal fade" id="update<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-primary" id="exampleModalLabel">Edit Details</h5>
-                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                    <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                            <label for="title">Name</label>
-                                            <input type="text" name="update_name"  class="form-control" id="title" value="<?php echo $row['Name']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Designation</label>
-                                           <input type="text" name="update_designation"   class="form-control" id="title" value="<?php echo $row['Designation']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Message</label>
-                                            <input input type="text" name="update_message" rows="3" class="form-control" id="title" value="<?php echo $row['Message']; ?>"aria-describedby="emailHelp"  placeholder="Enter title"></input>
-                                        </div> 
-                                        
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="update"  name="submit" class="btn btn-success" id="upload-file"><i class="fa fa-save" aria-hidden="true"></i> Save changes</button>
-                                        </div>
-                                     </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Delete Modal-->
-                        <div class="modal fade" id="delete<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="delete"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-primary" id="delete">Are you sure you want to delete?</h5>
-                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body text-danger">Select "Delete" below if you are ready to delete:<br> 
-                                        <strong> <?php echo $row['Name']; ?> <br>
-                                        <strong> <?php echo $row['Designation']; ?> <br>
-                                        <strong> <?php echo $row['Message']; ?></strong></strong>
-                                      
-                                        <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                          </div> 
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="delete"  name="submit" class="btn btn-danger" id="upload-file"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                                    
-
-                                        </div>
-                                     </form>
-                                         
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        <?php 
-                        }
-                        ?>
-               </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-</div>
-<div class="card shadow mb-4">
-    
-    <a href="#dataprevious3" class="d-block card-header py-3" data-toggle="collapse"
-                                    role="button" aria-expanded="true" aria-controls="dataprevious3">
-                                    <h6 class="m-0 font-weight-bold text-white">Administrative Staff</h6>
-                                </a>
-                                <div class="collapse" id="dataprevious3">
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-
-                        <th>Id</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Designation</th>
-                        <th>Message</th>
-                        <th>UploadDate</th>
-                        <th>Action</th>                
-                    </tr>
-                </thead>
-                
-               <tbody>
-               <?php  
-               
-                    $sql = "SELECT * FROM director_message";  
-                    $result = mysqli_query($connect, $sql);  
-
-                    while($row = mysqli_fetch_assoc($result))  
-                    {  ?>
-                        <tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><img  src="<?php echo $row['ImageUrl']; ?>" class="img-thumbnail" alt="Image will appear here" /></td>
-                        <td><?php echo $row['Name']; ?></td>
-                        <td><?php echo $row['Designation']; ?></td>
-                        <td><?php echo $row['Message']; ?></td>
-                        <td><?php echo $row['Date']; ?></td>
-                        <td><div class="btn-group" role="group" aria-label="Basic"><a class='btn btn-outline-success btn-sm'data-toggle='modal' data-target='#update<?php echo $row['id']; ?>'><i class='fas fa-pen'></i></a>
-                         <a   class='btn btn-outline-danger btn-sm'data-toggle='modal' data-target='#delete<?php echo $row['id']; ?>'><i class='fas fa-trash'></i></a>
-                        </div></td>
-                        </tr>
-                         
-                        <!-- Update Modal-->
-                        <div class="modal fade" id="update<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-primary" id="exampleModalLabel">Edit Details</h5>
-                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                    <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                            <label for="title">Name</label>
-                                            <input type="text" name="update_name"  class="form-control" id="title" value="<?php echo $row['Name']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Designation</label>
-                                           <input type="text" name="update_designation"   class="form-control" id="title" value="<?php echo $row['Designation']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Message</label>
-                                            <input input type="text" name="update_message" rows="3" class="form-control" id="title" value="<?php echo $row['Message']; ?>"aria-describedby="emailHelp"  placeholder="Enter title"></input>
-                                        </div> 
-                                        
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="update"  name="submit" class="btn btn-success" id="upload-file"><i class="fa fa-save" aria-hidden="true"></i> Save changes</button>
-                                        </div>
-                                     </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Delete Modal-->
-                        <div class="modal fade" id="delete<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="delete"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-primary" id="delete">Are you sure you want to delete?</h5>
-                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body text-danger">Select "Delete" below if you are ready to delete:<br> 
-                                        <strong> <?php echo $row['Name']; ?> <br>
-                                        <strong> <?php echo $row['Designation']; ?> <br>
-                                        <strong> <?php echo $row['Message']; ?></strong></strong>
-                                      
-                                        <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                          </div> 
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="delete"  name="submit" class="btn btn-danger" id="upload-file"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                                    
-
-                                        </div>
-                                     </form>
-                                         
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        <?php 
-                        }
-                        ?>
-               </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-</div>
-<div class="card shadow mb-4">
-    
-    <a href="#dataprevious4" class="d-block card-header py-3" data-toggle="collapse"
-                                    role="button" aria-expanded="true" aria-controls="dataprevious4">
-                                    <h6 class="m-0 font-weight-bold text-white">Technical Staffs</h6>
-                                </a>
-                                <div class="collapse" id="dataprevious4">
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Designation</th>
-                        <th>Action</th>                
-                    </tr>
-                </thead>
-                
-               <tbody>
-               <?php  
-               
-                    $sql = "SELECT * FROM staff where Category='Technical Staffs'";  
+                    $sql = "SELECT * FROM staff ORDER BY Id DESC";  
                     $result = mysqli_query($connect, $sql);  
 
                     while($row = mysqli_fetch_assoc($result))  
                     {  ?>
                         <tr>
                         <td><?php echo $row['Rank']; ?></td>
-                        <td><img  src="<?php echo $row['ImageUrl']; ?>" class="img-thumbnail" alt="Image will appear here" /></td>
-                        <td><?php echo $row['Name']; ?></td>
+                         <td><?php echo $row['Name']; ?></td>
                         <td><?php echo $row['Designation']; ?></td>
-                         <td><div class="btn-group" role="group" aria-label="Basic"><a class='btn btn-outline-success btn-sm'data-toggle='modal' data-target='#update<?php echo $row['Id']; ?>'><i class='fas fa-pen'></i></a>
+
+                         <td><?php echo $row['Category']; ?></td>
+                         <td><?php echo $row['Date']; ?></td>
+
+                        <td><div class="btn-group" role="group" aria-label="Basic"><a class='btn btn-outline-success btn-sm'data-toggle='modal' data-target='#update<?php echo $row['Id']; ?>'><i class='fas fa-pen'></i></a>
                          <a   class='btn btn-outline-danger btn-sm'data-toggle='modal' data-target='#delete<?php echo $row['Id']; ?>'><i class='fas fa-trash'></i></a>
                         </div></td>
                         </tr>
@@ -664,15 +338,19 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                    <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
+                                    <form method="post" action="Staff.php" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['Id']; ?>">
+                                             <label for="title">Rank</label>
+                                            <input type="text" name="update_rank"  class="form-control" id="title" value="<?php echo $row['Rank']; ?>"aria-describedby="emailHelp"  placeholder="Enter Rank"> <br>
                                             <label for="title">Name</label>
                                             <input type="text" name="update_name"  class="form-control" id="title" value="<?php echo $row['Name']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
                                            <br> <label for="Description">Designation</label>
                                            <input type="text" name="update_designation"   class="form-control" id="title" value="<?php echo $row['Designation']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Rank</label>
-                                            <input input type="text" name="update_message" rows="3" class="form-control" id="title" value="<?php echo $row['Rank']; ?>"aria-describedby="emailHelp"  placeholder="Enter title"></input>
+                                           <br> <label for="Description">Email</label>
+                                           <input type="text" name="update_email"   class="form-control" id="title" value="<?php echo $row['Email']; ?>"aria-describedby="emailHelp"  placeholder="Enter email">
+                                           <br> <label for="Description">Phone</label>
+                                           <input type="text" name="update_phone"   class="form-control" id="title" value="<?php echo $row['Phone']; ?>"aria-describedby="emailHelp"  placeholder="Enter Phone">
                                         </div> 
                                         
                                     </div>
@@ -698,121 +376,6 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         <div class="modal-body text-danger">Select "Delete" below if you are ready to delete:<br> 
                                         <strong> <?php echo $row['Name']; ?> <br>
                                         <strong> <?php echo $row['Designation']; ?> <br>
-                                       
-                                        <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                          </div> 
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="delete"  name="submit" class="btn btn-danger" id="upload-file"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                                    
-
-                                        </div>
-                                     </form>
-                                         
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        <?php 
-                        }
-                        ?>
-               </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="card shadow mb-4">
-    
-    <a href="#dataprevious5" class="d-block card-header py-3" data-toggle="collapse"
-                                    role="button" aria-expanded="true" aria-controls="dataprevious5">
-                                    <h6 class="m-0 font-weight-bold text-white">Skilled Supporting Staffs</h6>
-                                </a>
-                                <div class="collapse" id="dataprevious5">
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Designation</th>
-                        <th>Message</th>
-                        <th>UploadDate</th>
-                        <th>Action</th>                
-                    </tr>
-                </thead>
-                
-               <tbody>
-               <?php  
-               
-                    $sql = "SELECT * FROM director_message";  
-                    $result = mysqli_query($connect, $sql);  
-
-                    while($row = mysqli_fetch_assoc($result))  
-                    {  ?>
-                        <tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><img  src="<?php echo $row['ImageUrl']; ?>" class="img-thumbnail" alt="Image will appear here" /></td>
-                        <td><?php echo $row['Name']; ?></td>
-                        <td><?php echo $row['Designation']; ?></td>
-                        <td><?php echo $row['Message']; ?></td>
-                        <td><?php echo $row['Date']; ?></td>
-                        <td><div class="btn-group" role="group" aria-label="Basic"><a class='btn btn-outline-success btn-sm'data-toggle='modal' data-target='#update<?php echo $row['id']; ?>'><i class='fas fa-pen'></i></a>
-                         <a   class='btn btn-outline-danger btn-sm'data-toggle='modal' data-target='#delete<?php echo $row['id']; ?>'><i class='fas fa-trash'></i></a>
-                        </div></td>
-                        </tr>
-                         
-                        <!-- Update Modal-->
-                        <div class="modal fade" id="update<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-primary" id="exampleModalLabel">Edit Details</h5>
-                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                    <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                            <label for="title">Name</label>
-                                            <input type="text" name="update_name"  class="form-control" id="title" value="<?php echo $row['Name']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Designation</label>
-                                           <input type="text" name="update_designation"   class="form-control" id="title" value="<?php echo $row['Designation']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Message</label>
-                                            <input input type="text" name="update_message" rows="3" class="form-control" id="title" value="<?php echo $row['Message']; ?>"aria-describedby="emailHelp"  placeholder="Enter title"></input>
-                                        </div> 
-                                        
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="update"  name="submit" class="btn btn-success" id="upload-file"><i class="fa fa-save" aria-hidden="true"></i> Save changes</button>
-                                        </div>
-                                     </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Delete Modal-->
-                        <div class="modal fade" id="delete<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="delete"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-primary" id="delete">Are you sure you want to delete?</h5>
-                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body text-danger">Select "Delete" below if you are ready to delete:<br> 
-                                        <strong> <?php echo $row['Name']; ?> <br>
-                                        <strong> <?php echo $row['Designation']; ?> <br>
                                         <strong> <?php echo $row['Message']; ?></strong></strong>
                                       
                                         <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
@@ -840,121 +403,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
     </div>
 </div>
 </div>
-<div class="card shadow mb-4">
-    
-    <a href="#dataprevious6" class="d-block card-header py-3" data-toggle="collapse"
-                                    role="button" aria-expanded="true" aria-controls="dataprevious">
-                                    <h6 class="m-0 font-weight-bold text-white">Project Staffs</h6>
-                                </a>
-                                <div class="collapse" id="dataprevious6">
-    <div class="card-body">
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Designation</th>
-                        <th>Message</th>
-                        <th>UploadDate</th>
-                        <th>Action</th>                
-                    </tr>
-                </thead>
-                
-               <tbody>
-               <?php  
-               
-                    $sql = "SELECT * FROM director_message";  
-                    $result = mysqli_query($connect, $sql);  
-
-                    while($row = mysqli_fetch_assoc($result))  
-                    {  ?>
-                        <tr>
-                        <td><?php echo $row['id']; ?></td>
-                        <td><img  src="<?php echo $row['ImageUrl']; ?>" class="img-thumbnail" alt="Image will appear here" /></td>
-                        <td><?php echo $row['Name']; ?></td>
-                        <td><?php echo $row['Designation']; ?></td>
-                        <td><?php echo $row['Message']; ?></td>
-                        <td><?php echo $row['Date']; ?></td>
-                        <td><div class="btn-group" role="group" aria-label="Basic"><a class='btn btn-outline-success btn-sm'data-toggle='modal' data-target='#update<?php echo $row['id']; ?>'><i class='fas fa-pen'></i></a>
-                         <a   class='btn btn-outline-danger btn-sm'data-toggle='modal' data-target='#delete<?php echo $row['id']; ?>'><i class='fas fa-trash'></i></a>
-                        </div></td>
-                        </tr>
-                         
-                        <!-- Update Modal-->
-                        <div class="modal fade" id="update<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-primary" id="exampleModalLabel">Edit Details</h5>
-                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                    <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                            <label for="title">Name</label>
-                                            <input type="text" name="update_name"  class="form-control" id="title" value="<?php echo $row['Name']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Designation</label>
-                                           <input type="text" name="update_designation"   class="form-control" id="title" value="<?php echo $row['Designation']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
-                                           <br> <label for="Description">Message</label>
-                                            <input input type="text" name="update_message" rows="3" class="form-control" id="title" value="<?php echo $row['Message']; ?>"aria-describedby="emailHelp"  placeholder="Enter title"></input>
-                                        </div> 
-                                        
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="update"  name="submit" class="btn btn-success" id="upload-file"><i class="fa fa-save" aria-hidden="true"></i> Save changes</button>
-                                        </div>
-                                     </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Delete Modal-->
-                        <div class="modal fade" id="delete<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="delete"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-primary" id="delete">Are you sure you want to delete?</h5>
-                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body text-danger">Select "Delete" below if you are ready to delete:<br> 
-                                        <strong> <?php echo $row['Name']; ?> <br>
-                                        <strong> <?php echo $row['Designation']; ?> <br>
-                                        <strong> <?php echo $row['Message']; ?></strong></strong>
-                                      
-                                        <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                          </div> 
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="delete"  name="submit" class="btn btn-danger" id="upload-file"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                                    
-
-                                        </div>
-                                     </form>
-                                         
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        <?php 
-                        }
-                        ?>
-               </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-</div>
+ 
 <!-- /.container-fluid -->
 
 </div>
