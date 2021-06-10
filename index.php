@@ -69,14 +69,14 @@
   <div class="container">
     <div class="middle-section text-center">
       <div class="section-width">
-    <a href="Bulletinboarddetails.php">   <h3 class="hny-title py-md-4">Bulletin Board <span class="fa fa-external-link"></h3></a> 
+        <h3 class="hny-title py-md-4">Bulletin Board <i class="fa fa-bookmark" aria-hidden="true"></i></h3> 
        </div>
       </div> 
     <div class="grids-area-hny main-cont-wthree-fea row">      
       <div class="col-lg-6 col-sm-12 grids-feature  mb-4">
-        <a href="Bulletinboarddetails.php" class="list-group-item list-group-item-action flex-column align-items-start active">
+        <a href="News.php" class="list-group-item list-group-item-action flex-column align-items-start active">
    <div class="d-flex w-100 justify-content-between">
-     <h5 class="mb-1"><span class="fa fa-newspaper-o"></span> News / Events </h5>
+     <h5 class="mb-1"><span class="fa fa-newspaper-o"></span> News / Events   </h5><i class="fa fa-expand" aria-hidden="true"></i>
    </div>
     </a>
        <ul class="list-group left shadow">
@@ -88,7 +88,7 @@
                      {  
                           while($row = mysqli_fetch_array($result))  
                           {  
-                               echo '<a href="admin/dist/'.$row['PdfUrl'].'"target="_blank" class="marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'] .'<span class="badge badge-pill badge-danger">' .$row['Date'].'</span></li></a>';  
+                               echo '<a href="enIN841IN841/'.$row['PdfUrl'].'"target="_blank" class="marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'] .'<span class="badge badge-pill badge-danger">' .$row['Date'].'</span></li></a>';  
                           }  
                      } 
                      else
@@ -98,9 +98,10 @@
       </ul>
      </div> 
      <div class="col-lg-3 col-sm-6 grids-feature mb-4 ">
-      <a href="Bulletinboarddetails.php" class="list-group-item list-group-item-action flex-column align-items-start active">
+      <a href="Opportunity.php" class="list-group-item list-group-item-action flex-column align-items-start active">
  <div class="d-flex w-100 justify-content-between">
-   <h5 class="mb-1"><span class="fa fa-line-chart"></span> Opportunity</h5>
+   <h5 class="mb-1"><span class="fa fa-line-chart"></span> Opportunity  </h5> <i class="fa fa-expand" aria-hidden="true"></i>
+
 </div>
  </a>
      <ul class="list-group left shadow">
@@ -112,7 +113,7 @@
                      {  
                           while($row = mysqli_fetch_array($result))  
                           {  
-                               echo '<a href="admin/dist/'.$row['PdfUrl'].'"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'].'</li></a>';  
+                               echo '<a href="enIN841IN841/'.$row['PdfUrl'].'"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'].'</li></a>';  
                           }  
                      } 
                      else
@@ -123,9 +124,9 @@
    </div>
       
    <div class="col-lg-3 col-sm-6 grids-feature mb-4">
-    <a href="Bulletinboarddetails.php" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <a href="Tenders.php" class="list-group-item list-group-item-action flex-column align-items-start active">
 <div class="d-flex w-100 justify-content-between">
- <h5 class="mb-1"> <span class="fa fa-paperclip"></span> Tenders</h5>
+ <h5 class="mb-1"> <span class="fa fa-paperclip"></span> Tenders </h5>  <i class="fa fa-expand" aria-hidden="true"></i>
 </div>
 
 </a>
@@ -139,7 +140,7 @@
                      {  
                           while($row = mysqli_fetch_array($result))  
                           {  
-                               echo '<a href="admin/dist/'.$row['PdfUrl'].'"target="_blank" class="marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'].'</li></a>';  
+                               echo '<a href="enIN841IN841/'.$row['PdfUrl'].'"target="_blank" class="marq"> <li class="list-group-item d-flex justify-content-between align-items-center"> '.$row['Name'].'</li></a>';  
                           }  
                      } 
                      else
@@ -167,7 +168,7 @@
                 </div>
                 <div class="history-info mt-5">
                     <div class="position-relative">
-                        <img src="assets/images/National-Research-Centre-For-Orchids.jpg" class="img-fluid radius-image video-popup-image"
+                        <img src="assets/images/National-Research-Centre-For-Orchids.jpg" loading="lazy" class="img-fluid radius-image video-popup-image"
                             alt="video-popup">
                     </div>
                 </div>
@@ -477,52 +478,6 @@ Mobile App  </a>
 
  
  
-<section class="w3l-grids1">
-    <div class="hny-three-grids">
-      <div class="container">
-       <div class="row justify-content-center">
-       <div class="col-sm-4 col-lg-2">
-            <div class="benchbox">
-              <a href="https://icar.gov.in/">   <img src="assets/images/icarlogo.jpg" alt="ICAR" class="img-responsive   text-align: center;"></a>
-         </div>  </div>
-        
-          <div class="col-sm-4 col-lg-2">
-            <div class="benchbox">
-              <a href="https://www.mygov.in/">  <img src="assets/images/mygov.jpg" alt="MY GOV" class="img-responsive"></a>
-           </div>  </div>
-        
-          <div class="col-sm-4 col-lg-2">
-            <div class="benchbox">
-              <a href="https://www.farmer.gov.in/"> <img src="assets/images/farmerportal.png" alt="FARMER PORTAL" class="img-responsive"></a>  
-           </div>
-          </div>
-        
-          <div class="col-sm-4 col-lg-2">
-            <div class="benchbox">
-              <a href="https://www.iihr.res.in/">  <img src="assets/images/iirhlogo.jpg" alt="banner" class="img-responsive">
-             </a>  
-          </div>
-          </div>
-           
-          <div class="col-sm-4 col-lg-2">
-            <div class="benchbox">
-              <a href="https://www.iihr.res.in/">  <img src="assets/images/iirhlogo.jpg" alt="banner" class="img-responsive">
-             </a>  
-          </div>
-          </div>
-        
-          <div class="col-sm-4 col-lg-2">
-            <div class="benchbox">
-              <a href="Hospitality.html">  <img src="assets/images/digitallogo.jpg" alt="banner" class="img-responsive">
-            </a>   
-          </div> 
-          </div>
-          </div>
-           
-        
-        
-      </div>
-    </div>
-  </section>
+ 
 
 <?php require_once 'include/footer.php'; ?>

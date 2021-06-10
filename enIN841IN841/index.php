@@ -125,7 +125,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                News, Events...</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-900"> <a href="">Bulletin Board</a> </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-900"> <a href="BulletinBoard.php">Bulletin Board</a> </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-blue-900"></i>

@@ -1,5 +1,11 @@
 $(document).ready(function() {
   $('#dataTable').DataTable();  
+  $('#bulletinboard').DataTable( {
+    dom: 'lBfrtip',
+    buttons: [
+        'print'
+    ]
+} );
     $('#staff').DataTable( {
         initComplete: function () {
             this.api().columns(3).every( function () {

@@ -200,7 +200,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
         <option>Administrative Staffs</option>
 
         <option>Technical Staffs</option>
-        <option>Skilled Supportinf Staffs</option>
+        <option>Skilled Supporting Staffs</option>
         <option>Project Staffs</option>
  
       </select>
@@ -213,9 +213,9 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
   
   <button type="submit" style="width: 100%;" value="upload"  name="submit" class="btn btn-primary" id="upload-file"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
 </form>
-                                 </div>
-                                    </div>
-                                </div>
+    </div>
+    </div>
+    </div>
                              
         
     </div>
@@ -234,6 +234,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                 <p id="dab"></p>
                 <p id="as"></p>
                 <p id="asfs"></p>
+                
                 <img id="blah" src="user.png" class="img-fluid" alt="Image will appear here" />
                 <script>
                     function readURL(input) 
@@ -339,6 +340,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                     </div>
                                     <div class="modal-body">
                                     <form method="post" action="Staff.php" enctype="multipart/form-data" style="padding:10px;">
+                                    
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['Id']; ?>">
                                              <label for="title">Rank</label>
@@ -352,8 +354,11 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                            <br> <label for="Description">Phone</label>
                                            <input type="text" name="update_phone"   class="form-control" id="title" value="<?php echo $row['Phone']; ?>"aria-describedby="emailHelp"  placeholder="Enter Phone">
                                         </div> 
-                                        
-                                    </div>
+                                        <div class="text-center">
+                                          <div class="spinner-border text-primary" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                          </div>
+                                        </div>
                                     <div class="modal-footer">
                                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                          <button type="submit" value="update"  name="submit" class="btn btn-success" id="upload-file"><i class="fa fa-save" aria-hidden="true"></i> Save changes</button>

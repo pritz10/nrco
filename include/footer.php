@@ -204,6 +204,12 @@
   <!-- stats number counter-->
   <script src="assets/js/jquery.waypoints.min.js"></script>
   <script src="assets/js/jquery.countup.js"></script>
+  <script src="assets/js/lightbox-plus-jquery.min.js"></script>
+  <script>
+    (function() {
+        var $gallery = new SimpleLightbox('.gallery a', {});
+    })();
+</script>
   <script>
     $('.counter').countUp();
   </script>
