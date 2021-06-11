@@ -191,8 +191,9 @@
               <a class="nav-link" href="Gallery.php">Gallery</a>
             </li>
             <li class="nav-item  ">
-              <a class="nav-link" href="Gallery.php">Payment</a>
-            </li>
+            <a data-target="#payment" data-toggle="modal"class="nav-link"
+       href="#payment">Payment</a>
+             </li>
             <li class="nav-item  ">
               <a class="nav-link" href="index.php">हिंदी</a>
             </li>

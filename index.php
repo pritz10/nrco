@@ -1,5 +1,24 @@
 <!-- Include Header -->
 <?php require_once 'include/header.php'; ?>
+<!-- Modal -->
+<div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="payment" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="payment">Note:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       You will be redirected to another website
+      </div>
+      <div class="modal-footer">
+         <button type="button" onclick="window.open('https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=3152356','_blank')" class="btn btn-primary">Okay, Proceed !</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Main Body-->
 <?php   
     $sql = "SELECT * FROM bulletin_board ORDER BY id DESC LIMIT 5";  
