@@ -87,10 +87,11 @@
     }
   </script>
 
-  <header id="site-header" class="j" style="padding-left: 10px; padding-right: 10px;">
-    <div class="container">
+  <header id="site-header" class="j"   style="background: #189A46;  
+ padding-left: 10px; padding-right: 10px;">
+    <div class=" ">
 
-      <nav class="navbar navbar-expand-lg stroke">
+      <nav class="navbar navbar-expand-lg stroke ">
 
         <a class="navbar-brand" href="index.php">NRCO
           <img src="assets/images/logo.png" alt="logo" title="" style="height:35px;" />
@@ -190,6 +191,9 @@
               <a class="nav-link" href="Gallery.php">Gallery</a>
             </li>
             <li class="nav-item  ">
+              <a class="nav-link" href="Gallery.php">Payment</a>
+            </li>
+            <li class="nav-item  ">
               <a class="nav-link" href="index.php">हिंदी</a>
             </li>
             <li class="nav-item  ">
@@ -205,13 +209,13 @@
         <div class="mobile-position">
           <nav class="navigation">
             <div class="theme-switch-wrapper">
-              <a href="#" class="nav-link" data-toggle="modal" data-target="#modalPassword"><i class="fa fa-user fa-fw fa-lg"></i></a>
+              <a href="#" class="nav-link" data-toggle="modal" data-target="#modalPassword"><i class="fa fa-user fa-fw fa-lg"  style="  color: var(--heading-color);">  </i></a>
 
               <label class="theme-switch" for="checkbox">
                 <input type="checkbox" id="checkbox">
                 <div class="mode-container">
-                  <i class="gg-sun"></i>
-                  <i class="gg-moon"></i>
+                  <i class="gg-sun" style="  color: var(--heading-color);" ></i>
+                  <i class="gg-moon" style="  color: var(--heading-color);" ></i>
                 </div>
               </label>
             </div>
