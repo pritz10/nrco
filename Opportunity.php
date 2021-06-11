@@ -38,7 +38,7 @@
                         <td><?php echo $row['Id']; ?></td>
                         <td><?php echo $row['Date']; ?></td>
 
-                        <td><?php echo '<strong><i class="fa fa-file" aria-hidden="true"></i> <a href="enIN841IN841'.$row['PdfUrl'].'"target="_blank">  '.$row['Name'].'</li></a> <i class="fa fa-download text-danger " aria-hidden="true"> </i>'; ?></td>
+                        <td><?php echo '<strong><img src="assets/images/icon.svg.png" width="30" height="auto" style="border-radius: 0px;" > <a href="enIN841IN841'.$row['PdfUrl'].'"target="_blank">  '.$row['Name'].'</li></a> <i class="fa fa-download text-danger " aria-hidden="true"> </i>'; ?></td>
                         </tr>
                                 
 

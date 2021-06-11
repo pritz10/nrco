@@ -112,8 +112,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
 if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
 {
      
-    $uid = $_POST['Id'];   
-    $sql = "DELETE FROM nrconewdb.director_message where Id='$uid'";
+    $uid = $_POST['id'];   
+    $sql = "DELETE FROM nrconewdb.staff where Id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){
         echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -278,7 +278,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
     
     <a href="#dataprevious1" class="d-block card-header py-3" data-toggle="collapse"
                                     role="button" aria-expanded="true" aria-controls="dataprevious1">
-                                    <h6 class="m-0 font-weight-bold text-white">Head</h6>
+                                    <h6 class="m-0 font-weight-bold text-white">Staff List</h6>
                                 </a>
                                 <div class="collapse" id="dataprevious1">
     <div class="card-body">
@@ -322,12 +322,13 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                          <td><?php echo $row['Category']; ?></td>
                          <td><?php echo $row['Date']; ?></td>
 
-                        <td><div class="btn-group" role="group" aria-label="Basic"><a class='btn btn-outline-success btn-sm'data-toggle='modal' data-target='#update<?php echo $row['Id']; ?>'><i class='fas fa-pen'></i></a>
+                         <td><div class="btn-group" role="group" aria-label="Basic">
+                         <a class='btn btn-outline-success btn-sm'data-toggle='modal' data-target='#update<?php echo $row['Id']; ?>'><i class='fas fa-pen'></i></a>
+
                          <a   class='btn btn-outline-danger btn-sm'data-toggle='modal' data-target='#delete<?php echo $row['Id']; ?>'><i class='fas fa-trash'></i></a>
                         </div></td>
                         </tr>
-                         
-                        <!-- Update Modal-->
+                           <!-- Update Modal-->
                         <div class="modal fade" id="update<?php echo $row['Id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
@@ -367,33 +368,22 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                 </div>
                             </div>
                         </div>
+                        <!-- Update Modal-->
+                       
                         <!-- Delete Modal-->
-                        <div class="modal fade" id="delete<?php echo $row['Id']; ?>" tabindex="-1" role="dialog" aria-labelledby="delete"
-                                aria-hidden="true">
-                                <div class="modal-dialog modal-lg" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-primary" id="delete">Are you sure you want to delete?</h5>
-                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body text-danger">Select "Delete" below if you are ready to delete:<br> 
-                                        <strong> <?php echo $row['Name']; ?> <br>
-                                        <strong> <?php echo $row['Designation']; ?> <br>
-                                        <strong> <?php echo $row['Message']; ?></strong></strong>
+                        <div class="modal fade" id="delete<?php echo $row['Id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-primary" id="exampleModalLabel">Edit Details</h5>
+                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
                                       
-                                        <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
-                                         <div class="form-group">
-                                             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                          </div> 
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                         <button type="submit" value="delete"  name="submit" class="btn btn-danger" id="upload-file"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
-                                    
-
-                                        </div>
-                                     </form>
+                                       wgtr
+                                       
                                          
                                     </div>
                                 </div>

@@ -70,9 +70,9 @@
             </li>
               <!-- Nav Item - Charts -->
               <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="Publications.php">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Bulletin Board</span></a>
+                    <span>Publications</span></a>
             </li>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">

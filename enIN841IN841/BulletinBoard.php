@@ -6,7 +6,7 @@
     $filename = $_FILES['myfile']['name'];
     $name = $_POST['name'];
     $tags = $_POST['tags'];
-    $created_date = date("m-d-y");
+    $created_date = date("d-F-Y");
     // destination of the file on the server
     $destination = 'files/PDF/' . $filename;
 
@@ -206,9 +206,6 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                         <th>Category</th>
                         <th>UploadDate</th>
                         <th>Action</th>
-
-                       
-
                     </tr>
                 </thead>
                 
