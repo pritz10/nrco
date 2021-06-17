@@ -55,6 +55,20 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsewo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-home fa-cog"></i>
+                    <span>Home Page</span>
+                </a>
+                <div id="collapsewo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Select</h6>
+                        <a class="collapse-item" href="Counter.php">Counter</a>
+                        <a class="collapse-item" href="Visitors.php">Visitors feedback</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -170,6 +184,16 @@
                     <ul class="navbar-nav ml-auto">
 
                          
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        
+                            <a class="nav-link dropdown-toggle" href="#" style="color: red;" ><?php
+echo  date("d-F-Y");?>
+<i class="fas fa-calendar fa-fw"></i>
+                                
+                             </a>
+                         
+                           
+                        </li>
 
                        
                         
@@ -178,9 +202,9 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown"  role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hello, Pritam Shah</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600  ">Hello, Pritam Shah</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>

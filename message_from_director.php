@@ -19,7 +19,7 @@
         while($data = mysqli_fetch_array($records))
         {?>
            <div class="text-center">
-           <img src="admin/dist/<?php echo $data['ImageUrl']; ?>" class="img-curve img-fluid" alt="" />
+           <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" class="img-curve img-fluid" alt="" />
 
           <h5><?php echo $data['Name']; ?></h5>
           <p><?php echo $data['Designation']; ?></p>

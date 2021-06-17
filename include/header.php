@@ -5,6 +5,7 @@
 
 <head>
   <!-- Required meta tags -->
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>ICAR-NRC for Orchids</title>
@@ -20,7 +21,51 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/jquery.dataTables.min.js"></script>
   <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+ <style>
+   /* The device with borders */
+.smartphone {
+  position: relative;
+  width: 311px;
+  height: 520px;
+   border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+}
 
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+ .smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+ .smartphone .content {
+  width: 280px;
+  height: 420px;
+  background: black;
+}
+ </style>
   <script>
     $(document).ready(function() {
       $('#example').DataTable({
@@ -161,10 +206,9 @@
                 Publications
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Newsletter</a>
-                <a class="dropdown-item" href="#">Technical Bulletin</a>
-                <a class="dropdown-item" href="#">Annual Report</a>
-                <a class="dropdown-item" href="#">Technical Publications</a>
+                <a class="dropdown-item" href="Publications.php?xsuasdasdfafasfygug=Newsletter">Newsletter</a>
+                 <a class="dropdown-item" href="Publications.php?xsuasdasdfafasfygug=Annual Report"">Annual Report</a>
+                <a class="dropdown-item" href="Publications.php?xsuasdasdfafasfygug=Technical Publications"">Technical Publications</a>
               </div>
             </li>
 
@@ -226,3 +270,23 @@
       </nav>
   </header>
   </div>
+  <!-- Modal -->
+<div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="payment" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="payment">Note:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       You will be redirected to another website
+      </div>
+      <div class="modal-footer">
+         <button type="button" onclick="window.open('https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=3152356','_blank')" class="btn btn-primary">Okay, Proceed !</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->

@@ -72,11 +72,12 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
     $name = $_POST['update_name'];
     $rank = $_POST['update_rank'];
     $uid = $_POST['id'];
+    $category = $_POST['category'];
     $designation = $_POST['update_designation'];
     $email = $_POST['update_email'];
     $phone = $_POST['update_phone'];
     $created_date = date("m-d-y ");
-    $sql = "UPDATE staff set Name='$name', Designation='$designation', Phone='$phone', Email='$email', Rank='$rank', Date='$created_date' where id='$uid'";
+    $sql = "UPDATE staff set Name='$name', Designation='$designation', Phone='$phone', Email='$email', Category='$category', Rank='$rank', Date='$created_date' where id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){
  
@@ -86,7 +87,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>';
-        }
+      }
         else {
             echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>Something went wrong, Please try again later</strong>
@@ -196,13 +197,10 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
       <select id="inputState" name="category" required class="form-control">
          <option>Head</option>
         <option>Scientist Staffs</option>
-
         <option>Administrative Staffs</option>
-
         <option>Technical Staffs</option>
         <option>Skilled Supporting Staffs</option>
         <option>Project Staffs</option>
- 
       </select>
     </div>
     <div class="form-group col-md-2">
@@ -210,7 +208,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
       <input type="text" name="rank" class="form-control" required id="inputZip">
     </div>
   </div>
-  
+
   <button type="submit" style="width: 100%;" value="upload"  name="submit" class="btn btn-primary" id="upload-file"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
 </form>
     </div>
@@ -356,13 +354,28 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                       </div>
                                     </div>
                                     <div class="form-row">
-                                      <div class="form-group col-md-6">
+                                      <div class="form-group col-md-4">
                                         <label for="inputEmail4">Email</label>
                                         <input type="email" name="update_email" class="form-control"  value="<?php echo $row['Email']; ?>" id="email">
                                       </div>
-                                      <div class="form-group col-md-4">
+                                      
+                                      <div class="form-group col-md-3">
                                         <label for="inputPassword4">Phone</label>
                                         <input type="phone" name="update_phone" class="form-control"  value="<?php echo $row['Phone']; ?>" id="phone">
+                                      </div>
+                                      <div class="form-group col-md-3">
+                                        <label for="inputState">Category</label>
+                                        <select id="inputState" name="category" required class="form-control">
+                                          <option>Head</option>
+                                          <option>Scientist Staffs</option>
+
+                                          <option>Administrative Staffs</option>
+
+                                          <option>Technical Staffs</option>
+                                          <option>Skilled Supporting Staffs</option>
+                                          <option>Project Staffs</option>
+                                  
+                                        </select>
                                       </div>
                                       <div class="form-group col-md-2">
                                         <label for="inputZip">Rank</label>

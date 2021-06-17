@@ -6931,8 +6931,7 @@ a.close.disabled {
   bottom: 20px;
   left: 15%;
   z-index: 10;
-  background-color: bisque;
-  padding-top: 20px;
+   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
@@ -7295,7 +7294,7 @@ button.bg-dark:focus {
     left: 15%;
     border-radius: 13px;
     z-index: 10;
-    background-color: bisque;
+
     /* padding-top: 20px; */
     /* padding-bottom: 20px; */
     color: #fff;
@@ -7346,7 +7345,7 @@ button.bg-dark:focus {
     left: 15%;
     border-radius: 13px;
     z-index: 10;
-    background-color: bisque;
+
     /* padding-top: 20px; */
     /* padding-bottom: 20px; */
     color: #fff;
@@ -17893,3 +17892,4 @@ body.hidden-scroll {
       width: 50px;
       border-radius: 50%;
     }
+

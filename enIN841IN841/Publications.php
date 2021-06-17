@@ -34,7 +34,7 @@
      } else {
         // move the uploaded (temporary) file to the specified destination
         if (move_uploaded_file($file, $destination)) {
-            $sql = "INSERT INTO  nrconewdb.publications (name, pdfurl, tags, date) VALUES ('$name','$destination','$tags','$created_date')";
+            $sql = "INSERT INTO  nrconewdb.pdfs (name, pdfurl, tags, date) VALUES ('$name','$destination','$tags','$created_date')";
 
             if (mysqli_query($connect, $sql)) {
                 if(mysqli_affected_rows($connect) > 0 ){
@@ -69,9 +69,10 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
 {
     $name = $_POST['update_name'];
     $uid = $_POST['id'];
-    
+    $tags = $_POST['tags'];
+
     $created_date = date("m-d-y ");
-    $sql = "UPDATE nrconewdb.publications set Name='$name', Date='$created_date' where id='$uid'";
+    $sql = "UPDATE nrconewdb.pdfs set Name='$name',Tags='$tags', Date='$created_date' where id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){
         echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -105,7 +106,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
 {
      
     $uid = $_POST['id'];   
-    $sql = "DELETE FROM nrconewdb.publications where id='$uid'";
+    $sql = "DELETE FROM nrconewdb.pdfs where id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){
         echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -141,7 +142,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Bulletin Board</h1>
+    <h1 class="h3 mb-0 text-gray-800">Pulications</h1>
 </div>
 <div class="row">
 <!-- Area Chart -->
@@ -150,18 +151,19 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
    <!-- Card Header - Accordion -->
     <a href="#messagedata" class="d-block card-header py-3" data-toggle="collapse"
      role="button" aria-expanded="true" aria-controls="as">
- <h6 class="m-0 font-weight-bold text-white">News/ Events , Opportunity and Tenders</h6>
+ <h6 class="m-0 font-weight-bold text-white">Publication Upload</h6>
                                 </a>
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse show " id="messagedata">
                                     <div class="card-body">
                                     <form method="post" action="Publications.php" enctype="multipart/form-data" style="padding:10px;">
                                             <div class="form-group">
-                                                <label for="sel1">Select Category Where You Want To Upload: <br> [NEWS/ EVENTS] [OPPORTUNITY] [TENDERS]</label>
+                                                <label for="sel1">Select Category Where You Want To Upload: </label>
                                                 <select class="form-control" name="tags">
-                                                    <option>News/ Events</option>
-                                                    <option>Opportunity</option>
-                                                    <option>Tenders</option>
+                                                    <option>Annual Reports </option>
+                                                    <option>Newsletter</option>
+                                                     <option>Technical Publications</option>
+
                                                  </select>
                                                 </div>
                                                 <div class="form-group">
@@ -193,7 +195,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
     
     <a href="#dataprevious" class="d-block card-header py-3" data-toggle="collapse"
                                     role="button" aria-expanded="true" aria-controls="dataprevious">
-                                    <h6 class="m-0 font-weight-bold text-white">Previous Messages</h6>
+                                    <h6 class="m-0 font-weight-bold text-white">Publication Management</h6>
                                 </a>
                                 <div class="collapse" id="dataprevious">
     <div class="card-body">
@@ -212,7 +214,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                <tbody>
                <?php  
                
-                    $sql = "SELECT * FROM publications";  
+                    $sql = "SELECT * FROM pdfs";  
                     $result = mysqli_query($connect, $sql);  
 
                     while($row = mysqli_fetch_assoc($result))  
@@ -243,6 +245,15 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                     <form method="post" action="Publications.php" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['Id']; ?>">
+                                             <div class="form-group">
+                                                <label for="sel1">Select Category Where You Want To Upload:</label>
+                                                <select class="form-control" name="tags">
+                                                    <option>Annual Reports </option>
+                                                    <option>Newsletter</option>
+                                                    <option>Technical Publications</option>
+
+                                                 </select>
+                                                </div>
                                             <label for="title">Description of File</label>
                                             <input type="text" name="update_name"  class="form-control" id="title" value="<?php echo $row['Name']; ?>"aria-describedby="emailHelp"  placeholder="Enter title">
                                             

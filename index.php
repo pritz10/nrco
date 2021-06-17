@@ -1,24 +1,7 @@
 <!-- Include Header -->
 <?php require_once 'include/header.php'; ?>
-<!-- Modal -->
-<div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="payment" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="payment">Note:</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       You will be redirected to another website
-      </div>
-      <div class="modal-footer">
-         <button type="button" onclick="window.open('https://www.onlinesbi.com/sbicollect/icollecthome.htm?corpID=3152356','_blank')" class="btn btn-primary">Okay, Proceed !</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 <!-- Main Body-->
 <?php   
     $sql = "SELECT * FROM bulletin_board ORDER BY id DESC LIMIT 5";  
@@ -185,11 +168,74 @@
                     <h3 class="hny-title"> Welcome to NRCO, Sikkim</h3>
                     <p class="mt-3" style="text-align: justify;">The National Research Centre for Orchids was established on 5th October 1996 by the indian council of Agricultural Research (ICAR), New Delhi to organize program on improvement in productivity, quality and commercialization of orchids.<br><br> The Sikkim state authorities handed over 22.19 acres of land belonging to Regional Agricultural Centre along witha all other assets to ICAR for establishment of the centre. In October 1997, the centre also took over the CPRS, Darjeeling form CPRI and established a campus for research on temperate orchids.</p>
                 </div>
-                <div class="history-info mt-5">
+                <div class="cwp4-two row">
+                <div class="cwp4-image col-lg-6 pl-lg-5 mb-lg-0 mb-5">
                     <div class="position-relative">
                         <img src="assets/images/National-Research-Centre-For-Orchids.jpg" loading="lazy" class="img-fluid radius-image video-popup-image"
                             alt="video-popup">
                     </div>
+                </div>
+                <div class="cwp4-image col-lg-6 pl-lg-5 mb-lg-0 mb-5">
+                    <div class="position-relative">
+                    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <!-- Indicators -->
+  <ol class="carousel-indicators">
+        <?php
+        $sql = "select * from nrconewdb.flowers";  
+        $result = mysqli_query($connect, $sql); 
+        $count = mysqli_num_rows($result);  
+        $i=0;
+        foreach($result as $row)
+        {
+        $active='';
+        if($i==0)
+        {
+            $active='active';
+        }
+        ?>
+        <li data-target="#myCarousel" data-slide-to="<?=$i;?>" class="<?=$active;?>"></li>
+        <?php $i++;}    ?>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+    <?php
+    $sql = "select * from nrconewdb.flowers";  
+    $result = mysqli_query($connect, $sql); 
+    $count = mysqli_num_rows($result);  
+    $i=0;
+    foreach($result as $row)
+    {
+    $active='';
+    if($i==0)
+    {
+        $active='active';
+    }
+    ?>
+        <div class="carousel-item <?=$active;?>">
+        <img src="enIN841IN841/<?php echo $row['ImageUrl']; ?>">
+        <div class="carousel-caption  d-md-block">
+          <h5><?php echo $row['Title']; ?></h3>
+         </div>   
+        </div>
+        <?php $i++; } ?>
+
+         
+
+         
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -202,46 +248,74 @@
   
  
 
-<section class="w3l-features py-5" id="features">
-  <div class="container py-lg-5 py-md-4">
-    <div class="grids-area-hny main-cont-wthree-fea row">
-      <div class="col-lg-4 col-sm-6 grids-feature">
-      <div class="area-box mb-lg-0 shadow">
-      <div class="icon">
-            <span class="fa fa-fa fa-bookmark-o"></span>
-          </div>
-          <h4 style="color:primary;"><a href="#feature" class="title-head">Mandate</a></h4>
-          <p style="text-align: justify;">Applied and strategic research on conservation, improvement and culture of orchids for enhancing productivity and utilisation.
-Transfer of technology and capacity building of stakeholders for enhancing and sustaining productivity of orchid.</p>
-                    
-</div>
-                   
-      </div>
-      <div class="col-lg-4 col-sm-6 grids-feature mt-sm-0">
-        <div class="area-box mb-lg-0 shadow">
-        <div class="icon">
-            <span class="fa fa-dot-circle-o"></span>
-          </div>
-          <h4><a href="#feature" class="title-head">Vision</a></h4>
+  <!-- Orchid of the month -->
+
+<section class="w3l-grids-3 py-5" id="aboutorchid" style="background: #FF512F;
+    background: -webkit-linear-gradient(to right, #DD2476, #FF512F);
+    background: linear-gradient(to right, #DD2476, #FF512F);">
+    <div class="container">
+      <div class="cwp4-two row">
+        <div class="cwp4-image col-lg-6 pl-lg-5 mb-lg-0 mb-5">
+      <div class="bottom-ab-grids align-items-center">
+        <div class="bottom-ab-left">
+        <?php
+        $records = mysqli_query($connect,"select * from orchidinfo ORDER BY id DESC LIMIT 1"); // fetch data from database
+        while($data = mysqli_fetch_array($records))
+        {?>
          
-          
-          <p style="text-align: justify;">To act as premier centre for research and development activities related to orchid commercialization and sustainable utilization.</p>
- 
+          <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" class="img-curve img-fluid" alt="" />
+
         </div>
       </div>
-      <div class="col-lg-4 col-sm-6 grids-feature mt-lg-0">
-        <div class="area-box mb-lg-0 shadow">
-        <div class="icon">
-            <span class="fa fa-rocket"></span>
-          </div>
-          <h4><a href="#feature" class="title-head">Mission</a></h4>
-          <p style="text-align: justify;">Science and Technology driven development of orchid industry in the country.</p>
-         </div>
-      </div>      
+    </div>
+   
+      <div class="cwp4-image col-lg-6 pl-lg-5 mb-lg-0 mb-5">
+        <div class="text-center " style="color:white;" >
+         <h5  style="color:white;" >Orchid of the month</h5>
+
+          <h3 class="hny-title"  style="color:white;" ><?php echo $data['Name']; ?></h3>
+ 
+        <p style="text-align: justify; height:172px;overflow:hidden; color:white;" ><?php echo $data['Message']; ?></p>
+          <a data-target="#orchidinfo" data-toggle="modal" class="read"  style="color:white;" href="#orchidinfo">Read More</a><br> <br>
+          Share: 
+          <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-primary"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+</button>
+  <button type="button" class="btn btn-primary"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
+  <button type="button" class="btn btn-primary" onclick="window.open('https://wwww.facebook.com/sharer.php?u=https://nrcorchids.nic.in/index.php/en/','_blank')" ><i class="fa fa-share" aria-hidden="true"></i></button>
+</div>
+          <div class="modal fade" id="orchidinfo" tabindex="-1" role="dialog" aria-labelledby="orchidinfo" aria-hidden="true">
+  
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orchidinfo"><?php echo $data['Name']; ?></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" class="img-curve img-fluid" alt=""/> <br> <br>
+      <p style="text-align: justify;"><?php echo $data['Message']; ?></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+      </div>
     </div>
   </div>
-</section>
-<section class="w3l-grids-3 py-5" id="about">
+</div>
+           <?php
+       }?>
+      </div>
+      </div>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+  <!-- From the Director's Desk -->
+  <section class="w3l-grids-3 py-5" id="about">
     <div class="container">
       <div class="cwp4-two row">
         <div class="cwp4-image col-lg-6 pl-lg-5 mb-lg-0 mb-5">
@@ -253,7 +327,7 @@ Transfer of technology and capacity building of stakeholders for enhancing and s
         {?>
           <h6 class="sub-title">Message</h6>
           <h3 class="hny-title">From the Director's Desk</h3>
-          <p style="text-align: justify; height:257px;overflow:hidden;"><?php echo $data['Message']; ?></p>
+          <p style="text-align: justify; height:210px;overflow:hidden;"><?php echo $data['Message']; ?></p>
           <a href="message_from_director.php" class="read">Read more</a> 
          
         </div>
@@ -276,116 +350,76 @@ Transfer of technology and capacity building of stakeholders for enhancing and s
       </section>
   <!--//services-->
 
+  <section class="w3l-grids-3 py-5" id="about">
+
 <div class="container">
 <div class="row">
-  <div class="col-sm-6">
-  <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-Mobile App  </a>
-  <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-  <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
+  
+   <div class="col-sm-4"style="justify-content: center;">
+  <div class="smartphone">
+  <div class="content">
+  <a href=" .php" class="list-group-item list-group-item-action flex-column align-items-start active ">
+ <div class="d-flex w-100 justify-content-between">
+   <h5 class="mb-1 text-center">Mobile Applications<img src="google-play-badge.png" width="230px" alt=""> </h5>  
+</div>
+ </a>
+     <ul class="list-group left shadow" style="height: 230px;">
+     <a href="https://play.google.com/store/apps/details?id=nrco.cymbidiumorchid&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed.webp" width="50" alt="">Orchid Farming</li></a>
+     <a href="https://play.google.com/store/apps/details?id=nrco.orchidopedia&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (1).webp" width="50" alt=""> OrchidoPedia</li></a>
+     <a href="https://play.google.com/store/apps/details?id=com.nrco.orchidpestmanagement&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (2).webp" width="50" alt="">Orchid Pest Management</li></a>
+     <a href="https://play.google.com/store/apps/details?id=com.nrco.datasheet&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (3).webp" width="50" alt="">Orchid-MAN</li></a>
+      
+     </ul> </div>
 </div>
   </div>
-  <div class="col-sm-6">
-  <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-    The current link item
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-  <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-  <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">A disabled link item</a>
-</div>
-  </div>
-</div>
-<div class="album py-5">
-    <div class="container">
-      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col-lg-2 col-sm-6 grids-feature">
-      <div class="area-box mb-lg-0 shadow">
-            <div class="card-body">
-              <p class="card-text">Downloads</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
-                 </div>
-               </div>
-            </div>
+ 
+  <div class="col-sm-8">
+  <section class="w3l-feature-1">
+  <div class="feature-1sec py-5">
+    <div class="container py-lg-5">
+      <div class="feature-1-content py-lg-3">
+        <h4 class="sub-title">Our history of Pooch Care</h4>
+        <h3 class="hny-title two">Our history</h3>
+        <p class="mt-3">Lorem ipsum dolor sit amet,Ea consequuntur .Ea consequuntur illum facere aperiam
+          sequi optio consectetur adipisicing elitFuga, suscipit totam animi consequatur saepe
+          blanditiis.Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
+          consectetur adipisicing elit.</p>
+        <div class="history-grids">
+          <div class="history-ifo">
+            <h5 class="year">2017</h5>
+            <p>Lorem ipsum dolor sit amet</p>
+
           </div>
-        </div>
-        <div class="col-lg-2 col-sm-6 grids-feature">
-          <div class="card btn-outline-primary ">
-            <div class="card-body">
-              <p class="card-text black">Froms</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
-                 </div>
-               </div>
-            </div>
+          <div class="history-ifo">
+            <h5 class="year">2018</h5>
+            <p>Lorem ipsum dolor sit amet</p>
           </div>
-        </div>
-        <div class="col-lg-2 col-sm-6 grids-feature">
-          <div class="card ">
-            <div class="card-body">
-              <p class="card-text">Rajhbhasa</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
-                 </div>
-               </div>
-            </div>
+          <div class="history-ifo">
+            <h5 class="year">2019</h5>
+            <p>Lorem ipsum dolor sit amet</p>
           </div>
-        </div>
-        <div class="col-lg-2 col-sm-6 grids-feature">
-          <div class="card ">
-            <div class="card-body">
-              <p class="card-text">This is .</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
-                 </div>
-               </div>
-            </div>
+          <div class="history-ifo">
+            <h5 class="year">2020</h5>
+            <p>Lorem ipsum dolor sit amet</p>
           </div>
+
         </div>
-      
-        <div class="col-lg-2 col-sm-6 grids-feature">
-          <div class="card ">
-            <div class="card-body">
-              <p class="card-text">Android App</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
-                 </div>
-               </div>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-lg-2 col-sm-6 grids-feature">
-          <div class="card ">
-            <div class="card-body">
-              <p class="card-text">This is .</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-primary">View</button>
-                 </div>
-               </div>
-            </div>
-          </div>
-        </div>
-         
-      
+
       </div>
     </div>
   </div>
+</section>
+  <!-- <div class="smartphone">
+  <div class="content">
+<p style="text-align: center; color:blue ">Our Facebook Page</p> 
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="298" height="480" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>  </div>
+</div> -->
+  </div>
+</div>
+ 
 </div>
 
-  
-  <!-- stats -->
+</section>
 
 
 

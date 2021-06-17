@@ -158,11 +158,11 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Strength
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Sliding Flowers
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"> <a href="Counter.php">Counters</a> </div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"> <a href="flowers.php">Flower</a> </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm mr-2">
@@ -188,11 +188,11 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                            Happy Visitors...</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <a href="">Testimonials</a> </div>
+                                            Orchids</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <a href="funfacts.php">Fun Facts</a> </div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-yellow-900"></i>
+                                            <i class="fas fa-snowflake fa-2x text-yellow-900"></i>
                                         </div>
                                     </div>
                                 </div>
