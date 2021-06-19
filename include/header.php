@@ -26,7 +26,7 @@
 .smartphone {
   position: relative;
   width: 311px;
-  height: 520px;
+  height: 600px;
    border: 16px black solid;
   border-top-width: 60px;
   border-bottom-width: 60px;
@@ -62,7 +62,7 @@
 
  .smartphone .content {
   width: 280px;
-  height: 420px;
+  height: 520px;
   background: black;
 }
  </style>

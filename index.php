@@ -350,20 +350,22 @@
       </section>
   <!--//services-->
 
-  <section class="w3l-grids-3 py-5" id="about">
-
-<div class="container">
-<div class="row">
   
-   <div class="col-sm-4"style="justify-content: center;">
+  <section class="w3l-grids-3 py-5" id="about" style="background: #DE6262;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+<div class="container">
+<div class="cwp4-two row">
+        <div class="cwp4-image col-lg-4 pl-lg-5 mb-lg-0 mb-5">
   <div class="smartphone">
   <div class="content">
   <a href=" .php" class="list-group-item list-group-item-action flex-column align-items-start active ">
  <div class="d-flex w-100 justify-content-between">
-   <h5 class="mb-1 text-center">Mobile Applications<img src="google-play-badge.png" width="230px" alt=""> </h5>  
+   <h5 class="mb-1 text-center">Mobile Applications<img src="google-play-badge.png" width="200px" alt=""> </h5>  
 </div>
  </a>
-     <ul class="list-group left shadow" style="height: 230px;">
+     <ul class="list-group left shadow" style="height: 308px;">
      <a href="https://play.google.com/store/apps/details?id=nrco.cymbidiumorchid&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed.webp" width="50" alt="">Orchid Farming</li></a>
      <a href="https://play.google.com/store/apps/details?id=nrco.orchidopedia&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (1).webp" width="50" alt=""> OrchidoPedia</li></a>
      <a href="https://play.google.com/store/apps/details?id=com.nrco.orchidpestmanagement&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (2).webp" width="50" alt="">Orchid Pest Management</li></a>
@@ -373,40 +375,48 @@
 </div>
   </div>
  
-  <div class="col-sm-8">
+  <div class="cwp4-image col-lg-8 pl-lg-5 mb-lg-0 mb-5">
   <section class="w3l-feature-1">
-  <div class="feature-1sec py-5">
-    <div class="container py-lg-5">
-      <div class="feature-1-content py-lg-3">
-        <h4 class="sub-title">Our history of Pooch Care</h4>
-        <h3 class="hny-title two">Our history</h3>
-        <p class="mt-3">Lorem ipsum dolor sit amet,Ea consequuntur .Ea consequuntur illum facere aperiam
-          sequi optio consectetur adipisicing elitFuga, suscipit totam animi consequatur saepe
-          blanditiis.Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
-          consectetur adipisicing elit.</p>
-        <div class="history-grids">
-          <div class="history-ifo">
-            <h5 class="year">2017</h5>
-            <p>Lorem ipsum dolor sit amet</p>
-
-          </div>
-          <div class="history-ifo">
-            <h5 class="year">2018</h5>
-            <p>Lorem ipsum dolor sit amet</p>
-          </div>
-          <div class="history-ifo">
-            <h5 class="year">2019</h5>
-            <p>Lorem ipsum dolor sit amet</p>
-          </div>
-          <div class="history-ifo">
-            <h5 class="year">2020</h5>
-            <p>Lorem ipsum dolor sit amet</p>
-          </div>
-
-        </div>
-
+  <div class="feature-s1sec">
+    <div class="container">
+    <div class="cwp4-two row">
+    <div class="cwp4-image col-lg-6 pl-lg-5 mb-lg-0 mb-5">
+ 
+    <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    Cras justo odio
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">Downloads</a>
+  <a href="#" class="list-group-item list-group-item-action">Vision 2050</a>
+  <a href="#" class="list-group-item list-group-item-action">Swach Bharat Abhiyaan</a>
+  <a href="#" class="list-group-item list-group-item-action  ">Vestibulum at eros</a>
+</div>
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    Cras justo odio
+  </a>
+  <a href="#" class="list-group-item list-group-item-action">Downloads</a>
+  <a href="#" class="list-group-item list-group-item-action">Pulications</a>
+  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+  <a href="#" class="list-group-item list-group-item-action  ">Vestibulum at eros</a>
+  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+ </div>
+ 
       </div>
+    <div class="cwp4-image col-lg-6 pl-lg-5 mb-lg-0 mb-5">
+  <div class="smartphone">
+  <div class="content">
+  <p style="color: white;">Faceook Page:</p>
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&tabs=timeline&width=280&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="298" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>  </div>
+
     </div>
+</div>
+
+  </div>
+   
+  </div>
+  </div>
+
   </div>
 </section>
   <!-- <div class="smartphone">
