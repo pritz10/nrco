@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2021 at 06:42 AM
+-- Generation Time: Jun 19, 2021 at 07:26 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.3.27
 
@@ -59,7 +59,15 @@ INSERT INTO `bulletin_board` (`Id`, `Name`, `PdfUrl`, `Tags`, `Date`) VALUES
 (32, 'ICAR-NRCO new website is under construction', 'uploads/anexure.pdf', 'Oppoturnity', '20-05-21 10:53'),
 (33, 'Advt. for Young Profess', 'uploads/Advertizement for Young Professional II.pdf', 'Oppoturnity', '21-05-21 07:41'),
 (37, 'wtwe', 'files/PDF/DataTables example - File export.pdf', 'Tenders', '06-04-21'),
-(38, 'testing PDF', 'files/PDF/Vehiclecondemnation.pdf', 'News/ Events', '06-04-21');
+(38, 'testing PDF', 'files/PDF/Vehiclecondemnation.pdf', 'News/ Events', '06-04-21'),
+(39, 'Testing', 'files/PDF/Vehiclecondemnation.pdf', 'Newsletter', '06-10-21'),
+(40, 'Testing', 'files/PDF/Vehiclecondemnation.pdf', 'Newsletter', '06-10-21'),
+(41, 'Polyhouse designer needed', 'files/PDF/Polyhouse Deisgn Requirement.pdf', 'Opportunity', '06-10-21'),
+(42, 'Polyhouse designer needed', 'files/PDF/Polyhouse Deisgn Requirement.pdf', 'Opportunity', '06-10-21Europe/BerlinamThu, 10 Jun 2021 09:19:04 +0200'),
+(43, 'Polyhouse designer needed', 'files/PDF/Polyhouse Deisgn Requirement.pdf', 'Opportunity', '06-10-21'),
+(44, 'Polyhouse designer needed', 'files/PDF/Polyhouse Deisgn Requirement.pdf', 'Opportunity', '06-10-June2021'),
+(45, 'Polyhouse designer needed', 'files/PDF/Polyhouse Deisgn Requirement.pdf', 'Opportunity', '06-June-2021'),
+(47, 'SRF Interview on 25tyh', 'files/PDF/Vehiclecondemnation.pdf', 'Opportunity', '14-June-2021');
 
 -- --------------------------------------------------------
 
@@ -86,7 +94,8 @@ INSERT INTO `counter` (`Id`, `Name1`, `Name2`, `Name3`, `Name4`, `Date`) VALUES
 (16, '23', '345', '43', '7', '05-31-21'),
 (17, '23', '4', '4', '4', '05-31-21'),
 (18, 'df', 'dfg', 'fdg', 'dfg', '05-31-21'),
-(19, '565', '45', '654', '654', '05-31-21');
+(19, '565', '45', '654', '654', '05-31-21'),
+(20, '2500', '56', '12000', '52', '06-11-21');
 
 -- --------------------------------------------------------
 
@@ -112,11 +121,10 @@ INSERT INTO `director_message` (`id`, `Message`, `Name`, `Designation`, `ImageUr
 (10, 'fgh', 'dh', 'fgh', 'uploads/WhatsApp Image 2021-04-22 at 2.47.11 PM.jpeg', '27-04-21 08'),
 (11, 'dgf', 'dg', 'dfg', 'uploads/WhatsApp Image 2021-04-23 at 10.32.37 AM.jpeg', '27-04-21 08'),
 (12, 'dfh', 'df', 'fh', 'uploads/Screenshot (1).png', '27-04-21 08'),
-(13, 'gfh', 'fgh', 'gh', 'uploads/Untitled design.jpg', '27-04-21 08'),
 (14, 'Research work carried out during the last four decades at ICAR-IIHR, Bangalore has paid rich dividends in the terms of release of more than 170 varieties and hybrids and development of good number of sustainable production, protection and post harvest management technologies. In fruit crops, the institute has released three varieties in papaya, 5 hybrids in mango, 3 varieties in guava, 5 hybrids in grapes, one variety each in pomegranate, annona, ber and passion fruit. Recently released high yielding Pink fleshed Arka Prabhat papaya hybrid, Arka Kiran, a red fleshed hybrid guava and Arka Sahan, a hybrid of annona with large globules and less seeds hold better promise and are gaining more popularity.\r\n\r\nSo far the Institute has developed and released 60 high yielding open pollinated varieties and 15 F1 hybrids in 24 vegetable crops resistant to pests and diseases for commercial cultivation, Arka Manik of Watermelon – triple resistant to pests and diseases, Arka Anamika in okra resistant to Yellow Vein Mosaic Virus and Arka Komal of French bean resistant to rust has spread to the length and breadth of the nation. High yielding varieties of tomato Arka Vikas, Arka Kalyan and Arka Niketan in onion have made significant impacts. In the recent years, the Institute has released tomato hybrid Arka Ananya, with combined resistant to Tomato Leaf Curl Virus and Bacterial wilt, chilli hybrids Arka Meghana tolerant to thrips and viruses, Arka Harita and Arka Suphal of chilli tolerant to powdery mildew, high yielding male sterility base chilli hybrid Arka Swetha, bacterial wilt brinjal hybrid Arka Anand, high yielding onion hybrids based on male sterility Arka Lalima and Arka Kirthima are a few which have made significant impact in production and higher economic gains.\r\n\r\nIn the area of ornamental crops, the Institute has evolved improved varieties in gladiolus, chrysanthemum, bougainvillea, hibiscus, tube rose, rose, China aster, carnation, gerbera and crossandra. China aster varieties Poornima, Kamini, Vilet cushion and Shashank, tube rose cultivars, Shringar, Suvasini, Prajwal and Vibahv and crossandra variety Arka Ambara have become very popular among the farmers.  In the field of mushrooms, a spore less mutant of oyster mushroom, milky mushroom, Jews ear mushroom and a medicinal mushroom with export potentials have been developed.\r\n\r\nIn the field of production technologies the Institute has standardized the technology of high density planting of banana and pineapple which are being practiced by all most all  fruit growers these crops. Grape rootstock Dog ridge, identified and released by the Institute has revolutionized grape cultivation in dry land and problematic soils. Integrated water and nutrient management schedules like drip irrigation, fertigation, application of fertilizer in the active root feeding zone, etc., for optimum utilization of resources for various fruits, vegetables and ornamental crops have been standardized. The Institute has also standardized leaf and petiole diagnostics for optimum recommendation of fertilizers for respective crops. In the recent years, the institute has standardized technology for foliar nutrition of micro nutrients and has commercially released mango special, banana special, citrus special and vegetable special for higher and quality yields. These technologies have already been commercialized, making these technologies available to cross section of the farming community. The causative factors for occurrence of Spongy tissue, a major problem in mango has been found and accordingly recommendations are made to overcome the problem. The Institute has also come out with biofertilizers like PSB, azospirallium, VAM etc.\r\n\r\nIn the field of plant protection, the Institute has standardized the technology of pest management using trap crops like African marigold for control of tomato fruit borer, mustard for control of DBM in Cole crops, botanicals and plant products like neem soap and pongamia soap for control of major pests. Bio-control agents and micro organisms like Trichoderma, Pseudonomous fluoroscence, Paecilomyces lilacinus etc. for control of soil borne diseases and nematodes have been standardized. The mango fruit fly which has become the major limiting factor for export has been overcome by standardizing a pheromone trap which has been commercialized by the Institute. Simultaneously, integrated disease management protocols and diagnostic kits for viruses have also been developed.\r\n\r\nIn the field of post harvest technology, the Institute has standardized technology to extend the storage life at various temperatures, standardized the protocol for MOP and shrink wrapping technology. Value addition through product development has been a priority area, in which the Institute has developed protocols for preparation of osmo-dehydrated products, fruit based beverages like mango squash, passion fruit squash, aonla squash, passion fruit banana blends, various culinary pastes and purees, lactic acid fermentation of vegetables and protocols for minimally processed foods have been standardized. In the frontier areas and precision technology, the Institute has standardized technology for production of tomato, colored capsicum, cucumbers and melons under protected conditions. The technology for production of nursery seedlings using pro trays has been further refined. In the field of biotechnology, macro propagation protocols for various crops and nucleic acid probes for many viruses have been developed. DNA finger printing techniques have also been developed for characterization and documentation of germplasm.', 'gf', 'fg', 'uploads/Untitled design.jpg\r\n', '27-04-21 08'),
 (15, 'Research work carried out during the last four decades at ICAR-IIHR, Bangalore has paid rich dividends in the terms of release of more than 170 varieties and hybrids and development of good number of sustainable production, protection and post harvest management technologies.  <br><br> In fruit crops, the institute has released three varieties in papaya, 5 hybrids in mango, 3 varieties in guava, 5 hybrids in grapes, one variety each in pomegranate, annona, ber and passion fruit. Recently released high yielding Pink fleshed Arka Prabhat papaya hybrid, Arka Kiran, a red fleshed hybrid guava and Arka Sahan, a hybrid of annona with large globules and less seeds hold better promise and are gaining more popularity. So far the Institute has developed and released 60 high yielding open pollinated varieties and 15 F1 hybrids in 24 vegetable crops resistant to pests and diseases for commercial cultivation, Arka Manik of Watermelon – triple resistant to pests and diseases, Arka Anamika in okra resistant to Yellow Vein Mosaic Virus and Arka Komal of French bean resistant to rust has spread to the length and breadth of the nation. High yielding varieties of tomato Arka Vikas, Arka Kalyan and Arka Niketan in onion have made significant impacts. In the recent years, the Institute has released tomato hybrid Arka Ananya, with combined resistant to Tomato Leaf Curl Virus and Bacterial wilt, chilli hybrids Arka Meghana tolerant to thrips and viruses, Arka Harita and Arka Suphal of chilli tolerant to powdery mildew, high yielding male sterility base chilli hybrid Arka Swetha, bacterial wilt brinjal hybrid Arka Anand, high yielding onion hybrids based on male sterility Arka Lalima and Arka Kirthima are a few which have made significant impact in production and higher economic gains. In the area of ornamental crops, the Institute has evolved improved varieties in gladiolus, chrysanthemum, bougainvillea, hibiscus, tube rose, rose, China aster, carnation, gerbera and crossandra. China aster varieties Poornima, Kamini, Vilet cushion and Shashank, tube rose cultivars, Shringar, Suvasini, Prajwal and Vibahv and crossandra variety Arka Ambara have become very popular among the farmers. In the field of mushrooms, a spore less mutant of oyster mushroom, milky mushroom, Jews ear mushroom and a medicinal mushroom with export potentials have been developed. In the field of production technologies the Institute has standardized the technology of high density planting of banana and pineapple which are being practiced by all most all fruit growers these crops. Grape rootstock Dog ridge, identified and released by the Institute has revolutionized grape cultivation in dry land and problematic soils. Integrated water and nutrient management schedules like drip irrigation, fertigation, application of fertilizer in the active root feeding zone, etc., for optimum utilization of resources for various fruits, vegetables and ornamental crops have been standardized. The Institute has also standardized leaf and petiole diagnostics for optimum recommendation of fertilizers for respective crops. In the recent years, the institute has standardized technology for foliar nutrition of micro nutrients and has commercially released mango special, banana special, citrus special and vegetable special for higher and quality yields. These technologies have already been commercialized, making these technologies available to cross section of the farming community. The causative factors for occurrence of Spongy tissue, a major problem in mango has been found and accordingly recommendations are made to overcome the problem. The Institute has also come out with biofertilizers like PSB, azospirallium, VAM etc. In the field of plant protection, the Institute has standardized the technology of pest management using trap crops like African marigold for control of tomato fruit borer, mustard for control of DBM in Cole crops, botanicals and plant products like neem soap and pongamia soap for control of major pests. Bio-control agents and micro organisms like Trichoderma, Pseudonomous fluoroscence, Paecilomyces lilacinus etc. for control of soil borne diseases and nematodes have been standardized. The mango fruit fly which has become the major limiting factor for export has been overcome by standardizing a pheromone trap which has been commercialized by the Institute. Simultaneously, integrated disease management protocols and diagnostic kits for viruses have also been developed. In the field of post harvest technology, the Institute has standardized technology to extend the storage life at various temperatures, standardized the protocol for MOP and shrink wrapping technology. Value addition through product development has been a priority area, in which the Institute has developed protocols for preparation of osmo-dehydrated products, fruit based beverages like mango squash, passion fruit squash, aonla squash, passion fruit banana blends, various culinary pastes and purees, lactic acid fermentation of vegetables and protocols for minimally processed foods have been standardized. In the frontier areas and precision technology, the Institute has standardized technology for production of tomato, colored capsicum, cucumbers and melons under protected conditions. The technology for production of nursery seedlings using pro trays has been further refined. In the field of biotechnology, macro propagation protocols for various crops and nucleic acid probes for many viruses have been developed. DNA finger printing techniques have also been developed for characterization and documentation of germplasm.', 'Dr. Rampal', 'Director (Acting)', 'uploads/board.png', '27-04-21 12'),
 (16, 'The Sikkim state authorities handed over 22.19 acres of land belonging to Regional Agricultural Centre along witha all other assets to ICAR for establishment of the centre. In October 1997, the centre also took over the CPRS, Darjeeling form CPRI and established a campus for research on temperate orchids.', 'Rampal', 'Director (Acting)', 'uploads/PXL_20210415_112245873.jpg', '05-05-21 12'),
-(17, 'The Sikkim state authorities handed over 22.19 acres of land belonging to Regional Agricultural Centre along witha all other assets to ICAR for establishment of the centre. In October 1997, the centre also took over the CPRS, Darjeeling form CPRI and established a campus for research on temperate orchids.', 'Pritam Shah', 'Director (Acting)', 'uploads/IMG_20210501_180955.jpg', '05-05-21 12'),
+(17, 'The Dendrobium genus is one of the largest of all orchid groups with nearly 2,000 species. Native to southeast Asia, these plants grow in all manner of climates—from hot, wet lowlands to high-altitude, cool mountains. Dendrobiums are primarily epiphytes, meaning they grow on other plants. In nature, they\'re often found growing on tree branches. While the species vary in appearance, all of them are known for their profuse blooms that come in a variety of pastel tones. Some species bloom all along the lengths of their stems while others bloom just from the tops of the stems. Some are deciduous and drop their leaves in the fall, and some hold on to their leaves year-round. Most species have a moderate to fast growth rate. The best time to plant is either at the very beginning of the growing season or after the orchid has finished flowering. ', 'Pritam Shah', 'Director (Acting)', 'uploads/IMG_20210501_180955.jpg', '05-05-21 12'),
 (18, 'The Sikkim state authorities handed over 22.19 acres of land belonging to Regional Agricultural Centre along witha all other assets to ICAR for establishment of the centre. In October 1997, the centre also took over the CPRS, Darjeeling form CPRI and established a campus for research on temperate orchids.', 'Rampal', 'Director (Acting)', 'uploads/Screenshot (1).png', '05-05-21 12'),
 (19, 'rttu', 'rt', 'rt', 'files/Images/banner1.jpg', '28-05-21 11'),
 (20, 'sdg', 'sdg', 'sgd', 'files/Images/banner1.jpg', '05-28-21'),
@@ -135,7 +143,30 @@ INSERT INTO `director_message` (`id`, `Message`, `Name`, `Designation`, `ImageUr
 (34, 'wet', 'stw', 'twe', 'files/Images/banner1.jpg', '05-31-21'),
 (35, 'wet', 'stw', 'twe', 'files/Images/banner1.jpg', '05-31-21'),
 (36, 'try', 'rty', 'try', 'files/Images/banner1.jpg', '05-31-21'),
-(37, 'wet', 'Mr Name', 'testing', 'files/Images/banner1.jpg', '06-05-21 ');
+(37, 'wet', 'Mr Name', 'testing', 'files/Images/banner1.jpg', '06-05-21 '),
+(39, 'भारत को एक समृद्ध आर्किड विरासत के रूप में माना जाता है और दुनिया में जंगली ऑर्किड के एक महत्वपूर्ण उत्पादक के रूप में मान्यता प्राप्त है। यह अनुमान है कि भारत में ऑर्किड की लगभग 1300 प्रजातियां पाई जाती हैं, जो हिमालय के साथ लगभग 10% दुनिया के ऑर्किड वनस्पतियों का मुख्य आवास है। ', 'Dr RamPal', 'Director (Acting)', 'files/Images/orchids-1024x667.jpg', '06-16-21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `flowers`
+--
+
+CREATE TABLE `flowers` (
+  `Id` int(11) NOT NULL,
+  `ImageUrl` varchar(255) NOT NULL,
+  `Title` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `flowers`
+--
+
+INSERT INTO `flowers` (`Id`, `ImageUrl`, `Title`) VALUES
+(2, 'files/images/cymbidium-sp-pink-and-white-orchid-flowers-picture-id1093448542.jpg', '0'),
+(3, 'files/images/maxresdefault.jpg', '0'),
+(4, 'files/images/cymbidium-sp-pink-and-white-orchid-flowers-picture-id1093448542 (1).jpg', 'State Flower of Assam'),
+(5, 'files/images/WhatsApp Image 2021-06-18 at 11.43.09 AM (1).jpeg', '');
 
 -- --------------------------------------------------------
 
@@ -156,10 +187,8 @@ CREATE TABLE `mainslider` (
 --
 
 INSERT INTO `mainslider` (`Id`, `Title`, `Description`, `ImageUrl`, `Date`) VALUES
-(25, 'rter', 'ertertt7867677676', 'uploads/DSC_0254.jpg', '05-31-21 '),
 (27, 'n', ' n', 'uploads/1588591016phpzKnsK5.jpeg', '05-28-21 '),
 (28, 'werwe', 'werwer', 'uploads/1636811_1000x0.jpg', '05-28-21 '),
-(29, '', '', 'uploads/d3c42a5fafa640f90c4c3746f9fb2c22.jpg', '05-28-21 '),
 (30, 'SPSC Progam', 'Distribution of material for Orchid farming', 'uploads/DSC_0314.jpg', '20-05-21 10:45'),
 (32, 'Takshang Village', 'A visit to takshang village for discussion ', 'uploads/DSC_0370.jpg', '20-05-21 11:07'),
 (33, 'Pritam Shah', 'Just testing data', 'files/Images/banner2.jpg', '28-05-21 06:45'),
@@ -196,6 +225,28 @@ INSERT INTO `mainslider` (`Id`, `Title`, `Description`, `ImageUrl`, `Date`) VALU
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orchidinfo`
+--
+
+CREATE TABLE `orchidinfo` (
+  `id` int(11) NOT NULL,
+  `Message` text NOT NULL,
+  `Name` varchar(255) NOT NULL,
+  `ImageUrl` varchar(255) NOT NULL,
+  `Date` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orchidinfo`
+--
+
+INSERT INTO `orchidinfo` (`id`, `Message`, `Name`, `ImageUrl`, `Date`) VALUES
+(1, 'Dendrobium is a genus of mostly epiphytic and lithophytic orchids in the family Orchidaceae. It is a very large genus, containing more than 1,800 species that are found in diverse habitats throughout much of south, east and southeast Asia, including China, Japan, India, the Philippines, Indonesia, Australia, New Guinea, Vietnam and many of the islands of the Pacific.', 'Dendrobium', 'files/Images/banner2.jpg', '06-17-21 '),
+(2, 'Boat orchids are one of the most beautiful types of exotic flowers frequently used in flower arrangements and corsages.\r\n\r\nAlthough they are more demanding than the other types of orchids grown as houseplants, their attractive, long-lasting, and large flower spikes won’t make you think twice about including them in your house plant collection.  <br>\r\nCymbidium orchids are evergreen plants that originated from Southeast Asia, Australia, and China (1). They are mainly cultivated as potted plants and cut flowers for commercial uses. ', 'Cymbidium ', 'files/Images/cymbidium-orchid-care-1024x683.jpg', '06-June-202');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pdfs`
 --
 
@@ -206,6 +257,40 @@ CREATE TABLE `pdfs` (
   `Tags` varchar(255) NOT NULL,
   `Date` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pdfs`
+--
+
+INSERT INTO `pdfs` (`Id`, `Name`, `PdfUrl`, `Tags`, `Date`) VALUES
+(5, 'ytutyu', 'files/PDF/Polyhouse Deisgn Requirement.pdf', 'Annual Reports', '14-June-2021'),
+(6, 'fda', 'files/PDF/Vehiclecondemnation.pdf', 'Annual Reports', '14-June-2021'),
+(7, 'asfsaffsafsa', 'files/PDF/Polyhouse Deisgn Requirement.pdf', 'Annual Reports', '14-June-2021'),
+(8, 'fassfafsa', 'files/PDF/Vehiclecondemnation.pdf', 'Newsletter', '14-June-2021'),
+(9, 'saffsafsafs', 'files/PDF/Vehiclecondemnation.pdf', 'Newsletter', '14-June-2021'),
+(10, 'asfsafsa', 'files/PDF/Polyhouse Deisgn Requirement.pdf', 'Technical Publications', '14-June-2021'),
+(11, 'asffasaf', 'files/PDF/Polyhouse Deisgn Requirement.pdf', 'Technical Publications', '14-June-2021');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `publications`
+--
+
+CREATE TABLE `publications` (
+  `Id` int(11) NOT NULL DEFAULT 0,
+  `Name` varchar(255) NOT NULL,
+  `PdfUrl` text NOT NULL,
+  `Tags` varchar(255) NOT NULL,
+  `Date` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `publications`
+--
+
+INSERT INTO `publications` (`Id`, `Name`, `PdfUrl`, `Tags`, `Date`) VALUES
+(0, 'fgi76i76i', 'files/PDF/Vehiclecondemnation.pdf', 'News/ Events', '06-10-21 ');
 
 -- --------------------------------------------------------
 
@@ -231,16 +316,12 @@ CREATE TABLE `staff` (
 
 INSERT INTO `staff` (`Id`, `Name`, `Designation`, `Phone`, `Email`, `ImageUrl`, `Rank`, `Category`, `Date`) VALUES
 (2, 'Pritam Shah', 'Technical Assistant (Computer)', '6294408224', 'pritam@icar.gov.in', 'files/Images/2.png', '2', 'Technical Staffs', '06-02-21 '),
-(3, 'Srinivas', 'Scientist ', '7989898', 'kalaivanan@gmail.com', 'files/Images/NRCOLogo.png', '1', 'Scientist Staffs', '06-03-21 '),
-(4, 'Kalaivanan NS', 'Scientist ', '7989898', 'kalaivanan@gmail.com', 'files/Images/NRCOLogo.png', '3', 'Scientist Staffs', '06-02-21 '),
-(5, 'Dr. Ram Pal', 'Director (Acting)', '6294408224', 'director@icar.gov.in', 'files/Images/logo.png', '1', 'Head', '06-03-21'),
-(6, 'Rabinkala Subba', 'SSS', '8779897797', 'demo@gmail.com', 'files/Images/government-of-india.jpg', '1', 'Skilled Supporting Staffs', '06-03-21'),
-(7, 'Dikki Bhutia', 'Administrative Assistant', '98798798797', 'demo@gmail.com', 'files/Images/government-of-india.jpg', '2', 'Administrative Staffs', '06-05-21 '),
-(8, 'Rajat Kumar Das', 'AF & AO', '98797654', 'rajat@icar.gov.in', 'files/Images/ab2.jpg', '1', 'Administrative Staffs', '06-05-21'),
-(9, 'er', 'r', 'wet', 'wert@gmail.com', 'files/Images/government-of-india.jpg', 'twe', 'Scientist Staffs', '06-05-21'),
-(10, 'er', 'r', 'wet', 'wert@gmail.com', 'files/Images/government-of-india.jpg', 'twe', 'Scientist Staffs', '06-05-21'),
-(11, 'er', 'r', 'wet', 'wert@gmail.com', 'files/Images/government-of-india.jpg', 'twe', 'Scientist Staffs', '06-05-21'),
-(12, 'er', 'r', 'wet', 'wert@gmail.com', 'files/Images/government-of-india.jpg', 'twe', 'Scientist Staffs', '06-05-21');
+(3, 'Biswas Sisshartha', 'Scientist ', '7989898', 'kalaivanan@gmail.com', 'files/Images/NRCOLogo.png', '2', 'Scientist Staffs', '06-11-21 '),
+(4, 'Kalaivanan NS', 'Scientist ', '7989898', 'kalaivanan@gmail.com', 'files/Images/NRCOLogo.png', '1', 'Head', '06-14-21 '),
+(5, 'Dr. Ram Pal', 'Director (Acting)', '6294408224', 'director@icar.gov.in', 'files/Images/logo.png', '1', 'Head', '06-11-21 '),
+(6, 'Mrs. Rabinkala Subba', 'SSS', '8779897797', 'demo@gmail.com', 'files/Images/government-of-india.jpg', '1', 'Skilled Supporting Staffs', '06-10-21 '),
+(8, 'Rajat Das', 'AO AF', '7987987987', 'rajat@icar.gov.in', 'files/Images/ab2.jpg', '1', 'Administrative Staffs', '06-11-21 '),
+(13, 'Mr. Suman Natta', 'Scientist (Plant Biochemistry)', '54654998', 'demo@gmail.com', 'files/Images/government-of-india.jpg', '3', 'Scientist Staffs', '06-14-21 ');
 
 -- --------------------------------------------------------
 
@@ -289,15 +370,33 @@ ALTER TABLE `director_message`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `flowers`
+--
+ALTER TABLE `flowers`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- Indexes for table `mainslider`
 --
 ALTER TABLE `mainslider`
   ADD PRIMARY KEY (`Id`);
 
 --
+-- Indexes for table `orchidinfo`
+--
+ALTER TABLE `orchidinfo`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pdfs`
 --
 ALTER TABLE `pdfs`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `publications`
+--
+ALTER TABLE `publications`
   ADD PRIMARY KEY (`Id`);
 
 --
@@ -320,37 +419,49 @@ ALTER TABLE `testimonial`
 -- AUTO_INCREMENT for table `bulletin_board`
 --
 ALTER TABLE `bulletin_board`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `counter`
 --
 ALTER TABLE `counter`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `director_message`
 --
 ALTER TABLE `director_message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+--
+-- AUTO_INCREMENT for table `flowers`
+--
+ALTER TABLE `flowers`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `mainslider`
 --
 ALTER TABLE `mainslider`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+
+--
+-- AUTO_INCREMENT for table `orchidinfo`
+--
+ALTER TABLE `orchidinfo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pdfs`
 --
 ALTER TABLE `pdfs`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `testimonial`
