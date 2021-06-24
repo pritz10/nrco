@@ -197,8 +197,9 @@
                 Research
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Projects</a>
-                <a class="dropdown-item" href="#">Technologies</a>
+              <a class="dropdown-item" href="Training.php">Training</a>
+              <a class="dropdown-item" href="Projects.php">Projects</a>
+
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -206,10 +207,12 @@
                 Publications
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="Publications.php?xsuasdasdfafasfygug=Newsletter">Newsletter</a>
-                 <a class="dropdown-item" href="Publications.php?xsuasdasdfafasfygug=Annual Report"">Annual Report</a>
-                <a class="dropdown-item" href="Publications.php?xsuasdasdfafasfygug=Technical Publications"">Technical Publications</a>
-              </div>
+              <a class="dropdown-item" href="Newsletter.php">Newsletter</a>
+              <a class="dropdown-item" href="Annual Report.php">Annual Report</a>
+              <a class="dropdown-item" href="Technical Publications.php">Technical Pulications</a>
+
+                            
+                             </div>
             </li>
 
             <li class="nav-item dropdown">
@@ -217,8 +220,8 @@
                 Outreach
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">TSP</a>
-                <a class="dropdown-item" href="#">SCSP</a>
+              <a class="dropdown-item" href="TSP.php">TSP</a>
+              <a class="dropdown-item" href="SCSP.php">SCSP</a>
               </div>
             </li>
             <li class="nav-item dropdown">

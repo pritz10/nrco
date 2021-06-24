@@ -1,4 +1,8 @@
-<?php require_once 'db.php';?>
+<?php require_once 'db.php';
+   include('session.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,23 +94,15 @@
             </li>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-book"></i>
-                    <span>Publication</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
+                <a class="nav-link" href="Research.php">
+                    <i class="fas fa-fw fa fa-lightbulb"></i>
+                    <span>Research</span></a>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link" href="Outreach.php">
+                    <i class="fas fa-fw fa fa-map-marker"></i>
+                    <span>Outreach</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -187,8 +183,8 @@
                     <li class="nav-item dropdown no-arrow mx-1">
                         
                             <a class="nav-link dropdown-toggle" href="#" style="color: red;" ><?php
-echo  date("d-F-Y");?>
-<i class="fas fa-calendar fa-fw"></i>
+                                echo  date("d-F-Y");?>
+                                <i class="fas fa-calendar fa-fw"></i>
                                 
                              </a>
                          
@@ -224,7 +220,7 @@ echo  date("d-F-Y");?>
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="getin.php">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>

@@ -7,14 +7,16 @@
     $sql = "SELECT * FROM bulletin_board ORDER BY id DESC LIMIT 5";  
     $result = mysqli_query($connect, $sql);  
 ?>  
-<div class=" ">  
+<div class=" "  style="background: #FF512F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
       <marquee behavior="scroll"  direction="left" scrollamount="6" onmouseover="this.stop()" onmouseout="this.start()">
       <?php  
       if(mysqli_num_rows($result) > 0)  
         {  
           while($row = mysqli_fetch_array($result))  
             {  
-            echo '<img src="assets/images/giphy.gif" width="30px"><a href="admin/dist'.$row['PdfUrl'].'" class="marq"  target="_blank">'.$row['Name'].'</a>'."&nbsp;&nbsp;&nbsp;";  
+            echo '<img src="assets/images/new.gif" width="50px"><a href="admin/dist'.$row['PdfUrl'].'" class="marq" style="color:white; border-bottom: 2px solid white; "  target="_blank"> '.$row['Name'].'</a>'."&nbsp;&nbsp;&nbsp;";  
             }  
         }  
       ?>  
@@ -299,8 +301,7 @@
       <p style="text-align: justify;"><?php echo $data['Message']; ?></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+        
       </div>
     </div>
   </div>

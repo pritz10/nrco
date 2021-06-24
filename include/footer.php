@@ -252,22 +252,21 @@
     });
   });
 </script>
-<!-- //video popup -->
+<!-- //Right click -->
 <script>
   $(document).ready(function(){
    
-    // if (document.addEventListener) {
-    //     document.addEventListener('contextmenu', function(e) {
-    //         alert("Right click disabled !"); //here you draw your own menu
-    //         e.preventDefault();
-    //     }, false);
-    // } else {
-    //     document.attachEvent('oncontextmenu', function() {
-    //         alert("You've tried to open context menu");
-    //         window.event.returnValue = false;
-    //     });
-    // }
-      ///////////////// fixed menu on scroll for desktop
+    //  if (document.addEventListener) {
+    //      document.addEventListener('contextmenu', function(e) {
+    //          alert("Right click disabled !"); //here you draw your own menu
+    //          e.preventDefault();
+    //      }, false);
+    //  } else {
+    //      document.attachEvent('oncontextmenu', function() {
+    //        alert("You've tried to open context menu");
+    //          window.event.returnValue = false;
+    //      });
+    //  }
  
    $(window).scroll(function(){  
       if ($(this).scrollTop() > 300) {

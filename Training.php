@@ -12,9 +12,7 @@
 
    <section class="w3l-blog-single1">
     <div class="container py-lg-5">
-    <div class="text-bg-image text-center">
-        <img src="assets/images/National-Research-Centre-For-Orchids.jpg" alt="" class="img-fluid radius-image">
-      </div>
+    
        
       <div class="text-content-text">
         <div class="d-grid-2">
@@ -33,33 +31,56 @@
           </div>
         </div>
       </div>
-      <div class="chip" style="display: inline-block;
-      padding: 0 25px;
-       font-size: 16px;
-      line-height: 50px;
-      border-radius: 25px;
-      background-color: #f1f1f1;">
-  <img src="assets/images/icon.svg.png" alt="Person" width="100" height="auto" style=" float: left;
-      margin: 0 10px 0 -25px;
-      height: auto;
-      width: 50px; margin:10px;
-       " >
- <strong>5 days Training on Cultivation of Orchids (21st-25th May 2018)</strong> 
-
-</div>
-<div class="chip" style="display: inline-block;
-      padding: 0 25px;
-       font-size: 16px;
-      line-height: 50px;
-      border-radius: 25px;
-      background-color: #f1f1f1;">
-  <img src="assets/images/icon.svg.png" alt="Person" width="100" height="auto" style=" float: left;
-      margin: 0 10px 0 -25px;
-      height: auto;
-      width: 50px;
-       " >
- <strong>ICAR sponsored training under Pt. Deen Dayal Upadhayay Unnat Krishi Siksha Yojna organized by ICAR-NRCO from (24th-28th) March, 2017 at Kalyan Ashram, Ranipool</strong> 
+      <div class="area-box mb-lg-0 shadow" style="padding:10px;">
+                                     
+                                     <div class="table-responsive">
+                                     <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                     Search for any   <strong>  Training,
+ </strong> date, year etc...
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="table-responsive">
+       <table class="table table-hover table-bordered  " id="example" width="100%" cellspacing="0">             
+          <thead class="thead-dark">
+          <tr >
+                  
+          <th>Title</th>
+                 <th>Date</th>
+                
  
+         </thead> 
+         <tbody>
+         <?php  
+         
+           $sql = "SELECT * FROM pdfs where Tags= 'Training'  ORDER BY Id DESC";  
+             $result = mysqli_query($connect, $sql);  
+                         
+                         while($row = mysqli_fetch_assoc($result))  
+                         {  ?>
+ 
+                         <tr>
+                          
+ 
+                         <td><?php echo '<strong><img src="assets/images/icon.svg.png" width="30" height="auto" style="border-radius: 0px;" > <a href="enIN841IN841'.$row['PdfUrl'].'"target="_blank">  '.$row['Name'].'</li></a> <i class="fa fa-download text-danger " aria-hidden="true"> </i>'; ?></td>
+                         <td><?php echo $row['Date']; ?></td>
+  
+                       </tr>
+                                 
+ 
+                         
+                         <?php 
+                         }
+                         ?>
+         </tbody>
+          
+     </table> 
+ 
+     </div>
+     </div>
+   </div>
+  
 </div>
   </section>
 

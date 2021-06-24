@@ -6,20 +6,24 @@
 <!-- about breadcrumb -->
 <section class="w3l-about-breadcrumb text-center">
           <h2 class="title">Our Staffs</h2>
+          
           <div class="text-center" id="loader">
   <div class="spinner-border text-white" role="status">
     <span class="sr-only">Loading...</span>
   </div>
 </div>
 </section>
-
+<div class="text-bg-image text-center">
+        <img src="assets/images/prg-staff.jpg" alt="" class="img-fluid radius-image">
+      </div>
 <!--/team-sec-->
 <section class="w3l-team-main">
   <div class="team">
     <div class="container">
   
+      <br><br>
     <div class="title-content text-center">
-         <h3 class="hny-title">Head</h3>
+         <h3 class="hny-title">RMP</h3>
       </div>
       
       <div class="row team-row">
