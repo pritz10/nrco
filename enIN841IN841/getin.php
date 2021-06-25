@@ -1,35 +1,48 @@
  
 <?php require_once 'db.php';
- 
- if(isset($_SESSION['login_user'])){
-    header("location:index.php");
-     
- }
-   
-if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload'){
-// username and password sent from form 
-      
-      $myusername = mysqli_real_escape_string($connect,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($connect,$_POST['password']); 
-      
-      $sql = "SELECT Id FROM admin WHERE Username = '$myusername' and Password = '$mypassword'";
-      $result = mysqli_query($connect,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-       
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $myusername and $mypassword, table row must be 1 row
-		
-      if($count == 1) {
-          $_SESSION['login_user'] = $myusername;
-         
-         header("location: index.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-         echo $error;
-      }
+ session_start();
+ if(isset($_SESSION['us'])){
+     header("location:index.php");
    }
+ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload'){
+    $errorMsg = "";
+    $username = mysqli_real_escape_string($connect, $_POST['username']);
+    $password = mysqli_real_escape_string($connect, $_POST['password']); 
+if (!empty($username) || !empty($password)) {
+      $query  = "SELECT * FROM admin WHERE Username = '$username'";
+      $result = mysqli_query($connect, $query);
+      if(mysqli_num_rows($result) == 1){
+        while ($row = mysqli_fetch_assoc($result)) {
+          if (password_verify($password, $row['Password'])) {
+            $_SESSION['us']=$username;
+           
+            $errorMsg = "Preparing for launch !";
+            echo'<div class="alert alert-success text-center" style="font-weight:bold;">'.$errorMsg.'</div>';
+               header("Location:index.php");
+          }
+          else{
+              $errorMsg = "Username or Password is invalid";
+              echo'<div class="alert alert-danger text-center" style="font-weight:bold;">'.$errorMsg.'</div>';
+
+          }    
+        }
+      }else{
+        $errorMsg = "No user found on this username";
+        echo'<div class="alert alert-danger text-center" style="font-weight:bold;">'.$errorMsg.'</div>';
+
+      } 
+  }else{
+    $errorMsg = "Email and Password is required";
+    echo'<div class="alert alert-danger text-center" style="font-weight:bold;">'.$errorMsg.'</div>';
+
+  }
+}
+
 ?>
+
+
+
+ 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +67,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload'){
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="">
 
     <div class="container">
 

@@ -1,7 +1,24 @@
-<?php require_once 'db.php';
-   include('session.php');
+<?php
+   include('db.php');
+   session_start();
+   
+   $user_check = $_SESSION['us'];
+ $load= "Loading...\n".$user_check;
 
-?>
+ 
+   $ses_sql = mysqli_query($connect,"select Username from admin where Username = '$user_check' ");
+   $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
+     $login_session = $row['Username'];
+   
+   
+
+   if(!isset($_SESSION['us'])){
+      header("location:getin.php");
+      die();
+   }
+   
+
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +28,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Pritam Shah">
+    <meta http-equiv="refresh" content="900;url=getout.php" />
+
     <title>NRCO-Dashboard</title>
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -182,16 +201,25 @@
                          
                     <li class="nav-item dropdown no-arrow mx-1">
                         
-                            <a class="nav-link dropdown-toggle" href="#" style="color: red;" ><?php
-                                echo  date("d-F-Y");?>
-                                <i class="fas fa-calendar fa-fw"></i>
+                            <a class="nav-link dropdown-toggle" href="#" style="color: black;" ><i class="fas fa-calendar fa-fw"> </i><?php
+                                echo  date("d-F-Y");?>  
+                               
                                 
                              </a>
                          
                            
                         </li>
 
-                       
+                        <li class="nav-item dropdown no-arrow mx-1">
+                        
+                            <a class="nav-link dropdown-toggle" href="#" style="color: red;" ><i class="fas fa-clock fa-fw"> </i>
+
+                               <span id="timer"></span>
+                                
+                             </a>
+                         
+                           
+                        </li>
                         
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -200,7 +228,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown"  role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600  ">Hello, Pritam Shah</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600  ">Hello,  <?php echo  $user_check; ?> </span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -220,7 +248,7 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="getin.php">
+                                <a class="dropdown-item" href="getout.php">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
