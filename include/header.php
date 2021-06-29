@@ -14,7 +14,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <!--CSS-->
   <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
-
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="assets/css/style-starter.css">
   <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
   <script src="assets/js/jquery-3.5.1.min.js"></script>

@@ -17,8 +17,16 @@ if (!empty($username) || !empty($password)) {
             $_SESSION['us']=$username;
            
             $errorMsg = "Preparing for launch !";
+
             echo'<div class="alert alert-success text-center" style="font-weight:bold;">'.$errorMsg.'</div>';
                header("Location:index.php");
+
+               $created_date = date("d-F-Y");
+            $sql = "UPDATE nrconewdb.updatedate set UpdateDate='$created_date'";
+            if (mysqli_query($connect, $sql)) {            
+                echo'loading...';
+            }
+            
           }
           else{
               $errorMsg = "Username or Password is invalid";
@@ -53,6 +61,7 @@ if (!empty($username) || !empty($password)) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="refresh" content="900;url=getout.php" />
 
     <title>ADMIN LOGIN</title>
 

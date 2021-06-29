@@ -71,7 +71,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
     $uid = $_POST['id'];
     $tags = $_POST['tags'];
 
-    $created_date = date("m-d-y ");
+    $created_date = date("d-F-Y");
     $sql = "UPDATE nrconewdb.bulletin_board set Name='$name', Tags='$tags', Date='$created_date' where id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){

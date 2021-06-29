@@ -89,8 +89,20 @@
           </div>
         </div>
       </div>
-    <center>  <h6 style="color:green">Last Updated on : 12-May-2021</h6>  </center> 
-
+                     <?php
+                      $sql="SELECT * FROM updatedate;";
+                  $result = mysqli_query($connect,$sql); // fetch data from database
+                    if(mysqli_num_rows($result) > 0)  
+                    {  
+                        while($data = mysqli_fetch_array($result))  
+                        {                
+                    ?>
+                       <p class="copy-footer-28 text-center" style="color:green" >Last Updated: 
+                    <?php echo $data['UpdateDate']; ?></h6>  
+                      <?php
+                        }}?>
+                        
+            <div align='center'>Hits: <img src='http://www.hit-counts.com/counter.php?t=MTQ1ODQ5NA==' border='0'</div>
       <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
         <div class="container">
           <p class="copy-footer-28 text-center"> &copy; Copyright NRC for Orchids. All rights reserved. Designed, developed & maintained by <a
