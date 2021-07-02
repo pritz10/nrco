@@ -5,10 +5,10 @@
 
 <head>
   <!-- Required meta tags -->
-  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>ICAR-NRC for Orchids</title>
+  <title><?php echo $title; ?> |NRCO</title>
   <META NAME="DESCRIPTION" CONTENT="The ICAR-National Research Centre for Orchids, Sikkim was established by Indian Council of Agricultural Research, New Delhi on 5th October 1996 based on the recommendations of the Planning Commission during VIIIth Five Year Plan. The basic objective for setting up this centre was to provide research support to upcoming orchid industry, conserve and use orchid genetic resources available in the country.">
   <META NAME="KEYWORDS" CONTENT="Sikkim, Darjeeling, ICAR, NRCO, Orchids, Orchid, Gangtok,ICAR-NRC for Orchids">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,8 +24,8 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/jquery.dataTables.min.js"></script>
   <script src="assets/js/dataTables.bootstrap4.min.js"></script>
- <style>
-   /* The device with borders */
+  <style>
+     /* The device with borders */
 .smartphone {
   position: relative;
   width: 311px;
@@ -68,9 +68,12 @@
   height: 520px;
   background: black;
 }
- </style>
+  </style>
   <script>
     $(document).ready(function() {
+      $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
       $('#example').DataTable({
         "lengthMenu": [
           [10, 25, 50, -1],
@@ -94,21 +97,22 @@
       <div class="container">
         <header class="row top-menu-top">
           <div class="accounts col-6">
-
-            <li class="top_li"><a id="google_translate_element"> </a> </li>
-
-            <li class="top_li"><span class="fa fa-phone"></span><a href="tel:03592267031">Call</a></li>
-            <li class="top_li"><span class="fa fa-envelope"></span><a href="mailto:director.nrco@icar.gov.in" class="mail"> Email</a> </li>
+           
+            <li class="top_li"data-toggle="tooltip" data-placement="top" title="Skip the header and banners"><span class="fa fa-universal-access"></span><a href="index.php#mainid">Skip to main content</a></li>
+            <li class="top_li" data-toggle="tooltip" data-placement="top" title="Call 03592267031"><span class="fa fa-phone"></span><a href="tel:03592267031">Call</a></li>
+            <li class="top_li" data-toggle="tooltip" data-placement="top" title="Email director.nrco@icar.gov.in"><span class="fa fa-envelope"></span><a href="mailto:director.nrco@icar.gov.in" class="mail"> Email</a> </li>
+            <li class="top_li" data-toggle="tooltip" data-placement="top" title="Translate this website using Google-Translate"><a id="google_translate_element"> </a> </li>
+          
           </div>
           <div class="social-top col-6 " style="font-size: 14px;">
             </span>
             <span class="fa fa-book top_li1" style="color: white;">
-              <a href="Screenreader.html" style="color: white;" data-toggle="tooltip" data-placement="top" title="Screen Reader">Screen Reader</a> |
+              <a href="Screenreader.php" style="color: white;" data-toggle="tooltip" data-placement="top" title="Screen Reader">Screen Reader</a> |
             </span>
-            <span class="fa fa-font" style="color: white;">
-              <a class="increase" data-toggle="tooltip" data-placement="top" title="Increase Font Size!">+ </a> |
-              <a class="decrease" data-toggle="tooltip" data-placement="top" title="Decrease Font Size!">--</a> |
-              <a class="reset" data-toggle="tooltip" data-placement="top" title="Original Size">reset</a>
+            <span class=" t" style="color: white;">Font-Size:
+           <strong>   <a class="increase" data-toggle="tooltip" data-placement="top" title="Increase Font Size!">A+ </a> |
+              <a class="decrease" data-toggle="tooltip" data-placement="top" title="Decrease Font Size!">A--</a> |
+              <a class="reset" data-toggle="tooltip" data-placement="top" title="Original Size">A</a></strong>
             </span>
           </div>
         </header>
@@ -141,7 +145,7 @@
 
       <nav class="navbar navbar-expand-lg stroke ">
 
-        <a class="navbar-brand" href="index.php">NRCO
+        <a class="navbar-brand" href="index.php" data-toggle="tooltip" data-placement="top" title="Homepage">NRCO
           <img src="assets/images/logo.png" alt="logo" title="" style="height:35px;" />
         </a>
         <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -164,6 +168,8 @@
                 <a class="dropdown-item" href="about_nrco.php">About NRCO</a>
                 <a class="dropdown-item" href="#">Organization Setup</a>
                 <a class="dropdown-item" href="Staff.php">Staffs</a>
+                <a class="dropdown-item" href="message_from_director.php">Message from Director</a>
+
                 <a class="dropdown-item" href="regional_sub-centres.php">Regional/ Sub Centres</a>
                 <a class="dropdown-item" href="admin\dist\uploads\ICAR-NRCO-At-a-Glance.pdf">Institute as a glance</a>
                 <a class="dropdown-item" href="FormerDirectors.php">Former Directors</a>
@@ -238,14 +244,14 @@
               </div>
             </li>
             <li class="nav-item  ">
-              <a class="nav-link" href="Gallery.php">Gallery</a>
+              <a class="nav-link" href="Gallery.php">More...</a>
             </li>
             <li class="nav-item  ">
             <a data-target="#payment" data-toggle="modal"class="nav-link"
        href="#payment">Payment</a>
              </li>
             <li class="nav-item  ">
-              <a class="nav-link" href="index.php">हिंदी</a>
+              <a class="nav-link" href="index.php" data-toggle="tooltip" data-placement="top" title="Hindi version of this website">हिंदी</a>
             </li>
             <li class="nav-item  ">
               <a class="nav-link" href="index.php">Contact</a>
@@ -265,8 +271,8 @@
               <label class="theme-switch" for="checkbox">
                 <input type="checkbox" id="checkbox">
                 <div class="mode-container">
-                  <i class="gg-sun" style="  color: var(--heading-color);" ></i>
-                  <i class="gg-moon" style="  color: var(--heading-color);" ></i>
+                  <i class="gg-sun" data-toggle="tooltip" data-placement="top" title="Light Theme" style="  color: var(--heading-color);" ></i>
+                  <i class="gg-moon" data-toggle="tooltip" data-placement="top" title="Dark Theme"   style="  color: var(--heading-color);" ></i>
                 </div>
               </label>
             </div>

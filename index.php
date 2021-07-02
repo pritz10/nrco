@@ -1,5 +1,7 @@
 <!-- Include Header -->
-<?php require_once 'include/header.php'; ?>
+<?php
+$title = "ICAR-NRC for Orchids";
+require_once 'include/header.php'; ?>
 
 
 <!-- Main Body-->
@@ -21,10 +23,10 @@
         }  
       ?>  
       </marquee>  
-      <br />                 
+                      
 </div>  
 
-  
+<br>
 <div class="container">
 
  <!-- main-slider -->
@@ -69,7 +71,7 @@
   </section>
   <!-- /main-slider -->
   </div>
-<section class="w3l-features py-5" id="features">
+<section class="w3l-features py-5" id="mainid">
   <div class="container">
     <div class="middle-section text-center">
       <div class="section-width">
@@ -78,7 +80,7 @@
       </div> 
     <div class="grids-area-hny main-cont-wthree-fea row">      
       <div class="col-lg-6 col-sm-12 grids-feature  mb-4">
-        <a href="News.php" class="list-group-item list-group-item-action flex-column align-items-start active">
+        <a href="News.php" data-toggle="tooltip" data-placement="top" title="Click to explore more..."   class="list-group-item list-group-item-action flex-column align-items-start active">
    <div class="d-flex w-100 justify-content-between">
      <h5 class="mb-1"><span class="fa fa-newspaper-o"></span> News / Events   </h5><i class="fa fa-expand" aria-hidden="true"></i>
    </div>
@@ -102,7 +104,7 @@
       </ul>
      </div> 
      <div class="col-lg-3 col-sm-6 grids-feature mb-4 ">
-      <a href="Opportunity.php" class="list-group-item list-group-item-action flex-column align-items-start active">
+      <a href="Opportunity.php" data-toggle="tooltip" data-placement="top" title="Click to explore all Opportunity..." class="list-group-item list-group-item-action flex-column align-items-start active">
  <div class="d-flex w-100 justify-content-between">
    <h5 class="mb-1"><span class="fa fa-line-chart"></span> Opportunity  </h5> <i class="fa fa-expand" aria-hidden="true"></i>
 
@@ -128,7 +130,7 @@
    </div>
       
    <div class="col-lg-3 col-sm-6 grids-feature mb-4">
-    <a href="Tenders.php" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <a href="Tenders.php" data-toggle="tooltip" data-placement="top" title="Click to explore all tenders..." class="list-group-item list-group-item-action flex-column align-items-start active">
 <div class="d-flex w-100 justify-content-between">
  <h5 class="mb-1"> <span class="fa fa-paperclip"></span> Tenders </h5>  <i class="fa fa-expand" aria-hidden="true"></i>
 </div>
@@ -361,16 +363,16 @@ background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, F
         <div class="cwp4-image col-lg-4 pl-lg-5 mb-lg-0 mb-5">
   <div class="smartphone">
   <div class="content">
-  <a href=" .php" class="list-group-item list-group-item-action flex-column align-items-start active ">
+  <a href=" .php"  class="list-group-item list-group-item-action flex-column align-items-start active ">
  <div class="d-flex w-100 justify-content-between">
    <h5 class="mb-1 text-center">Mobile Applications<img src="google-play-badge.png" width="200px" alt=""> </h5>  
 </div>
  </a>
      <ul class="list-group left shadow" style="height: 308px;">
-     <a href="https://play.google.com/store/apps/details?id=nrco.cymbidiumorchid&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed.webp" width="50" alt="">Orchid Farming</li></a>
-     <a href="https://play.google.com/store/apps/details?id=nrco.orchidopedia&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (1).webp" width="50" alt=""> OrchidoPedia</li></a>
-     <a href="https://play.google.com/store/apps/details?id=com.nrco.orchidpestmanagement&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (2).webp" width="50" alt="">Orchid Pest Management</li></a>
-     <a href="https://play.google.com/store/apps/details?id=com.nrco.datasheet&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (3).webp" width="50" alt="">Orchid-MAN</li></a>
+     <a data-toggle="tooltip" data-placement="top" title="Click to explore more..."  href="https://play.google.com/store/apps/details?id=nrco.cymbidiumorchid&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed.webp" width="50" alt="">Orchid Farming</li></a>
+     <a  data-toggle="tooltip" data-placement="top" title="Click to explore more..."  href="https://play.google.com/store/apps/details?id=nrco.orchidopedia&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (1).webp" width="50" alt=""> OrchidoPedia</li></a>
+     <a  data-toggle="tooltip" data-placement="top" title="Click to explore more..." href="https://play.google.com/store/apps/details?id=com.nrco.orchidpestmanagement&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (2).webp" width="50" alt="">Orchid Pest Management</li></a>
+     <a  data-toggle="tooltip" data-placement="top" title="Click to explore more..." href="https://play.google.com/store/apps/details?id=com.nrco.datasheet&hl=en"target="_blank" class=" marq"> <li class="list-group-item d-flex justify-content-between align-items-center"><img src="assets/images/unnamed (3).webp" width="50" alt="">Orchid-MAN</li></a>
       
      </ul> </div>
 </div>
@@ -405,7 +407,7 @@ background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, F
  
       </div>
     <div class="cwp4-image col-lg-6 pl-lg-5 mb-lg-0 mb-5">
-  <div class="smartphone">
+  <div data-toggle="tooltip" data-placement="top" title="Scroll Please"  class="smartphone">
   <div class="content">
   <p style="color: white;">Faceook Page:</p>
   <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&tabs=timeline&width=280&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="298" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>  </div>

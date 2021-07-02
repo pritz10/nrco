@@ -1,5 +1,7 @@
 <!-- Include Header -->
-<?php require_once 'include/header.php'; ?>
+<?php
+$title = "Message from Director| NRCO";
+require_once 'include/header.php'; ?>
 <!-- Main Body-->
 <section class="w3l-about-breadcrumb text-center">
  

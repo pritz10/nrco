@@ -1,5 +1,7 @@
 <!-- Include Header -->
-<?php require_once 'include/header.php'; ?>
+<?php
+$title = "Projects|NRCO";
+require_once 'include/header.php'; ?>
  
 
  

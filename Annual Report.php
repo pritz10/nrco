@@ -1,5 +1,8 @@
 <!-- Include Header -->
-<?php require_once 'include/header.php'; ?>
+<?php
+$title = "Annual Report";
+require_once 'include/header.php'; ?>
+
  
  
  

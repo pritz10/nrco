@@ -1,6 +1,8 @@
 <!-- Include Header -->
 
-<?php require_once 'include/header.php'; ?>
+<?php
+$title = "Opportunity|NRCO";
+require_once 'include/header.php'; ?>
 <section class="w3l-about-breadcrumb text-center">
           <h2 class="title">Opportunity</h2>
 </section>

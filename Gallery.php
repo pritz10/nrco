@@ -1,11 +1,14 @@
  <!-- Include Header -->
-<?php require_once 'include/header.php'; ?>
+ <?php
+$title = "Gallery";
+require_once 'include/header.php'; ?>
+
  
 
  
  <!-- about breadcrumb -->
  <section class="w3l-about-breadcrumb text-center">
-           <h2 class="title">Consultancy</h2>
+           <h2 class="title">Gallery</h2>
  </section>
  <div class="gallery">
         <a href="assets/images/g1.jpg" class="mb-4"> <img src="assets/images/g1.jpg" class="img-fluid" alt="" title="Beautiful Image" /></a>

@@ -112,7 +112,7 @@
     </div>
   </footer>
   <!-- move top -->
-  <button onclick="topFunction()" id="movetop" title="Go to top">
+  <button data-toggle="tooltip" data-placement="top" title="Directly to top"  onclick="topFunction()" id="movetop" title="Go to top">
     &#10548;
   </button>
   <script>
