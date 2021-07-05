@@ -3,9 +3,9 @@
     if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload')
     {
     $filename = $_FILES['myfile']['name'];
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-     $created_date = date("m-d-y");
+    $title =mysqli_real_escape_string($connect, $_POST['title']);
+    $description =mysqli_real_escape_string($connect, $_POST['description']);
+     $created_date = date("d-F-Y");
     // destination of the file on the server
     $destination = 'files/images/' . $filename;
 
@@ -56,10 +56,10 @@
 }
 if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
 {
-    $utitle = $_POST['update_title'];
-    $uid = $_POST['Id'];
-    $description = $_POST['update_desc'];
-    $created_date = date("m-d-y ");
+    $utitle = mysqli_real_escape_string($connect,$_POST['update_title']);
+    $uid = mysqli_real_escape_string($connect,$_POST['Id']);
+    $description = mysqli_real_escape_string($connect,$_POST['update_desc']);
+    $created_date = date("d-F-Y");
     $sql = "UPDATE nrconewdb.mainslider set Title='$utitle', Description='$description', Date='$created_date' where Id='$uid'";
     if (mysqli_query($connect, $sql)) {
         echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">

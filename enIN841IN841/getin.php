@@ -63,7 +63,7 @@ if (!empty($username) || !empty($password)) {
     <meta name="author" content="">
     <meta http-equiv="refresh" content="900;url=getout.php" />
 
-    <title>ADMIN LOGIN</title>
+    <title>Get In</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -113,7 +113,7 @@ if (!empty($username) || !empty($password)) {
                                         <button type="submit" style="width: 100%;" value="upload"  name="submit" class="btn btn-primary btn-user btn-block" id="upload-file"><i class="fa fa-user" aria-hidden="true"></i> Get In...</button>
 
                                        
-
+        
 
 
                                     </form>

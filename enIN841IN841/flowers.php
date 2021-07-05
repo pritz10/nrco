@@ -3,7 +3,7 @@
     if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload')
     {
     $filename = $_FILES['myfile']['name'];
-    $title = $_POST['title'];
+    $title = mysqli_real_escape_string($connect, $_POST['title']);
     // destination of the file on the server
     $destination = 'files/images/' . $filename;
 
@@ -56,7 +56,7 @@
 if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
 {
      
-    $uid = $_POST['Id'];   
+    $uid =  mysqli_real_escape_string($connect, $_POST['Id']);   
     $sql = "DELETE FROM nrconewdb.flowers where Id='$uid'";
     if (mysqli_query($connect, $sql)) {
         echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">

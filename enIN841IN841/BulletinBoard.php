@@ -4,8 +4,8 @@
     if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload')
     {
     $filename = $_FILES['myfile']['name'];
-    $name = $_POST['name'];
-    $tags = $_POST['tags'];
+    $name = mysqli_real_escape_string($connect, $_POST['name']);
+    $tags = mysqli_real_escape_string($connect, $_POST['tags']);
     $created_date = date("d-F-Y");
     // destination of the file on the server
     $destination = 'files/PDF/' . $filename;
@@ -67,9 +67,9 @@
 }
 if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
 {
-    $name = $_POST['update_name'];
-    $uid = $_POST['id'];
-    $tags = $_POST['tags'];
+    $name = mysqli_real_escape_string($connect, $_POST['update_name']);
+    $uid = mysqli_real_escape_string($connect, $_POST['id']);
+    $tags = mysqli_real_escape_string($connect, $_POST['tags']);
 
     $created_date = date("d-F-Y");
     $sql = "UPDATE nrconewdb.bulletin_board set Name='$name', Tags='$tags', Date='$created_date' where id='$uid'";
@@ -105,7 +105,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
 if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
 {
      
-    $uid = $_POST['id'];   
+    $uid =  mysqli_real_escape_string($connect,$_POST['id']);   
     $sql = "DELETE FROM nrconewdb.bulletin_board where id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){

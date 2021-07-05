@@ -2,12 +2,12 @@
 <?php
    if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload')
    {	 	
-        $name1 = $_POST['name1'];
-        $name2 = $_POST['name2'];
-        $name3 = $_POST['name3'];
-        $name4 = $_POST['name4'];
+        $name1 = mysqli_real_escape_string($connect, $_POST['name1']);
+        $name2 = mysqli_real_escape_string($connect, $_POST['name2']);
+        $name3 = mysqli_real_escape_string($connect, $_POST['name3']);
+        $name4 = mysqli_real_escape_string($connect, $_POST['name4']);
 
-        $date = date("m-d-y");
+        $date = date("d-F-Y");
 
           $sql = "INSERT INTO counter (Name1,Name2,Name3,Name4,Date) VALUES ('$name1','$name2','$name3','$name4','$date')";
           if (mysqli_query($connect, $sql)) {

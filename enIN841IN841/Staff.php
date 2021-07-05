@@ -3,13 +3,13 @@
     if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload')
     {
     $filename = $_FILES['myfile']['name'];
-    $name = $_POST['name'];
-    $designation = $_POST['designation'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $category = $_POST['category'];
-    $rank = $_POST['rank'];
-    $created_date = date("m-d-y");
+    $name = mysqli_real_escape_string($connect, $_POST['name']);
+    $designation = mysqli_real_escape_string($connect, $_POST['designation']);
+    $email =  mysqli_real_escape_string($connect,$_POST['email']);
+    $phone =  mysqli_real_escape_string($connect,$_POST['phone']);
+    $category =  mysqli_real_escape_string($connect,$_POST['category']);
+    $rank =  mysqli_real_escape_string($connect,$_POST['rank']);
+    $created_date = date("d-F-Y");
     // destination of the file on the server
     $destination = 'files/Images/' . $filename;
 
@@ -69,14 +69,14 @@
 }
 if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
 {
-    $name = $_POST['update_name'];
-    $rank = $_POST['update_rank'];
-    $uid = $_POST['id'];
-    $category = $_POST['category'];
-    $designation = $_POST['update_designation'];
-    $email = $_POST['update_email'];
-    $phone = $_POST['update_phone'];
-    $created_date = date("m-d-y ");
+    $name = mysqli_real_escape_string($connect, $_POST['update_name']);
+    $rank =mysqli_real_escape_string($connect, $_POST['update_rank']);
+    $uid =mysqli_real_escape_string($connect, $_POST['id']);
+    $category = mysqli_real_escape_string($connect,$_POST['category']);
+    $designation = mysqli_real_escape_string($connect,$_POST['update_designation']);
+    $email =mysqli_real_escape_string($connect, $_POST['update_email']);
+    $phone =mysqli_real_escape_string($connect, $_POST['update_phone']);
+    $created_date = date("d-F-Y ");
     $sql = "UPDATE staff set Name='$name', Designation='$designation', Phone='$phone', Email='$email', Category='$category', Rank='$rank', Date='$created_date' where id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){
@@ -113,7 +113,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'update')
 if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
 {
      
-    $uid = $_POST['id'];   
+    $uid = mysqli_real_escape_string($connect,$_POST['id']);   
     $sql = "DELETE FROM nrconewdb.staff where Id='$uid'";
     if (mysqli_query($connect, $sql)) {
         if(mysqli_affected_rows($connect) >0 ){

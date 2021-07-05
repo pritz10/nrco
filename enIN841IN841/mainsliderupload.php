@@ -1,8 +1,8 @@
 <?php require_once 'db.php'; ?>
 <?php 
     $filename = $_FILES['myfile']['name'];
-    $title = $_POST['title'];
-    $description = $_POST['description'];
+    $title = mysqli_real_escape_string($connect, $_POST['title']);
+    $description = mysqli_real_escape_string($connect, $_POST['description']);
      $created_date = date("d-m-y H:i");
     // destination of the file on the server
     $destination = 'uploads/' . $filename;

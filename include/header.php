@@ -107,12 +107,13 @@
           <div class="social-top col-6 " style="font-size: 14px;">
             </span>
             <span class="fa fa-book top_li1" style="color: white;">
-              <a href="Screenreader.php" style="color: white;" data-toggle="tooltip" data-placement="top" title="Screen Reader">Screen Reader</a> |
+              <a href="Screenreader.php" style="color: white;" data-toggle="tooltip" data-placement="top" title="Screen Reader Accessibility tools">Screen Reader</a> |
             </span>
             <span class=" t" style="color: white;">Font-Size:
            <strong>   <a class="increase" data-toggle="tooltip" data-placement="top" title="Increase Font Size!">A+ </a> |
-              <a class="decrease" data-toggle="tooltip" data-placement="top" title="Decrease Font Size!">A--</a> |
-              <a class="reset" data-toggle="tooltip" data-placement="top" title="Original Size">A</a></strong>
+           <a class="reset" data-toggle="tooltip" data-placement="top" title="Original Size">A</a> |
+              <a class="decrease" data-toggle="tooltip" data-placement="top" title="Decrease Font Size!">A--</a>
+              </strong>
             </span>
           </div>
         </header>
@@ -243,8 +244,15 @@
                 <a class="dropdown-item" href="Tenders.php">Tenders</a>
               </div>
             </li>
-            <li class="nav-item  ">
-              <a class="nav-link" href="Gallery.php">More...</a>
+            <li class="nav-item dropdown data-toggle="tooltip" data-placement="top" title="Downloads, Gallery, Swach Bharat Abhiyaan etc">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More...
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Downloads.php">Downloads</a>
+              <a class="dropdown-item" href="Gallery.php">Gallery</a>
+              <a class="dropdown-item" href="Gallery.php">Swach Bharat Abhiyaan</a>
+              </div>
             </li>
             <li class="nav-item  ">
             <a data-target="#payment" data-toggle="modal"class="nav-link"
@@ -254,7 +262,7 @@
               <a class="nav-link" href="index.php" data-toggle="tooltip" data-placement="top" title="Hindi version of this website">हिंदी</a>
             </li>
             <li class="nav-item  ">
-              <a class="nav-link" href="index.php">Contact</a>
+              <a class="nav-link" href="contact.php">Contact</a>
             </li>
 
 
