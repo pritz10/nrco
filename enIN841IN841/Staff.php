@@ -164,7 +164,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse show " id="messagedata">
                                     <div class="card-body">
-                                    <form method="post" action="Staff.php" enctype="multipart/form-data" style="padding:10px;">                                        
+                                    <form method="post" action="Staff" enctype="multipart/form-data" style="padding:10px;">                                        
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Name</label>
@@ -181,8 +181,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
       <input type="email" name="email" class="form-control" required onchange="readURL(this);" id="email">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Phone</label>
-      <input type="phone" name="phone" class="form-control" required onchange="readURL(this);" id="phone">
+      <label for="inputPassword4">Former Director Date Tenure</label>
+      <input type="text" name="phone" class="form-control" placeholder="1994-2003" required onchange="readURL(this);" id="phone">
     </div>
   </div>
   
@@ -201,6 +201,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
         <option>Technical Staffs</option>
         <option>Skilled Supporting Staffs</option>
         <option>Project Staffs</option>
+        <option>Former Directors</option>
+
       </select>
     </div>
     <div class="form-group col-md-2">
@@ -341,7 +343,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                    <form method="post" action="Staff.php" enctype="multipart/form-data" style="padding:10px;">
+                                    <form method="post" action="Staff" enctype="multipart/form-data" style="padding:10px;">
                                     <div class="form-row">
                                     <input type="hidden" name="id" value="<?php echo $row['Id']; ?>">
                                       <div class="form-group col-md-6">
@@ -360,8 +362,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                       </div>
                                       
                                       <div class="form-group col-md-3">
-                                        <label for="inputPassword4">Phone</label>
-                                        <input type="phone" name="update_phone" class="form-control"  value="<?php echo $row['Phone']; ?>" id="phone">
+                                        <label for="inputPassword4">Former Director Tenure</label>
+                                        <input type="text" name="update_phone" class="form-control"  value="<?php echo $row['Phone']; ?>" id="phone">
                                       </div>
                                       <div class="form-group col-md-3">
                                         <label for="inputState">Category</label>
@@ -374,6 +376,8 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                           <option>Technical Staffs</option>
                                           <option>Skilled Supporting Staffs</option>
                                           <option>Project Staffs</option>
+                                          <option>Former Directors</option>
+
                                   
                                         </select>
                                       </div>
@@ -407,7 +411,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         <strong> <?php echo $row['Name']; ?> <br>
                                         
                                       
-                                        <form method="post" action="Staff.php" enctype="multipart/form-data" style="padding:10px;">
+                                        <form method="post" action="Staff" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['Id']; ?>">
                                           </div> 

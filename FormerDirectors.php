@@ -27,7 +27,7 @@ require_once 'include/header.php'; ?>
       
       <div class="row team-row">
                 <?php
-                  $sql="SELECT * FROM staff where Category='Head'ORDER BY Rank;";
+                  $sql="SELECT * FROM staff where Category='Former Directors' ORDER BY Rank;";
                   $result = mysqli_query($connect,$sql); // fetch data from database
                     if(mysqli_num_rows($result) > 0)  
                     {  
@@ -35,7 +35,7 @@ require_once 'include/header.php'; ?>
                         {                
                     ?>
         <div class="col-lg-3 col-6 team-wrap  ">
-          <div class="team-info text-center">
+          <div class="team-info text-center shadow">
             <div class="column position-relative">
             
              <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" alt="staff"

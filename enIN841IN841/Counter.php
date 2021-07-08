@@ -12,7 +12,7 @@
           $sql = "INSERT INTO counter (Name1,Name2,Name3,Name4,Date) VALUES ('$name1','$name2','$name3','$name4','$date')";
           if (mysqli_query($connect, $sql)) {
             if(mysqli_affected_rows($connect) >0 ){
-            echo'<div class="alert alert-warning alert-dismissible fade show" id="alert" role="alert">
+            echo'<div class="alert alert-success alert-dismissible fade show" id="alert" role="alert">
             <strong>Uploaded Successfully</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -49,7 +49,7 @@
                                         <i class="fas fa-chart-area mr-1"></i>
                                         </strong> Counter</strong>
                                     </div>
-                                    <form method="post" action="Counter.php" enctype="multipart/form-data" style="padding:10px;">
+                                    <form method="post" action="Counter" enctype="multipart/form-data" style="padding:10px;">
                                               <div class="form-group">
                                                 <label for="exampleFormControlInput1">Number of Species</label>
                                                 <input type="text" name="name1" class="form-control" required >

@@ -75,12 +75,12 @@ require_once 'include/header.php'; ?>
   <div class="container">
     <div class="middle-section text-center">
       <div class="section-width">
-        <h3 class="hny-title py-md-4">Bulletin Board <i class="fa fa-bookmark" aria-hidden="true"></i></h3> 
+        <h3 class="hny-title py-md-4">Bulletin Board <i class="fa fa-thumb-tack" aria-hidden="true"></i></h3> 
        </div>
       </div> 
     <div class="grids-area-hny main-cont-wthree-fea row">      
       <div class="col-lg-6 col-sm-12 grids-feature  mb-4">
-        <a href="News.php" data-toggle="tooltip" data-placement="top" title="Click to explore more..."   class="list-group-item list-group-item-action flex-column align-items-start active">
+        <a href="News" data-toggle="tooltip" data-placement="top" title="Click to explore more..."   class="list-group-item list-group-item-action flex-column align-items-start active">
    <div class="d-flex w-100 justify-content-between">
      <h5 class="mb-1"><span class="fa fa-newspaper-o"></span> News / Events   </h5><i class="fa fa-expand" aria-hidden="true"></i>
    </div>
@@ -104,7 +104,7 @@ require_once 'include/header.php'; ?>
       </ul>
      </div> 
      <div class="col-lg-3 col-sm-6 grids-feature mb-4 ">
-      <a href="Opportunity.php" data-toggle="tooltip" data-placement="top" title="Click to explore all Opportunity..." class="list-group-item list-group-item-action flex-column align-items-start active">
+      <a href="Opportunity" data-toggle="tooltip" data-placement="top" title="Click to explore all Opportunity..." class="list-group-item list-group-item-action flex-column align-items-start active">
  <div class="d-flex w-100 justify-content-between">
    <h5 class="mb-1"><span class="fa fa-line-chart"></span> Opportunity  </h5> <i class="fa fa-expand" aria-hidden="true"></i>
 
@@ -130,7 +130,7 @@ require_once 'include/header.php'; ?>
    </div>
       
    <div class="col-lg-3 col-sm-6 grids-feature mb-4">
-    <a href="Tenders.php" data-toggle="tooltip" data-placement="top" title="Click to explore all tenders..." class="list-group-item list-group-item-action flex-column align-items-start active">
+    <a href="Tenders" data-toggle="tooltip" data-placement="top" title="Click to explore all tenders..." class="list-group-item list-group-item-action flex-column align-items-start active">
 <div class="d-flex w-100 justify-content-between">
  <h5 class="mb-1"> <span class="fa fa-paperclip"></span> Tenders </h5>  <i class="fa fa-expand" aria-hidden="true"></i>
 </div>
@@ -169,7 +169,7 @@ require_once 'include/header.php'; ?>
             <div class=" text-center">
                 <div class="section-width">
                   <h6 class="sub-title text-center"> About Us</h6>
-                    <h3 class="hny-title"> Welcome to NRCO, Sikkim</h3>
+                    <h3 class="hny-title"> Welcome to NRCO, Sikkim <img src="assets/images/namaste.png" width="50px" alt=""></h3>
                     <p class="mt-3" style="text-align: justify;">The National Research Centre for Orchids was established on 5th October 1996 by the indian council of Agricultural Research (ICAR), New Delhi to organize program on improvement in productivity, quality and commercialization of orchids.<br><br> The Sikkim state authorities handed over 22.19 acres of land belonging to Regional Agricultural Centre along witha all other assets to ICAR for establishment of the centre. In October 1997, the centre also took over the CPRS, Darjeeling form CPRI and established a campus for research on temperate orchids.</p>
                 </div>
                 <div class="cwp4-two row">
@@ -277,23 +277,29 @@ require_once 'include/header.php'; ?>
         <div class="text-center " style="color:white;" >
          <h5  style="color:white;" >Orchid of the month</h5>
 
-          <h3 class="hny-title"  style="color:white;" ><?php echo $data['Name']; ?></h3>
+          <h3 class="hny-title"  style="color:white;" ><?php echo $data['Name']; ?><img src="assets/images/ribbon.png" width="50px" alt=""></h3>
  
         <p style="text-align: justify; height:172px;overflow:hidden; color:white;" ><?php echo $data['Message']; ?></p>
           <a data-target="#orchidinfo" data-toggle="modal" class="read"  style="color:white;" href="#orchidinfo">Read More</a><br> <br>
           Share: 
           <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary"><i class="fa fa-facebook-square" aria-hidden="true"></i>
-</button>
-  <button type="button" class="btn btn-primary"><i class="fa fa-whatsapp" aria-hidden="true"></i></button>
-  <button type="button" class="btn btn-primary" onclick="window.open('https://wwww.facebook.com/sharer.php?u=https://nrcorchids.nic.in/index.php/en/','_blank')" ><i class="fa fa-share" aria-hidden="true"></i></button>
-</div>
+ 
+            <a href="whatsapp://send?text=www.nrco.icar.gov.in/index#aboutorchid" data-action="share/whatsapp/share" target="_blank"  data-toggle="tooltip" data-placement="top" title="Share to Whatsapp" class="btn btn-light">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Share to Facebook" class="btn btn-light">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Copy Link" class="btn btn-light">
+            <i class="fa fa-share" aria-hidden="true"></i>
+            </a>
+            </div>
           <div class="modal fade" id="orchidinfo" tabindex="-1" role="dialog" aria-labelledby="orchidinfo" aria-hidden="true">
   
   <div class="modal-dialog modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="orchidinfo"><?php echo $data['Name']; ?></h5>
+        <h5 class="modal-title" id="orchidinfo"><?php echo $data['Name']; ?> <img src="assets/images/ribbon.png" width="50px" alt=""></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -302,8 +308,18 @@ require_once 'include/header.php'; ?>
       <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" class="img-curve img-fluid" alt=""/> <br> <br>
       <p style="text-align: justify;"><?php echo $data['Message']; ?></p>
       </div>
-      <div class="modal-footer">
-        
+      <div class="modal-footer">Share:
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="whatsapp://send?text=www.nrco.icar.gov.in/index#aboutorchid" data-action="share/whatsapp/share" target="_blank"  data-toggle="tooltip" data-placement="top" title="Share to Whatsapp" class="btn btn-light">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Share to Facebook" class="btn btn-light">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Copy Link" class="btn btn-light">
+        <i class="fa fa-share" aria-hidden="true"></i>
+        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -331,7 +347,7 @@ require_once 'include/header.php'; ?>
           <h6 class="sub-title">Message</h6>
           <h3 class="hny-title">From the Director's Desk</h3>
           <p style="text-align: justify; height:210px;overflow:hidden;"><?php echo $data['Message']; ?></p>
-          <a href="message_from_director.php" class="read">Read more</a> 
+          <a href="message_from_director" class="read">Read more</a> 
          
         </div>
       </div>
@@ -363,7 +379,7 @@ background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, F
         <div class="cwp4-image col-lg-4 pl-lg-5 mb-lg-0 mb-5">
   <div class="smartphone">
   <div class="content">
-  <a href=" .php"  class="list-group-item list-group-item-action flex-column align-items-start active ">
+  <a href=" "  class="list-group-item list-group-item-action flex-column align-items-start active ">
  <div class="d-flex w-100 justify-content-between">
    <h5 class="mb-1 text-center">Mobile Applications<img src="google-play-badge.png" width="200px" alt=""> </h5>  
 </div>
@@ -410,7 +426,7 @@ background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, F
   <div data-toggle="tooltip" data-placement="top" title="Scroll Please"  class="smartphone">
   <div class="content">
   <p style="color: white;">Faceook Page:</p>
-  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&tabs=timeline&width=280&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="298" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>  </div>
+  <iframe src="https://www.facebook.com/plugins/page?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&tabs=timeline&width=280&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="298" height="420" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>  </div>
 
     </div>
 </div>
@@ -425,7 +441,7 @@ background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, F
   <!-- <div class="smartphone">
   <div class="content">
 <p style="text-align: center; color:blue ">Our Facebook Page</p> 
-  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="298" height="480" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>  </div>
+  <iframe src="https://www.facebook.com/plugins/page?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="298" height="480" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>  </div>
 </div> -->
   </div>
 </div>
@@ -534,8 +550,8 @@ background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, F
       <div class="row justify-content-center">       
       <div class="col-4">
           <h6 class="sub-title">Facebook</h6>
-     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" class="no-lazyload"></iframe>
-<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&width=160&layout=button_count&action=like&size=large&share=true&height=46&appId" width="160" height="29" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" class="no-lazyload"></iframe>
+     <iframe src="https://www.facebook.com/plugins/page?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" class="no-lazyload"></iframe>
+<iframe src="https://www.facebook.com/plugins/like?href=https%3A%2F%2Fwww.facebook.com%2FNRCOSikkim%2F&width=160&layout=button_count&action=like&size=large&share=true&height=46&appId" width="160" height="29" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" class="no-lazyload"></iframe>
         </div>
       </div>
     </div>

@@ -125,7 +125,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                News, Events...</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-900"> <a href="BulletinBoard.php">Bulletin Board</a> </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-900"> <a href="BulletinBoard">Bulletin Board</a> </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-blue-900"></i>
@@ -143,7 +143,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                Message from</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-900"> <a href="DirectorMessage.php">Director's Desk</a> </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-900"> <a href="DirectorMessage">Director's Desk</a> </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-envelope fa-2x text-green-900"></i>
@@ -162,7 +162,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"> <a href="flowers.php">Flower</a> </div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"> <a href="flowers">Flower</a> </div>
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm mr-2">
@@ -189,7 +189,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                             Orchids</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <a href="funfacts.php">Fun Facts</a> </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> <a href="funfacts">Fun Facts</a> </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-snowflake fa-2x text-yellow-900"></i>
@@ -214,7 +214,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse show " id="messagedata">
                                     <div class="card-body">
-                                    <form method="post" action="index.php" enctype="multipart/form-data" style="padding:10px;">                                        
+                                    <form method="post" action="index" enctype="multipart/form-data" style="padding:10px;">                                        
                                         <div class="form-group">
                                         <label for="exampleFormControlInput1">Enter Title</label>
                                         <input type="text" name="title" class="form-control"    onchange="readURL(this);" id="title" placeholder="Nataional Science Day Celebration">
@@ -301,9 +301,6 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                         <th>Description</th>
                         <th>UploadDate</th>
                         <th>Action</th>
-
-                       
-
                     </tr>
                 </thead>
                 
@@ -338,7 +335,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                    <form method="post" action="index.php" enctype="multipart/form-data" style="padding:10px;">
+                                    <form method="post" action="index" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="Id" value="<?php echo $row['Id']; ?>">
                                             <label for="title">Title</label>
@@ -373,7 +370,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         <strong> <?php echo $row['Title']; ?> <br>
                                         <strong> <?php echo $row['Description']; ?></strong></strong>
                                       
-                                        <form method="post" action="index.php" enctype="multipart/form-data" style="padding:10px;">
+                                        <form method="post" action="index" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="Id" value="<?php echo $row['Id']; ?>">
                                           </div> 

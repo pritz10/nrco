@@ -13,7 +13,7 @@
    
 
    if(!isset($_SESSION['us'])){
-      header("location:getin.php");
+      header("location:getin");
       die();
    }
    
@@ -28,7 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Pritam Shah">
-    <meta http-equiv="refresh" content="900;url=getout.php" />
+    <meta http-equiv="refresh" content="900;url=getout" />
 
     <title>NRCO-Dashboard</title>
     <!-- Custom fonts for this template-->
@@ -53,7 +53,7 @@
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index">
                 <div class="sidebar-brand-icon">
                   <img src="img/logo.png" width="35px" alt="">
                 </div>
@@ -63,7 +63,7 @@
             <hr class="sidebar-divider my-0">
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="index">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -86,8 +86,8 @@
                 <div id="collapsewo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Select</h6>
-                        <a class="collapse-item" href="Counter.php">Counter</a>
-                        <a class="collapse-item" href="Visitors.php">Visitors feedback</a>
+                        <a class="collapse-item" href="Counter">Counter</a>
+                        <a class="collapse-item" href="Visitors">Visitors feedback</a>
                     </div>
                 </div>
             </li>
@@ -100,25 +100,25 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Select</h6>
-                        <a class="collapse-item" href="Staff.php">Staffs</a>
+                        <a class="collapse-item" href="Staff">Staffs</a>
                         <a class="collapse-item" href="cards.html">Former Directors</a>
                     </div>
                 </div>
             </li>
               <!-- Nav Item - Charts -->
               <li class="nav-item">
-                <a class="nav-link" href="Publications.php">
+                <a class="nav-link" href="Publications">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Publications</span></a>
             </li>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="Research.php">
+                <a class="nav-link" href="Research">
                     <i class="fas fa-fw fa fa-lightbulb"></i>
                     <span>Research</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Outreach.php">
+                <a class="nav-link" href="Outreach">
                     <i class="fas fa-fw fa fa-map-marker"></i>
                     <span>Outreach</span></a>
             </li>
@@ -208,13 +208,13 @@
                                         $style = "style='display:none;'";
                                     }
                                     ?>
-                                <a class="dropdown-item" <?php echo $style;?> href="fghg.php">
+                                <a class="dropdown-item" <?php echo $style;?> href="fghg">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
                                 </a>
                                 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="getout.php">
+                                <a class="dropdown-item" href="getout">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>

@@ -8,7 +8,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title><?php echo $title; ?> |NRCO</title>
+  <title><?php echo $title; ?> | NRCO</title>
   <META NAME="DESCRIPTION" CONTENT="The ICAR-National Research Centre for Orchids, Sikkim was established by Indian Council of Agricultural Research, New Delhi on 5th October 1996 based on the recommendations of the Planning Commission during VIIIth Five Year Plan. The basic objective for setting up this centre was to provide research support to upcoming orchid industry, conserve and use orchid genetic resources available in the country.">
   <META NAME="KEYWORDS" CONTENT="Sikkim, Darjeeling, ICAR, NRCO, Orchids, Orchid, Gangtok,ICAR-NRC for Orchids">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -98,7 +98,7 @@
         <header class="row top-menu-top">
           <div class="accounts col-6">
            
-            <li class="top_li"data-toggle="tooltip" data-placement="top" title="Skip the header and banners"><span class="fa fa-universal-access"></span><a href="index.php#mainid">Skip to main content</a></li>
+            <li class="top_li"data-toggle="tooltip" data-placement="top" title="Skip the header and banners"><span class="fa fa-universal-access"></span><a href="index#mainid">Skip to main content</a></li>
             <li class="top_li" data-toggle="tooltip" data-placement="top" title="Call 03592267031"><span class="fa fa-phone"></span><a href="tel:03592267031">Call</a></li>
             <li class="top_li" data-toggle="tooltip" data-placement="top" title="Email director.nrco@icar.gov.in"><span class="fa fa-envelope"></span><a href="mailto:director.nrco@icar.gov.in" class="mail"> Email</a> </li>
             <li class="top_li" data-toggle="tooltip" data-placement="top" title="Translate this website using Google-Translate"><a id="google_translate_element"> </a> </li>
@@ -107,7 +107,7 @@
           <div class="social-top col-6 " style="font-size: 14px;">
             </span>
             <span class="fa fa-book top_li1" style="color: white;">
-              <a href="Screenreader.php" style="color: white;" data-toggle="tooltip" data-placement="top" title="Screen Reader Accessibility tools">Screen Reader</a> |
+              <a href="Screenreader" style="color: white;" data-toggle="tooltip" data-placement="top" title="Screen Reader Accessibility tools">Screen Reader</a> |
             </span>
             <span class=" t" style="color: white;">Font-Size:
            <strong>   <a class="increase" data-toggle="tooltip" data-placement="top" title="Increase Font Size!">A+ </a> |
@@ -146,7 +146,7 @@
 
       <nav class="navbar navbar-expand-lg stroke ">
 
-        <a class="navbar-brand" href="index.php" data-toggle="tooltip" data-placement="top" title="Homepage">NRCO
+        <a class="navbar-brand" href="index" data-toggle="tooltip" data-placement="top" title="Homepage">NRCO
           <img src="assets/images/logo.png" alt="logo" title="" style="height:35px;" />
         </a>
         <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -159,21 +159,21 @@
           <ul class="navbar-nav ml-auto">
 
             <li class="nav-item  ">
-              <a class="nav-link" href="index.php"> <span class="fa fa-home"></span> Home</a>
+              <a class="nav-link" href="index"> <span class="fa fa-home"></span> Home</a>
             </li>
             <li class="nav-item dropdown  ">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 At a glance
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="about_nrco.php">About NRCO</a>
+                <a class="dropdown-item" href="about_nrco">About NRCO</a>
                 <a class="dropdown-item" href="#">Organization Setup</a>
-                <a class="dropdown-item" href="Staff.php">Staffs</a>
-                <a class="dropdown-item" href="message_from_director.php">Message from Director</a>
+                <a class="dropdown-item" href="Staff">Staffs</a>
+                <a class="dropdown-item" href="message_from_director">Message from Director</a>
 
-                <a class="dropdown-item" href="regional_sub-centres.php">Regional/ Sub Centres</a>
+                <a class="dropdown-item" href="regional_sub-centres">Regional/ Sub Centres</a>
                 <a class="dropdown-item" href="admin\dist\uploads\ICAR-NRCO-At-a-Glance.pdf">Institute as a glance</a>
-                <a class="dropdown-item" href="FormerDirectors.php">Former Directors</a>
+                <a class="dropdown-item" href="FormerDirectors">Former Directors</a>
 
 
               </div>
@@ -188,16 +188,16 @@
                 <div class="dropdown-menu">
                   <a href="Library.php" class="dropdown-item">Library Services</a>
                   <a href="#" class="dropdown-item">Guest House</a>
-                  <a class="dropdown-item" href="SAIF.php">SAIF</a>
-                  <a class="dropdown-item" href="Labrotaries.php">Labrotaries</a>
+                  <a class="dropdown-item" href="SAIF">SAIF</a>
+                  <a class="dropdown-item" href="Labrotaries">Labrotaries</a>
                 </div>
-                <a class="dropdown-item" href="Training.php">Training</a>
-                <a class="dropdown-item" href="Consultancy.php">Consultancy</a>
-                <a class="dropdown-item" href="NAGS.php">NAGS</a>
+                <a class="dropdown-item" href="Training">Training</a>
+                <a class="dropdown-item" href="Consultancy">Consultancy</a>
+                <a class="dropdown-item" href="NAGS">NAGS</a>
                 <a href="Library.php" class="dropdown-item">Library Services</a>
-                <a class="dropdown-item" href="SAIF.php">SAIF</a>
-                <a class="dropdown-item" href="Labrotaries.php">Labrotaries</a>
-                <a class="dropdown-item" href="Seminarhall.php">Seminar Hall</a>
+                <a class="dropdown-item" href="SAIF">SAIF</a>
+                <a class="dropdown-item" href="Labrotaries">Labrotaries</a>
+                <a class="dropdown-item" href="Seminarhall">Seminar Hall</a>
 
               </div>
             </li>
@@ -207,8 +207,8 @@
                 Research
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="Training.php">Training</a>
-              <a class="dropdown-item" href="Projects.php">Projects</a>
+              <a class="dropdown-item" href="Training">Training</a>
+              <a class="dropdown-item" href="Projects">Projects</a>
 
               </div>
             </li>
@@ -217,9 +217,9 @@
                 Publications
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="Newsletter.php">Newsletter</a>
-              <a class="dropdown-item" href="Annual Report.php">Annual Report</a>
-              <a class="dropdown-item" href="Technical Publications.php">Technical Pulications</a>
+              <a class="dropdown-item" href="Newsletter">Newsletter</a>
+              <a class="dropdown-item" href="Annual Report">Annual Report</a>
+              <a class="dropdown-item" href="Technical Publications">Technical Pulications</a>
 
                             
                              </div>
@@ -230,8 +230,8 @@
                 Outreach
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="TSP.php">TSP</a>
-              <a class="dropdown-item" href="SCSP.php">SCSP</a>
+              <a class="dropdown-item" href="TSP">TSP</a>
+              <a class="dropdown-item" href="SCSP">SCSP</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -239,9 +239,9 @@
                 Bulletin
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="News.php">Events</a>
-                <a class="dropdown-item" href="Opportunity.php">Opportunity</a>
-                <a class="dropdown-item" href="Tenders.php">Tenders</a>
+                <a class="dropdown-item" href="News">Events</a>
+                <a class="dropdown-item" href="Opportunity">Opportunity</a>
+                <a class="dropdown-item" href="Tenders">Tenders</a>
               </div>
             </li>
             <li class="nav-item dropdown data-toggle="tooltip" data-placement="top" title="Downloads, Gallery, Swach Bharat Abhiyaan etc">
@@ -249,9 +249,9 @@
                 More...
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="Downloads.php">Downloads</a>
-              <a class="dropdown-item" href="Gallery.php">Gallery</a>
-              <a class="dropdown-item" href="Gallery.php">Swach Bharat Abhiyaan</a>
+              <a class="dropdown-item" href="Downloads">Downloads</a>
+              <a class="dropdown-item" href="Gallery">Gallery</a>
+              <a class="dropdown-item" href="Gallery">Swach Bharat Abhiyaan</a>
               </div>
             </li>
             <li class="nav-item  ">
@@ -259,10 +259,10 @@
        href="#payment">Payment</a>
              </li>
             <li class="nav-item  ">
-              <a class="nav-link" href="index.php" data-toggle="tooltip" data-placement="top" title="Hindi version of this website">हिंदी</a>
+              <a class="nav-link" href="index" data-toggle="tooltip" data-placement="top" title="Hindi version of this website">हिंदी</a>
             </li>
             <li class="nav-item  ">
-              <a class="nav-link" href="contact.php">Contact</a>
+              <a class="nav-link" href="contact">Contact</a>
             </li>
 
 

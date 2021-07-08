@@ -26,7 +26,7 @@ require_once 'include/header.php'; ?>
                       </div>
                       <textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Message"
                           required=""></textarea>
-                      <button type="submit" class="btn btn-style btn-primary mt-4">Send Message</button>
+                      <button type="submit" class="btn btn-style btn-primary mt-4">Send Message  <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                   </form>
               </div>
               <div class="cont-detailshnyf mt-lg-0 mt-4">
@@ -36,8 +36,7 @@ require_once 'include/header.php'; ?>
                   </div>
                   <div class="cont-right">
                       <h6>Address</h6>
-                      <p>ICAR-National Research Centre for Orchids
-Dikiling Road, Pakyong, Sikkim 737106</p>
+                      <p>ICAR-National Research Centre for Orchids Dikiling Road, Pakyong, Sikkim 737106</p>
                   </div>
               </div>
                 <div class="cont-tophny margin-up">

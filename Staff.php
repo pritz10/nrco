@@ -1,8 +1,7 @@
 <!-- Include Header -->
-<?php require_once 'include/header.php'; ?>
- 
-
- 
+<?php
+$title = "Staffs";
+require_once 'include/header.php'; ?>
 <!-- about breadcrumb -->
 <section class="w3l-about-breadcrumb text-center">
           <h2 class="title">Our Staffs</h2>
@@ -36,7 +35,7 @@
                         {                
                     ?>
         <div class="col-lg-3 col-6 team-wrap  ">
-          <div class="team-info text-center">
+          <div class="team-info text-center shadow">
             <div class="column position-relative">
             
              <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" alt="staff"
@@ -80,7 +79,7 @@
                         {                
                     ?>
         <div class="col-lg-3 col-6 team-wrap ">
-          <div class="team-info text-center">
+          <div class="team-info text-center shadow">
             <div class="column position-relative">              
              <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" alt="staff"class="img-fluid team-image" /></div>
             <div class="column">
@@ -127,7 +126,7 @@
                         {                
                     ?>
         <div class="col-lg-3 col-6 team-wrap ">
-          <div class="team-info text-center">
+          <div class="team-info text-center shadow">
             <div class="column position-relative">              
              <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" alt="staff"class="img-fluid team-image" /></div>
             <div class="column">
@@ -167,7 +166,7 @@
                         {                
                     ?>
         <div class="col-lg-3 col-6 team-wrap ">
-          <div class="team-info text-center">
+          <div class="team-info text-center shadow">
             <div class="column position-relative">              
              <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" alt="staff"class="img-fluid team-image" /></div>
             <div class="column">
@@ -208,7 +207,7 @@
                         {                
                     ?>
         <div class="col-lg-3 col-6 team-wrap ">
-          <div class="team-info text-center">
+          <div class="team-info text-center shadow">
             <div class="column position-relative">              
              <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" alt="staff"class="img-fluid team-image" /></div>
             <div class="column">
@@ -248,7 +247,7 @@
                         {                
                     ?>
         <div class="col-lg-3 col-6 team-wrap ">
-          <div class="team-info text-center">
+          <div class="team-info text-center shadow">
             <div class="column position-relative">              
              <img src="enIN841IN841/<?php echo $data['ImageUrl']; ?>" alt="staff"class="img-fluid team-image" /></div>
             <div class="column">

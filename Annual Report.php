@@ -2,11 +2,6 @@
 <?php
 $title = "Annual Report";
 require_once 'include/header.php'; ?>
-
- 
- 
- 
-
 <!-- about breadcrumb -->
 <section class="w3l-about-breadcrumb text-center">
           <h2 class="title">Annual Reports</h2>

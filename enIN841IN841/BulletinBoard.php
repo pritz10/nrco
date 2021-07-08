@@ -156,7 +156,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse show " id="messagedata">
                                     <div class="card-body">
-                                    <form method="post" action="BulletinBoard.php" enctype="multipart/form-data" style="padding:10px;">
+                                    <form method="post" action="BulletinBoard" enctype="multipart/form-data" style="padding:10px;">
                                             <div class="form-group">
                                                 <label for="sel1">Select Category Where You Want To Upload: <br> [NEWS/ EVENTS] [OPPORTUNITY] [TENDERS]</label>
                                                 <select class="form-control" name="tags">
@@ -241,7 +241,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                    <form method="post" action="BulletinBoard.php" enctype="multipart/form-data" style="padding:10px;">
+                                    <form method="post" action="BulletinBoard" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['Id']; ?>">
                                              <div class="form-group">
@@ -281,7 +281,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         <strong> <?php echo $row['Name']; ?> <br>
                                         
                                       
-                                        <form method="post" action="BulletinBoard.php" enctype="multipart/form-data" style="padding:10px;">
+                                        <form method="post" action="BulletinBoard" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['Id']; ?>">
                                           </div> 

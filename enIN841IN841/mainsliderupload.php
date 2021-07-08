@@ -1,4 +1,4 @@
-<?php require_once 'db.php'; ?>
+<?php require_once 'db'; ?>
 <?php 
     $filename = $_FILES['myfile']['name'];
     $title = mysqli_real_escape_string($connect, $_POST['title']);
@@ -18,14 +18,14 @@
         echo "You file extension must be  .jpg or .png or .jpeg or .gif";
      } elseif ($_FILES['myfile']['size'] > 200000000) { // file shouldn't be larger than 20Megabyte
         echo "File too large!";
-        header("location:index.php?error");
+        header("location:index?error");
      } else {
         // move the uploaded (temporary) file to the specified destination
         if (move_uploaded_file($file, $destination)) {
             $sql = "INSERT INTO  nrconewdb.mainslider(title, description, imageurl, date) VALUES ('$title','$description','$destination','$created_date')";
             if (mysqli_query($connect, $sql)) {
            echo "File uploaded successfully";
-                header("location:index.php?success");
+                header("location:index?success");
              }
         } else {
            // echo "Failed to upload file.";

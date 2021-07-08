@@ -1,4 +1,4 @@
-<?php require_once 'Header.php';?>
+<?php require_once 'Header';?>
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload')
@@ -156,7 +156,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse show " id="messagedata">
                                     <div class="card-body">
-                                    <form method="post" action="Outreach.php" enctype="multipart/form-data" style="padding:10px;">
+                                    <form method="post" action="Outreach" enctype="multipart/form-data" style="padding:10px;">
                                             <div class="form-group">
                                                 <label for="sel1">Select Category Where You Want To Upload: </label>
                                                 <select class="form-control" name="tags">
@@ -241,7 +241,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                    <form method="post" action="Outreach.php" enctype="multipart/form-data" style="padding:10px;">
+                                    <form method="post" action="Outreach" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['Id']; ?>">
                                              <div class="form-group">
@@ -281,7 +281,7 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                         <strong> <?php echo $row['Name']; ?> <br>
                                         
                                       
-                                        <form method="post" action="Outreach.php" enctype="multipart/form-data" style="padding:10px;">
+                                        <form method="post" action="Outreach" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['Id']; ?>">
                                           </div> 

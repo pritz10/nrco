@@ -2,7 +2,7 @@
 <?php require_once 'db.php';
  session_start();
  if(isset($_SESSION['us'])){
-     header("location:index.php");
+     header("location:index");
    }
  if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload'){
     $errorMsg = "";
@@ -19,7 +19,7 @@ if (!empty($username) || !empty($password)) {
             $errorMsg = "Preparing for launch !";
 
             echo'<div class="alert alert-success text-center" style="font-weight:bold;">'.$errorMsg.'</div>';
-               header("Location:index.php");
+               header("Location:index");
 
                $created_date = date("d-F-Y");
             $sql = "UPDATE nrconewdb.updatedate set UpdateDate='$created_date'";
@@ -61,7 +61,7 @@ if (!empty($username) || !empty($password)) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta http-equiv="refresh" content="900;url=getout.php" />
+    <meta http-equiv="refresh" content="900;url=getout" />
 
     <title>Get In</title>
 
@@ -96,7 +96,7 @@ if (!empty($username) || !empty($password)) {
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">NRCO ADMIN</h1>
                                     </div>
-                                    <form method="post"  class="user" action="getin.php" enctype="multipart/form-data" style="padding:10px;">                                        
+                                    <form method="post"  class="user" action="getin" enctype="multipart/form-data" style="padding:10px;">                                        
 
                                          <div class="form-group">
                                             <input type="text" name="username" class="form-control form-control-user"

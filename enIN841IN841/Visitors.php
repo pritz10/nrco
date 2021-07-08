@@ -21,7 +21,7 @@
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse show " id="messagedata">
                                     <div class="card-body">
-                                    <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">                                        
+                                    <form method="post" action="DirectorMessage" enctype="multipart/form-data" style="padding:10px;">                                        
                                     <div class="form-group">
                                                 <label for="e">Enter Name</label>
                                                 <input type="text" name="name" class="form-control" required onchange="readURL(this);" id="title"  >
@@ -152,7 +152,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                    <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
+                                    <form method="post" action="DirectorMessage" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                             <label for="title">Name</label>
@@ -188,7 +188,7 @@
                                         <strong> <?php echo $row['Designation']; ?> <br>
                                         <strong> <?php echo $row['Message']; ?></strong></strong>
                                       
-                                        <form method="post" action="DirectorMessage.php" enctype="multipart/form-data" style="padding:10px;">
+                                        <form method="post" action="DirectorMessage" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                           </div> 

@@ -364,14 +364,10 @@
 	jQuery('.lang-select').click(function() {
 	  var theLang = jQuery(this).attr('data-lang');
 	  jQuery('.goog-te-combo').val(theLang);
-
-	  //alert(jQuery(this).attr('href'));
 	  window.location = jQuery(this).attr('href');
 	  location.reload();
-
 	});
 </script>
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
- 
 </body>
 </html>

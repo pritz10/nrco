@@ -10,12 +10,12 @@
      if (strcmp($user_check, "Prits") == 0) {
       }
     else {
-         header("location:getin.php");
+         header("location:getin");
          die();
     }
 }
 else{
-    header("location:getin.php");
+    header("location:getin");
     die();
  } 
  
@@ -89,7 +89,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta http-equiv="refresh" content="900;url=getout.php" />
+    <meta http-equiv="refresh" content="900;url=getout" />
 
     <title>NRCO ADMIN</title>
 
@@ -175,7 +175,7 @@ else{
                                         <div class="modal-body">Select "Delete" below if you are ready to delete:<br> 
                                         <strong> <?php echo $row['Username']; ?>  </strong>
                                       
-                                        <form method="post" action="fghg.php" enctype="multipart/form-data" style="padding:10px;">
+                                        <form method="post" action="fghg" enctype="multipart/form-data" style="padding:10px;">
                                          <div class="form-group">
                                              <input type="hidden" name="Id" value="<?php echo $row['Id']; ?>">
                                           </div> 
@@ -200,7 +200,7 @@ else{
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form method="post"  class="user" action="fghg.php" enctype="multipart/form-data" style="padding:10px;">                                        
+                            <form method="post"  class="user" action="fghg" enctype="multipart/form-data" style="padding:10px;">                                        
                                  
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" name="username" id="exampleInputEmail"
@@ -213,7 +213,7 @@ else{
                                     
                                     </div>
                                     <button type="submit" style="width: 100%;" value="upload"  name="submit" class="btn btn-primary btn-user btn-block" id="upload-file"><i class="fa fa-user" aria-hidden="true"></i>  Register...</button>
-                                    <a href="index.php" class="btn btn-google btn-user btn-block">
+                                    <a href="index" class="btn btn-google btn-user btn-block">
                                     <i class="fa fa-home" aria-hidden="true"></i>  Home
                                 </a>
                                 </div>
