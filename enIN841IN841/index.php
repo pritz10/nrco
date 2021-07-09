@@ -7,7 +7,7 @@
     $description =mysqli_real_escape_string($connect, $_POST['description']);
      $created_date = date("d-F-Y");
     // destination of the file on the server
-    $destination = 'files/images/' . $filename;
+    $destination = 'files/images/mainslider/' . $filename;
 
     // get the file extension
     $extension = pathinfo($filename, PATHINFO_EXTENSION);

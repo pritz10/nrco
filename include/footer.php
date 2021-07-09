@@ -1,7 +1,7 @@
  
 <section class="w3l-footer">
 <div class="map-iframe mt-5">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3547.607592443914!2d88.58795001437328!3d27.23146735285179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e6a6f3e32a5de9%3A0xbbea4c4e38649e3!2sICAR-National%20Research%20Centre%20For%20Orchids!5e0!3m2!1sen!2sin!4v1620627718763!5m2!1sen!2sin" width="600" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3547.607592443914!2d88.58795001437328!3d27.23146735285179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e6a6f3e32a5de9%3A0xbbea4c4e38649e3!2sICAR-National%20Research%20Centre%20For%20Orchids!5e0!3m2!1sen!2sin!4v1620627718763!5m2!1sen!2sin" width="600" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
   <footer class="footer-28">
     <div class="footer-bg-layer">
@@ -217,7 +217,6 @@
   <!-- stats number counter-->
   <script src="assets/js/jquery.waypoints.min.js"></script>
   <script src="assets/js/jquery.countup.js"></script>
-  <script src="assets/js/lightbox-plus-jquery.min.js"></script>
   <script>
     (function() {
         var $gallery = new SimpleLightbox('.gallery a', {});
@@ -368,6 +367,7 @@
 	  location.reload();
 	});
 </script>
+ 
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

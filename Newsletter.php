@@ -26,27 +26,28 @@ require_once 'include/header.php'; ?>
       <table class="table table-hover table-bordered  " id="example" width="100%" cellspacing="0">             
          <thead class="thead-dark">
          <tr >
-                <th>Id</th>
+                
 
-                <th>Date</th>
+             
                 <th>Title</th>
+                <th>Date</th>
 
         </thead>
         <tbody>
         <?php  
         
-          $sql = "SELECT * FROM pdfs where Tags= 'Newsletter'  ORDER BY Id DESC";  
+          $sql = "SELECT * FROM pdfs where Tags= 'Newsletter' ORDER BY Id DESC";  
             $result = mysqli_query($connect, $sql);  
                         
                         while($row = mysqli_fetch_assoc($result))  
                         {  ?>
 
                         <tr>
-                        <td><?php echo $row['Id']; ?></td>
-                        <td><?php echo $row['Date']; ?></td>
 
                         <td><?php echo '<strong><img src="assets/images/icon.svg.png" width="30" height="auto" style="border-radius: 0px;" > <a href="enIN841IN841'.$row['PdfUrl'].'"target="_blank">  '.$row['Name'].'</li></a> <i class="fa fa-download text-danger " aria-hidden="true"> </i>'; ?></td>
-                        </tr>
+                        <td><?php echo $row['Date']; ?></td>
+  
+                      </tr>
                                 
 
                         

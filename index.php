@@ -18,7 +18,7 @@ require_once 'include/header.php'; ?>
         {  
           while($row = mysqli_fetch_array($result))  
             {  
-            echo '<img src="assets/images/new.gif" width="50px"><a href="admin/dist'.$row['PdfUrl'].'" class="marq" style="color:white; border-bottom: 2px solid white; "  target="_blank"> '.$row['Name'].'</a>'."&nbsp;&nbsp;&nbsp;";  
+            echo '<img src="assets/images/new.gif" width="50px"><a href="enIN841IN841/'.$row['PdfUrl'].'" class="marq" style="color:white; border-bottom: 2px solid white; "  target="_blank"> '.$row['Name'].'</a>'."&nbsp;&nbsp;&nbsp;";  
             }  
         }  
       ?>  
@@ -290,9 +290,9 @@ require_once 'include/header.php'; ?>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Share to Facebook" class="btn btn-light">
             <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Copy Link" class="btn btn-light">
+            <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Copy Link" class="btn btn-light">
             <i class="fa fa-share" aria-hidden="true"></i>
-            </a>
+            </a> -->
             </div>
           <div class="modal fade" id="orchidinfo" tabindex="-1" role="dialog" aria-labelledby="orchidinfo" aria-hidden="true">
   
@@ -316,9 +316,9 @@ require_once 'include/header.php'; ?>
         <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Share to Facebook" class="btn btn-light">
         <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Copy Link" class="btn btn-light">
+        <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnrco.icar.gov.in/index#aboutorchid" target="_blank" data-toggle="tooltip" data-placement="top" title="Copy Link" class="btn btn-light">
         <i class="fa fa-share" aria-hidden="true"></i>
-        </a>
+        </a> -->
         </div>
       </div>
     </div>
@@ -541,6 +541,9 @@ background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, F
   </div>
   <!-- //grids -->
 </section>
+
+ 
+
 
 <!-- <section class="w3l-content-with-photo-4">
   

@@ -1,4 +1,4 @@
-<?php require_once 'Header';?>
+<?php require_once 'Header.php';?>
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.0/css/buttons.dataTables.min.css">
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload')
