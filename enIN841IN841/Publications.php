@@ -3,28 +3,56 @@
 <?php
     if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'upload')
     {
-    $filename = $_FILES['myfile']['name'];
+    $filename1 = $_FILES['myfile1']['name'];
+    $filename2 = $_FILES['myfile2']['name'];
     $name = mysqli_real_escape_string($connect, $_POST['name']);
+    $description = mysqli_real_escape_string($connect, $_POST['description']);
+    $publisher = mysqli_real_escape_string($connect, $_POST['publisher']);
+    $pages = mysqli_real_escape_string($connect, $_POST['pages']);
+    $yr = mysqli_real_escape_string($connect, $_POST['yr']);
+    $keywrds = mysqli_real_escape_string($connect, $_POST['keywrds']);
     $tags = mysqli_real_escape_string($connect, $_POST['tags']);
     $created_date = date("d-F-Y");
     // destination of the file on the server
-    $destination = 'files/PDF/' . $filename;
+    $destination1 = 'files/Images/' . $filename1;
+    $destination2 = 'files/PDF/' . $filename2;
+
 
     // get the file extension
-    $extension = pathinfo($filename, PATHINFO_EXTENSION);
+    $extension1 = pathinfo($filename1, PATHINFO_EXTENSION);
+    $extension2 = pathinfo($filename2, PATHINFO_EXTENSION);
+
 
     // the physical file on a temporary uploads directory on the server
-    $file = $_FILES['myfile']['tmp_name'];
-    $size = $_FILES['myfile']['size'];
+    $file1 = $_FILES['myfile1']['tmp_name'];
+    $size1 = $_FILES['myfile1']['size'];
 
-    if (!in_array($extension, ['pdf'])) {
+    $file2 = $_FILES['myfile2']['tmp_name'];
+    $size2 = $_FILES['myfile2']['size'];
+
+    if (!in_array($extension1, ['jpg','png','jpeg','gif'])) {
+      echo'<div class="alert alert-warning alert-dismissible fade show" id="alert" role="alert">
+      <strong>File extension ishould be JPG or PNG or the image is too big to handle.</strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>';
+   } elseif ($_FILES['myfile1']['size'] > 70000000) { // file shouldn't be larger than 
+        echo'<div class="alert alert-warning alert-dismissible fade show" id="alert" role="alert">
+        <strong>File too large! Compress the PDF and try again.</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>';
+     }
+    if (!in_array($extension2, ['pdf'])) {
         echo'<div class="alert alert-warning alert-dismissible fade show" id="alert" role="alert">
         <strong>File extension should be PDF or the File is too big to handle.</strong>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>';
-     } elseif ($_FILES['myfile']['size'] > 70000000) { // file shouldn't be larger than 20Megabyte
+     } elseif ($_FILES['myfile2']['size'] > 70000000) { // file shouldn't be larger than 
         echo'<div class="alert alert-warning alert-dismissible fade show" id="alert" role="alert">
         <strong>File too large! Compress the PDF and try again.</strong>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -33,8 +61,10 @@
       </div>';
      } else {
         // move the uploaded (temporary) file to the specified destination
-        if (move_uploaded_file($file, $destination)) {
-            $sql = "INSERT INTO  nrconewdb.pdfs (name, pdfurl, tags, date) VALUES ('$name','$destination','$tags','$created_date')";
+        if (move_uploaded_file($file2, $destination2)) {
+
+ 
+            $sql = "INSERT INTO  nrconewdb.pdfs (Name,Pdfurl,Publisher,Pyear,Pages,Keywrds,Imageurl,Description,Tags,Date) VALUES ('$name','$destination2','$publisher','$yr','$pages','$keywrds','$destination1','$description','$tags','$created_date')";
 
             if (mysqli_query($connect, $sql)) {
                 if(mysqli_affected_rows($connect) > 0 ){
@@ -54,7 +84,8 @@
               </div>';
              }
             }
-        } else {
+        
+       } else {
              echo'<div class="alert alert-warning alert-dismissible fade show" id="alert" role="alert">
             <strong>Something went wrong, Please try again later</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -157,24 +188,52 @@ if($_SERVER['REQUEST_METHOD']=='POST' and $_REQUEST['submit']== 'delete')
                                 <div class="collapse show " id="messagedata">
                                     <div class="card-body">
                                     <form method="post" action="Publications" enctype="multipart/form-data" style="padding:10px;">
-                                            <div class="form-group">
+                                    <div class="form-row">
+                                                <div class="form-group col-md-6">
                                                 <label for="sel1">Select Category Where You Want To Upload: </label>
                                                 <select class="form-control" name="tags">
                                                     <option>Annual Reports </option>
                                                     <option>Newsletter</option>
                                                      <option>Technical Publications</option>
-
                                                  </select>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                  <label for="inputEmail4">Title of PDF</label>
+                                                  <input type="text" name="name" class="form-control" required onchange="readURL(this);" id="email">
+                                                </div>
+                                                </div>
+                                                <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Enter Description</label>
+                                                <textarea class="form-control" name="description"   onchange="readURL(this);" id="details" placeholder="Dikling School was invited in celebration of National Science Day"></textarea>
+                                                </div>
+                                                                                 
+                                                <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                  <label for="inputEmail4">Publisher</label>
+                                                  <input type="text" name="publisher" class="form-control" required onchange="readURL(this);" id="email">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                  <label for="inputPassword4">Pages</label>
+                                                  <input type="text" name="pages" class="form-control" placeholder="30" required onchange="readURL(this);" id="phone">
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                  <label for="inputPassword4">Year</label>
+                                                  <input type="text" name="yr" class="form-control" placeholder="2021" required onchange="readURL(this);" id="phone">
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                <label for="inputPassword4">Keywords</label>
+                                                  <input type="text" name="keywrds" class="form-control" placeholder="2021" required onchange="readURL(this);" id="phone">
+                                                </div>
+                                              </div> <div class="form-group">
+                                                <label for="h">Select an Image</label>
+                                                <input class="form-control" name="myfile1" id="formFileLg"required   type="file">
                                                 </div>
                                                 <div class="form-group">
                                                 <label for="h">Select a PDF</label>
-                                                <input class="form-control" name="myfile" id="formFileLg"required   type="file">
+                                                <input class="form-control" name="myfile2" id="formFileLg"required   type="file">
                                                 </div>
                                               
-                                            <div class="form-group">
-                                                <label for="exampleFormControlInput1">Description of PDF</label>
-                                                <input type="text" name="name" class="form-control" required   id="title"  >
-                                            </div>
+                                            
                                            
 
                                             <button type="submit" style="width: 100%;" value="upload"  name="submit" class="btn btn-primary" id="upload-file"><i class="fa fa-upload" aria-hidden="true"></i> Upload</button>
