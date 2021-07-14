@@ -19,7 +19,7 @@ require_once 'include/header.php'; ?>
         </button>
       </div>
       <div class="table-responsive">
-      <table class="table table-hover table-bordered" id="example" width="100%" cellspacing="0">             
+      <table class="table table-hover" id="example" width="100%" cellspacing="0">             
          <thead class="thead-dark">
          <tr>
         
